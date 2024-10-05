@@ -274,7 +274,64 @@ namespace DataLayer
                 }
             }
         }
-    }
+
+        //Metodo para obtener id del producto
+        public DataTable ObtenerIdProducto()
+        {
+            // Definir una instancia DataTable para almacenar el resultado
+            DataTable result = null;
+
+            // Obtener la cadena de conexión desde el archivo de configuración
+            string connectionString = ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString;
+
+            // Crear una nueva conexión SQL usando la cadena de conexión
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                // Crear un nuevo comando SQL para ejecutar el procedimiento almacenado
+                using (SqlCommand cmd = new SqlCommand("Us_ObtenerIdProducto", conn))
+                {
+                    try
+                    {
+                        // Establecer el tipo de comando como procedimiento almacenado
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Abrir la conexión
+                        conn.Open();
+
+                        // Ejecutar el comando y obtener los resultados en un SqlDataReader
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        // Verificar si hay filas en el resultado
+                        if (reader.HasRows)
+                        {
+                            // Inicializar el DataTable
+                            result = new DataTable();
+
+                            // Cargar los datos del SqlDataReader en el DataTable
+                            result.Load(reader);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Se ha producido un error al procesar los datos: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Cerrar la conexión
+                        conn.Close();
+                    }
+                }
+            }
+
+            // Devolver el DataTable resultante
+            return result;
+        }
+
+
+    }// Fin de la clase
 
     
+
+
+
 }

@@ -73,5 +73,13 @@ namespace LogicLayer
             return pd.EliminarProducto(codigo);
         }
 
+        //Metodo pra obtener id del producto
+        public static DataTable ObtenerIdProducto()
+        { 
+            Producto_Data pd = new Producto_Data();
+            return pd.ObtenerIdProducto();
+        
+        }
+
     }
 }

@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Categoria_Logic.cs" />
     <Compile Include="Cliente_Logic.cs" />
+    <Compile Include="Detalle_EntradaLogic.cs" />
+    <Compile Include="Entrada_InventarioLogic.cs" />
     <Compile Include="Marca_Logic.cs" />
     <Compile Include="Producto_Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

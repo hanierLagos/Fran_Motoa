@@ -178,9 +178,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+    <ProjectReference Include="..\LogicLayer\BussinesLayer.csproj">
       <Project>{b3e6cad9-b1cd-41d7-8b25-03d11c0f175a}</Project>
-      <Name>LogicLayer</Name>
+      <Name>BussinesLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agregar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-mas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
