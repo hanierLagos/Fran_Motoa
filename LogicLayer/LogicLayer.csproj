@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{35162E1B-28BC-497B-8309-01BE64867020}</ProjectGuid>
+    <ProjectGuid>{B3E6CAD9-B1CD-41D7-8B25-03D11C0F175A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EntityLayer</RootNamespace>
-    <AssemblyName>EntityLayer</AssemblyName>
+    <RootNamespace>LogicLayer</RootNamespace>
+    <AssemblyName>LogicLayer</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,12 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categorias.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Marcas.cs" />
-    <Compile Include="Productos.cs" />
+    <Compile Include="Categoria_Logic.cs" />
+    <Compile Include="Cliente_Logic.cs" />
+    <Compile Include="Marca_Logic.cs" />
+    <Compile Include="Producto_Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{dc38c92d-922f-42f3-8a76-ae5dc90e2dac}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{35162e1b-28bc-497b-8309-01be64867020}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

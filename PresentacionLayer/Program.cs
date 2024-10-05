@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PresentacionLayer.Catalogos;
+using PresentacionLayer.Menus;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmInventario());
         }
     }
 }
