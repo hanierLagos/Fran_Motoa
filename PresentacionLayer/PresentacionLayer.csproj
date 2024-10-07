@@ -113,6 +113,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Menus\FrmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\FrmAdministrador.Designer.cs">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menus\FrmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\FrmAdministrador.resx">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menus\FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
