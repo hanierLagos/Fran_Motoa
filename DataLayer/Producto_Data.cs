@@ -140,7 +140,7 @@ namespace DataLayer
             return result;  // Retorna los datos del producto
         }
 
-        // Método para actualizar un producto en la base de datos
+        // Método para actualizar un producto en la base de datos desde la ventana de editar
         public int ActualizarProducto(Productos p)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
@@ -153,6 +153,48 @@ namespace DataLayer
                         cmd.Connection = conn;
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.CommandText = "Us_ActualizarProducto";  // Procedimiento almacenado para actualizar productos
+
+                        // Limpia los parámetros y añade los nuevos con los valores actualizados
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@codigo", p.CODIGO_PRODUCTO);
+                        cmd.Parameters.AddWithValue("@nombre", p.NOMBRE_PRODUCTO);
+                        cmd.Parameters.AddWithValue("@precio", p.PRECIO);
+                        cmd.Parameters.AddWithValue("@marcaid", p.ID_MARCA);
+                        cmd.Parameters.AddWithValue("@categoriaid", p.ID_CATEGORIA);
+                        cmd.Parameters.AddWithValue("@cantidad", p.CANTIDAD);
+
+
+                        // Abre la conexión y ejecuta la actualización
+                        conn.Open();
+                        return cmd.ExecuteNonQuery();  // Retorna el número de filas afectadas
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de errores
+                        throw new Exception("Error al actualizar el producto: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Cierra la conexión
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
+        // Método para actualizar un producto que entran en la base de datos
+        public int ActualizarProductoEntrada(Productos p)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    try
+                    {
+                        // Asigna la conexión y el tipo de comando
+                        cmd.Connection = conn;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "Us_ActualizarProductoEntrada";  // Procedimiento almacenado para actualizar productos
 
                         // Limpia los parámetros y añade los nuevos con los valores actualizados
                         cmd.Parameters.Clear();

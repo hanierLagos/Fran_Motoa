@@ -38,17 +38,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscra = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.DG_Productos = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbFilter = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.mskCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.BtnGuestPlus = new FontAwesome.Sharp.IconButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.CODIGO_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE_PRODUCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +48,17 @@
             this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbFilter = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mskCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.imgCrud = new System.Windows.Forms.ImageList(this.components);
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BtnHome = new FontAwesome.Sharp.IconButton();
+            this.BtnGuestPlus = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Productos)).BeginInit();
             this.SuspendLayout();
@@ -83,24 +84,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1287, 54);
             this.panel1.TabIndex = 37;
-            // 
-            // BtnHome
-            // 
-            this.BtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.BtnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnHome.IconSize = 32;
-            this.BtnHome.Location = new System.Drawing.Point(12, 9);
-            this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(46, 39);
-            this.BtnHome.TabIndex = 5;
-            this.BtnHome.UseVisualStyleBackColor = false;
-            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // label4
             // 
@@ -155,7 +138,7 @@
             this.DG_Productos.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -182,6 +165,68 @@
             this.DG_Productos.Size = new System.Drawing.Size(1159, 416);
             this.DG_Productos.TabIndex = 31;
             this.DG_Productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Productos_CellContentClick);
+            // 
+            // CODIGO_PRODUCTO
+            // 
+            this.CODIGO_PRODUCTO.HeaderText = "Código";
+            this.CODIGO_PRODUCTO.MinimumWidth = 6;
+            this.CODIGO_PRODUCTO.Name = "CODIGO_PRODUCTO";
+            this.CODIGO_PRODUCTO.Width = 172;
+            // 
+            // NOMBRE_PRODUCT
+            // 
+            this.NOMBRE_PRODUCT.HeaderText = "Nombre";
+            this.NOMBRE_PRODUCT.MinimumWidth = 6;
+            this.NOMBRE_PRODUCT.Name = "NOMBRE_PRODUCT";
+            this.NOMBRE_PRODUCT.Width = 171;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "Precio";
+            this.PRECIO.MinimumWidth = 6;
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.Width = 172;
+            // 
+            // NOMBRE_MARCA
+            // 
+            this.NOMBRE_MARCA.HeaderText = "Marca";
+            this.NOMBRE_MARCA.MinimumWidth = 6;
+            this.NOMBRE_MARCA.Name = "NOMBRE_MARCA";
+            this.NOMBRE_MARCA.Width = 172;
+            // 
+            // cntry
+            // 
+            this.cntry.HeaderText = "Categoría";
+            this.cntry.MinimumWidth = 6;
+            this.cntry.Name = "cntry";
+            this.cntry.Width = 171;
+            // 
+            // CANTIDAD
+            // 
+            this.CANTIDAD.HeaderText = "Cantidad Disponible";
+            this.CANTIDAD.Name = "CANTIDAD";
+            // 
+            // Edit
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Edit.FillWeight = 60F;
+            this.Edit.HeaderText = "Editar";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // delete
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.delete.DefaultCellStyle = dataGridViewCellStyle4;
+            this.delete.HeaderText = "Eliminar";
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // label3
             // 
@@ -254,24 +299,54 @@
             this.label1.TabIndex = 42;
             this.label1.Text = "Filtrar";
             // 
-            // iconButton1
+            // imgCrud
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.Location = new System.Drawing.Point(1250, 58);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(26, 28);
-            this.iconButton1.TabIndex = 40;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.imgCrud.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCrud.ImageStream")));
+            this.imgCrud.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgCrud.Images.SetKeyName(0, "avatar-de-usuario.png");
+            this.imgCrud.Images.SetKeyName(1, "eliminar.png");
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.maskedTextBox1.Location = new System.Drawing.Point(86, 68);
+            this.maskedTextBox1.Mask = "AAAAA00000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(110, 24);
+            this.maskedTextBox1.TabIndex = 41;
+            this.maskedTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskCodigo_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.label5.Location = new System.Drawing.Point(29, 70);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 19);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Filtrar";
+            // 
+            // BtnHome
+            // 
+            this.BtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHome.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.BtnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnHome.IconSize = 32;
+            this.BtnHome.Location = new System.Drawing.Point(12, 9);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(46, 39);
+            this.BtnHome.TabIndex = 5;
+            this.BtnHome.UseVisualStyleBackColor = false;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // BtnGuestPlus
             // 
@@ -306,84 +381,16 @@
             this.btnSearch.TabIndex = 33;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // CODIGO_PRODUCTO
-            // 
-            this.CODIGO_PRODUCTO.HeaderText = "Código";
-            this.CODIGO_PRODUCTO.MinimumWidth = 6;
-            this.CODIGO_PRODUCTO.Name = "CODIGO_PRODUCTO";
-            this.CODIGO_PRODUCTO.Width = 172;
-            // 
-            // NOMBRE_PRODUCT
-            // 
-            this.NOMBRE_PRODUCT.HeaderText = "Nombre";
-            this.NOMBRE_PRODUCT.MinimumWidth = 6;
-            this.NOMBRE_PRODUCT.Name = "NOMBRE_PRODUCT";
-            this.NOMBRE_PRODUCT.Width = 171;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "Precio";
-            this.PRECIO.MinimumWidth = 6;
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.Width = 172;
-            // 
-            // NOMBRE_MARCA
-            // 
-            this.NOMBRE_MARCA.HeaderText = "Marca";
-            this.NOMBRE_MARCA.MinimumWidth = 6;
-            this.NOMBRE_MARCA.Name = "NOMBRE_MARCA";
-            this.NOMBRE_MARCA.Width = 172;
-            // 
-            // cntry
-            // 
-            this.cntry.HeaderText = "Categoría";
-            this.cntry.MinimumWidth = 6;
-            this.cntry.Name = "cntry";
-            this.cntry.Width = 171;
-            // 
-            // CANTIDAD
-            // 
-            this.CANTIDAD.HeaderText = "Cantidad";
-            this.CANTIDAD.Name = "CANTIDAD";
-            // 
-            // Edit
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Edit.FillWeight = 60F;
-            this.Edit.HeaderText = "Editar";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // delete
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.delete.DefaultCellStyle = dataGridViewCellStyle4;
-            this.delete.HeaderText = "Eliminar";
-            this.delete.MinimumWidth = 6;
-            this.delete.Name = "delete";
-            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // imgCrud
-            // 
-            this.imgCrud.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCrud.ImageStream")));
-            this.imgCrud.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgCrud.Images.SetKeyName(0, "avatar-de-usuario.png");
-            this.imgCrud.Images.SetKeyName(1, "eliminar.png");
-            // 
             // FrmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1287, 546);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mskCodigo);
-            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.txtBuscra);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnGuestPlus);
@@ -392,8 +399,9 @@
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListaProductos";
-            this.Text = "FrmListaProductos";
+            this.Text = "LISTA DE LOS PRODUCTOS";
             this.Load += new System.EventHandler(this.FrmListaProductos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -414,10 +422,12 @@
         private System.Windows.Forms.ComboBox cmbFilter;
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.MaskedTextBox mskCodigo;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton BtnHome;
+        private System.Windows.Forms.ImageList imgCrud;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE_PRODUCT;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
@@ -426,6 +436,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn delete;
-        private System.Windows.Forms.ImageList imgCrud;
     }
 }

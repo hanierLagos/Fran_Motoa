@@ -19,6 +19,8 @@ namespace PresentacionLayer.Catalogos
         public FrmProducto(string codigo, string nombre, Decimal precio, string marca, string categoria, int cantidad)
         { 
             InitializeComponent();
+            CargarMarcaComboBox();
+            CargarCategoriaComboBox();
             mskCodigo.Text = codigo;
             txtNombre.Text = nombre;
             txtPrecioProducto.Text = precio.ToString();
@@ -30,9 +32,12 @@ namespace PresentacionLayer.Catalogos
         public FrmProducto()
         {
             InitializeComponent();
+            CargarMarcaComboBox();
+            CargarCategoriaComboBox();
         }
 
-        private void FrmProducto_Load(object sender, EventArgs e)
+        //Metodo para cargar las marcas existentes en un ComboBox
+        private void CargarMarcaComboBox()
         {
             //Cargar el listado de las marcas       
             foreach (DataRow r in Marca_Logic.ObtenerIdMarca().Rows)
@@ -41,9 +46,11 @@ namespace PresentacionLayer.Catalogos
                 cmbMarca.Items.Add(r["NOMBRE_MARCA"].ToString());
                 idM.Add(int.Parse(r["ID_MARCA"].ToString()));
             }//Fin de la instrucción foreach
+        }
 
-            //Mandar a mostrar el primer indice
-            cmbMarca.SelectedIndex = -1;
+        //Metodo para cargar las categorias existentes en un ComboBox
+        private void CargarCategoriaComboBox()
+        {
 
             //Cargar el listado de las categorias       
             foreach (DataRow r in Categoria_Logic.ObtenerIdCategoria().Rows)
@@ -51,17 +58,15 @@ namespace PresentacionLayer.Catalogos
                 //Cargar los nombres de las categorias
                 cmbCategoria.Items.Add(r["NOMBRE_CATEGORIA"].ToString());
                 idC.Add(int.Parse(r["ID_CATEGORIA"].ToString()));
-            }//Fin de la instrucción foreach
-
-            //Mandar a mostrar el primer indice
-            cmbCategoria.SelectedIndex = -1;
-
+            }//Fin de la instrucción foreach     
         }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void FrmProducto_Load(object sender, EventArgs e)
         {
+           
+
 
         }
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -102,5 +107,10 @@ namespace PresentacionLayer.Catalogos
 
 
         }
+
+        //Metodo para limpiar todos los Campos
+
+
+
     }
 }

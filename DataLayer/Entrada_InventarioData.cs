@@ -155,7 +155,7 @@ namespace DataLayer
 
             }// fin de primer using
             return result;
-        }//fin de metodo GetGuest 
+        }//fin de metodo  
 
         public int ActualizarEntrada(Entrada_Inventario e)
         {
@@ -246,6 +246,61 @@ namespace DataLayer
             }
 
             // Devolver el DataTable resultante
+            return result;
+        }
+        // Método para ver todas las entradas realizadas
+        public DataTable VerEntradas()
+        {
+            // Definir la instancia de DataTable donde se enviará el resultado
+            DataTable result = new DataTable(); // Inicializamos el DataTable desde el principio para evitar problemas de retorno nulo
+
+            // Usar el bloque using para asegurarse de que la conexión se cierre correctamente
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
+            {
+                // Crear una nueva instancia de SqlCommand
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    try
+                    {
+                        // Establecer la conexión en la que se opera
+                        cmd.Connection = conn;
+
+                        // Indicar el tipo de comando a ejecutar, en este caso un procedimiento almacenado
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "Us_VerEntradas"; // Asegúrate de que el nombre del procedimiento almacenado es correcto
+
+                        // Asegurar que los parámetros estén vacíos
+                        cmd.Parameters.Clear();
+
+                        // Abrir la conexión para procesar los resultados
+                        conn.Open();
+
+                        // Ejecutar el comando y cargar los resultados en un SqlDataReader
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            // Verificar si se ha obtenido algún registro
+                            if (dr.HasRows)
+                            {
+                                result.Load(dr); // Cargar los datos en el DataTable
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        // Lanzar una excepción en caso de error
+                        throw new Exception("Se ha producido un error interno en el procesamiento de los datos: " + e.Message);
+                    }
+                    finally
+                    {
+                        // Asegurarse de que la conexión se cierra
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
+                    }
+                } // Fin del segundo using
+            } // Fin del primer using
+
             return result;
         }
 

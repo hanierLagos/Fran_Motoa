@@ -44,10 +44,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.radioBtnNuevo = new System.Windows.Forms.RadioButton();
             this.radioBtnExistente = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnNuevaMarca = new FontAwesome.Sharp.IconPictureBox();
+            this.BtnNuevaCategoria = new FontAwesome.Sharp.IconPictureBox();
             this.txtPrecioEntrada = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -66,17 +72,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.DG_ProductosEntrantes = new System.Windows.Forms.DataGridView();
-            this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
-            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.BtnNuevaCategoria = new FontAwesome.Sharp.IconPictureBox();
-            this.BtnNuevaMarca = new FontAwesome.Sharp.IconPictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.btnFinalizarEntrada = new System.Windows.Forms.ToolStripButton();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,20 +79,25 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.btnFinalizarEntrada = new System.Windows.Forms.ToolStripButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
+            this.bindingBotons.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosEntrantes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
-            this.bindingBotons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -232,6 +232,36 @@
             this.panel4.Size = new System.Drawing.Size(396, 42);
             this.panel4.TabIndex = 37;
             // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconPictureBox2.IconSize = 24;
+            this.iconPictureBox2.Location = new System.Drawing.Point(233, 10);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(24, 26);
+            this.iconPictureBox2.TabIndex = 40;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Instalod;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconPictureBox1.IconSize = 24;
+            this.iconPictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(24, 26);
+            this.iconPictureBox1.TabIndex = 39;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // radioBtnNuevo
             // 
             this.radioBtnNuevo.AutoSize = true;
@@ -283,6 +313,44 @@
             this.groupBox1.Text = "Datos deL Prducto Entrante:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // bindingBotons
+            // 
+            this.bindingBotons.AddNewItem = null;
+            this.bindingBotons.AutoSize = false;
+            this.bindingBotons.BackColor = System.Drawing.Color.Transparent;
+            this.bindingBotons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bindingBotons.CountItem = null;
+            this.bindingBotons.DeleteItem = null;
+            this.bindingBotons.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingBotons.Font = new System.Drawing.Font("Microsoft JhengHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bindingBotons.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingBotons.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.bindingBotons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnAgregar});
+            this.bindingBotons.Location = new System.Drawing.Point(135, 410);
+            this.bindingBotons.MoveFirstItem = null;
+            this.bindingBotons.MoveLastItem = null;
+            this.bindingBotons.MoveNextItem = null;
+            this.bindingBotons.MovePreviousItem = null;
+            this.bindingBotons.Name = "bindingBotons";
+            this.bindingBotons.PositionItem = null;
+            this.bindingBotons.Size = new System.Drawing.Size(157, 37);
+            this.bindingBotons.TabIndex = 45;
+            this.bindingBotons.Text = "bindingNavigator1";
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
+            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
+            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -306,6 +374,38 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(376, 372);
             this.panel3.TabIndex = 29;
+            // 
+            // BtnNuevaMarca
+            // 
+            this.BtnNuevaMarca.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaMarca.ForeColor = System.Drawing.Color.Green;
+            this.BtnNuevaMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.BtnNuevaMarca.IconColor = System.Drawing.Color.Green;
+            this.BtnNuevaMarca.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnNuevaMarca.IconSize = 24;
+            this.BtnNuevaMarca.Location = new System.Drawing.Point(340, 125);
+            this.BtnNuevaMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNuevaMarca.Name = "BtnNuevaMarca";
+            this.BtnNuevaMarca.Size = new System.Drawing.Size(24, 25);
+            this.BtnNuevaMarca.TabIndex = 42;
+            this.BtnNuevaMarca.TabStop = false;
+            this.BtnNuevaMarca.Click += new System.EventHandler(this.BtnNuevaMarca_Click);
+            // 
+            // BtnNuevaCategoria
+            // 
+            this.BtnNuevaCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaCategoria.ForeColor = System.Drawing.Color.Green;
+            this.BtnNuevaCategoria.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.BtnNuevaCategoria.IconColor = System.Drawing.Color.Green;
+            this.BtnNuevaCategoria.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnNuevaCategoria.IconSize = 24;
+            this.BtnNuevaCategoria.Location = new System.Drawing.Point(340, 173);
+            this.BtnNuevaCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNuevaCategoria.Name = "BtnNuevaCategoria";
+            this.BtnNuevaCategoria.Size = new System.Drawing.Size(24, 26);
+            this.BtnNuevaCategoria.TabIndex = 41;
+            this.BtnNuevaCategoria.TabStop = false;
+            this.BtnNuevaCategoria.Click += new System.EventHandler(this.BtnNuevaCategoria_Click);
             // 
             // txtPrecioEntrada
             // 
@@ -535,105 +635,48 @@
             this.DG_ProductosEntrantes.Size = new System.Drawing.Size(646, 304);
             this.DG_ProductosEntrantes.TabIndex = 44;
             // 
-            // bindingBotons
+            // producto
             // 
-            this.bindingBotons.AddNewItem = null;
-            this.bindingBotons.AutoSize = false;
-            this.bindingBotons.BackColor = System.Drawing.Color.Transparent;
-            this.bindingBotons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bindingBotons.CountItem = null;
-            this.bindingBotons.DeleteItem = null;
-            this.bindingBotons.Dock = System.Windows.Forms.DockStyle.None;
-            this.bindingBotons.Font = new System.Drawing.Font("Microsoft JhengHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bindingBotons.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingBotons.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.bindingBotons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnAgregar});
-            this.bindingBotons.Location = new System.Drawing.Point(135, 410);
-            this.bindingBotons.MoveFirstItem = null;
-            this.bindingBotons.MoveLastItem = null;
-            this.bindingBotons.MoveNextItem = null;
-            this.bindingBotons.MovePreviousItem = null;
-            this.bindingBotons.Name = "bindingBotons";
-            this.bindingBotons.PositionItem = null;
-            this.bindingBotons.Size = new System.Drawing.Size(157, 37);
-            this.bindingBotons.TabIndex = 45;
-            this.bindingBotons.Text = "bindingNavigator1";
+            this.producto.HeaderText = "Código";
+            this.producto.MinimumWidth = 6;
+            this.producto.Name = "producto";
             // 
-            // BtnAgregar
+            // NOMBRE_PRODUCTO
             // 
-            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
-            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
-            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
-            this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            this.NOMBRE_PRODUCTO.HeaderText = "Producto";
+            this.NOMBRE_PRODUCTO.Name = "NOMBRE_PRODUCTO";
+            this.NOMBRE_PRODUCTO.Width = 80;
             // 
-            // iconPictureBox2
+            // Marca
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox2.IconSize = 24;
-            this.iconPictureBox2.Location = new System.Drawing.Point(233, 10);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(24, 26);
-            this.iconPictureBox2.TabIndex = 40;
-            this.iconPictureBox2.TabStop = false;
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.Width = 80;
             // 
-            // iconPictureBox1
+            // Categoria
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Instalod;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox1.IconSize = 24;
-            this.iconPictureBox1.Location = new System.Drawing.Point(8, 10);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(24, 26);
-            this.iconPictureBox1.TabIndex = 39;
-            this.iconPictureBox1.TabStop = false;
+            this.Categoria.HeaderText = "Categoría";
+            this.Categoria.Name = "Categoria";
             // 
-            // BtnNuevaCategoria
+            // cantidad
             // 
-            this.BtnNuevaCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevaCategoria.ForeColor = System.Drawing.Color.Green;
-            this.BtnNuevaCategoria.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.BtnNuevaCategoria.IconColor = System.Drawing.Color.Green;
-            this.BtnNuevaCategoria.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.BtnNuevaCategoria.IconSize = 24;
-            this.BtnNuevaCategoria.Location = new System.Drawing.Point(340, 173);
-            this.BtnNuevaCategoria.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnNuevaCategoria.Name = "BtnNuevaCategoria";
-            this.BtnNuevaCategoria.Size = new System.Drawing.Size(24, 26);
-            this.BtnNuevaCategoria.TabIndex = 41;
-            this.BtnNuevaCategoria.TabStop = false;
-            this.BtnNuevaCategoria.Click += new System.EventHandler(this.BtnNuevaCategoria_Click);
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 80;
             // 
-            // BtnNuevaMarca
+            // PrecioEntrada
             // 
-            this.BtnNuevaMarca.BackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevaMarca.ForeColor = System.Drawing.Color.Green;
-            this.BtnNuevaMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.BtnNuevaMarca.IconColor = System.Drawing.Color.Green;
-            this.BtnNuevaMarca.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.BtnNuevaMarca.IconSize = 24;
-            this.BtnNuevaMarca.Location = new System.Drawing.Point(340, 125);
-            this.BtnNuevaMarca.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnNuevaMarca.Name = "BtnNuevaMarca";
-            this.BtnNuevaMarca.Size = new System.Drawing.Size(24, 25);
-            this.BtnNuevaMarca.TabIndex = 42;
-            this.BtnNuevaMarca.TabStop = false;
-            this.BtnNuevaMarca.Click += new System.EventHandler(this.BtnNuevaMarca_Click);
+            this.PrecioEntrada.HeaderText = "Precio de Entrada";
+            this.PrecioEntrada.MinimumWidth = 6;
+            this.PrecioEntrada.Name = "PrecioEntrada";
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.MinimumWidth = 6;
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.Width = 105;
             // 
             // groupBox2
             // 
@@ -709,49 +752,6 @@
             this.label10.TabIndex = 42;
             this.label10.Text = "OPCIONES";
             // 
-            // producto
-            // 
-            this.producto.HeaderText = "Código";
-            this.producto.MinimumWidth = 6;
-            this.producto.Name = "producto";
-            // 
-            // NOMBRE_PRODUCTO
-            // 
-            this.NOMBRE_PRODUCTO.HeaderText = "Producto";
-            this.NOMBRE_PRODUCTO.Name = "NOMBRE_PRODUCTO";
-            this.NOMBRE_PRODUCTO.Width = 80;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.Width = 80;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoría";
-            this.Categoria.Name = "Categoria";
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 6;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 80;
-            // 
-            // PrecioEntrada
-            // 
-            this.PrecioEntrada.HeaderText = "Precio de Entrada";
-            this.PrecioEntrada.MinimumWidth = 6;
-            this.PrecioEntrada.Name = "PrecioEntrada";
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.MinimumWidth = 6;
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.Width = 105;
-            // 
             // FrmEntradas_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -766,8 +766,9 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEntradas_Inventario";
-            this.Text = "FrmEntradas_Inventario";
+            this.Text = "CREAR ENTRADAS";
             this.Load += new System.EventHandler(this.FrmEntradas_Inventario_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -775,21 +776,21 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).EndInit();
+            this.bindingBotons.ResumeLayout(false);
+            this.bindingBotons.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosEntrantes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).EndInit();
-            this.bindingBotons.ResumeLayout(false);
-            this.bindingBotons.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);

@@ -11,7 +11,7 @@ namespace LogicLayer
 {
     public  class Producto_Logic
     {
-
+        //metodo para actualozar producto desde la ventana de editar
         public static int CrearProducto_Logic(string codigo, string nombre, Decimal precio, int marcaId, int categoriaId, int cantidad)
         {
             Productos p = new Productos
@@ -38,6 +38,32 @@ namespace LogicLayer
             }
         }
 
+        //Metodo para actualizar producto desde la entrada
+        public static int CrearProductoEntrada_Logic(string codigo, string nombre, Decimal precio, int marcaId, int categoriaId, int cantidad)
+        {
+            Productos p = new Productos
+            {
+                CODIGO_PRODUCTO = codigo,
+                NOMBRE_PRODUCTO = nombre,
+                PRECIO = precio,
+                ID_MARCA = marcaId,
+                ID_CATEGORIA = categoriaId,
+                CANTIDAD = cantidad
+            };
+
+            Producto_Data pd = new Producto_Data();
+
+            // Verificar si el producto existe
+            DataTable existingProduct = pd.ReadProducto(codigo);
+            if (existingProduct == null) // Si no hay filas, significa que no existe
+            {
+                return pd.CrearProducto(p);
+            }
+            else
+            {
+                return pd.ActualizarProductoEntrada(p);
+            }
+        }
 
         // Método para obtener productos aplicando un filtro (por código de producto)
         public static DataTable GetProductoLogic(string filter)

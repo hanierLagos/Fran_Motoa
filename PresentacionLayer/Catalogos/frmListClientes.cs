@@ -90,7 +90,7 @@ namespace PresentacionLayer.Catalogos
         private void frmListClientes_Load(object sender, EventArgs e)
         {
             // Cargar todos los clientes en originalDataTable al cargar el formulario
-            originalDataTable = Cliente_Logic.ReadTopClienteLogic(100);
+            originalDataTable = Cliente_Logic.ReadTopClienteLogic(5);
             CargarCliente(originalDataTable); // Mostrar datos en el DataGridView
            
         }

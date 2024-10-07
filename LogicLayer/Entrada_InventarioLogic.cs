@@ -60,5 +60,13 @@ namespace BussinesLayer
             return ed.ObtenerIdEntrdada();
 
         }
+
+        
+        public static DataTable VerEntradas()
+        {
+            Entrada_InventarioData data = new Entrada_InventarioData();
+            return data.VerEntradas();
+        
+        }
     }
 }

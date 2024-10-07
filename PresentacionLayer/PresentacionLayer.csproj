@@ -72,6 +72,12 @@
     <Compile Include="Catalogos\FrmListaCategoriaMarcas.Designer.cs">
       <DependentUpon>FrmListaCategoriaMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\FrmListaEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\FrmListaEntradas.Designer.cs">
+      <DependentUpon>FrmListaEntradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\FrmListaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,17 +127,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Catalogos\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmListaCategoriaMarcas.resx">
       <DependentUpon>FrmListaCategoriaMarcas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FrmListaEntradas.resx">
+      <DependentUpon>FrmListaEntradas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmListaProductos.resx">
       <DependentUpon>FrmListaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\frmListClientes.resx">
       <DependentUpon>frmListClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
@@ -212,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\boton-mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo tienda de productos de motos ilustrativo retro rojo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

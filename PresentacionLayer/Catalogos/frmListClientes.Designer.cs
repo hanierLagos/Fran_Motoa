@@ -37,6 +37,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.DG_Clientes = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ph = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cntry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,13 +54,6 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.APELLIDOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ph = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cntry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.imgCrud = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Clientes)).BeginInit();
             this.panel1.SuspendLayout();
@@ -111,7 +111,7 @@
             this.DG_Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -130,6 +130,63 @@
             this.DG_Clientes.Size = new System.Drawing.Size(1062, 421);
             this.DG_Clientes.TabIndex = 19;
             this.DG_Clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Clientes_CellContentClick);
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.MinimumWidth = 6;
+            this.codigo.Name = "codigo";
+            this.codigo.Width = 172;
+            // 
+            // NOMBRES
+            // 
+            this.NOMBRES.HeaderText = "Nombres";
+            this.NOMBRES.MinimumWidth = 6;
+            this.NOMBRES.Name = "NOMBRES";
+            this.NOMBRES.Width = 171;
+            // 
+            // APELLIDOS
+            // 
+            this.APELLIDOS.HeaderText = "Apellidos";
+            this.APELLIDOS.MinimumWidth = 6;
+            this.APELLIDOS.Name = "APELLIDOS";
+            this.APELLIDOS.Width = 172;
+            // 
+            // ph
+            // 
+            this.ph.HeaderText = "Teléfono";
+            this.ph.MinimumWidth = 6;
+            this.ph.Name = "ph";
+            this.ph.Width = 172;
+            // 
+            // cntry
+            // 
+            this.cntry.HeaderText = "Dirección";
+            this.cntry.MinimumWidth = 6;
+            this.cntry.Name = "cntry";
+            this.cntry.Width = 171;
+            // 
+            // Edit
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Edit.FillWeight = 60F;
+            this.Edit.HeaderText = "Editar";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // delete
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.delete.DefaultCellStyle = dataGridViewCellStyle4;
+            this.delete.HeaderText = "Eliminar";
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // label3
             // 
@@ -276,63 +333,6 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "FILTRAR";
             // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.MinimumWidth = 6;
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 172;
-            // 
-            // NOMBRES
-            // 
-            this.NOMBRES.HeaderText = "Nombres";
-            this.NOMBRES.MinimumWidth = 6;
-            this.NOMBRES.Name = "NOMBRES";
-            this.NOMBRES.Width = 171;
-            // 
-            // APELLIDOS
-            // 
-            this.APELLIDOS.HeaderText = "Apellidos";
-            this.APELLIDOS.MinimumWidth = 6;
-            this.APELLIDOS.Name = "APELLIDOS";
-            this.APELLIDOS.Width = 172;
-            // 
-            // ph
-            // 
-            this.ph.HeaderText = "Teléfono";
-            this.ph.MinimumWidth = 6;
-            this.ph.Name = "ph";
-            this.ph.Width = 172;
-            // 
-            // cntry
-            // 
-            this.cntry.HeaderText = "Dirección";
-            this.cntry.MinimumWidth = 6;
-            this.cntry.Name = "cntry";
-            this.cntry.Width = 171;
-            // 
-            // Edit
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Edit.FillWeight = 60F;
-            this.Edit.HeaderText = "Editar";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // delete
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.delete.DefaultCellStyle = dataGridViewCellStyle4;
-            this.delete.HeaderText = "Eliminar";
-            this.delete.MinimumWidth = 6;
-            this.delete.Name = "delete";
-            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // imgCrud
             // 
             this.imgCrud.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCrud.ImageStream")));
@@ -357,9 +357,10 @@
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.iconButton2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListClientes";
+            this.Text = "LISTA DE LOS CLIENTES";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmListClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Clientes)).EndInit();

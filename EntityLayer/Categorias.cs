@@ -10,6 +10,8 @@ namespace EntityLayer
     {
         public int ID_CATEGORIA {  get; set; }
         public string CODIGO_CATEGORIA { get; set; }
-        public string NOMBRE_CATEGORIA { get; set; }    
+        public string NOMBRE_CATEGORIA { get; set; }   
+        
+
     }
 }

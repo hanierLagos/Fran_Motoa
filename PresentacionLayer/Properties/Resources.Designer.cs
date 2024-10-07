@@ -143,6 +143,16 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_tienda_de_productos_de_motos_ilustrativo_retro_rojo {
+            get {
+                object obj = ResourceManager.GetObject("Logo tienda de productos de motos ilustrativo retro rojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap orden_de_compra {
             get {
                 object obj = ResourceManager.GetObject("orden-de-compra", resourceCulture);

@@ -22,6 +22,8 @@ namespace PresentacionLayer.Operaciones
         public FrmEntradas_Inventario()
         {
             InitializeComponent();
+            CargarMarcaComboBox();
+            CargarCategoriaComboBox();
         }
 
         //Metodo para limpiar los campos de producto
@@ -39,7 +41,6 @@ namespace PresentacionLayer.Operaciones
         //Metodo para desactivar la escritura en los campos productos
         private void SetTextBoxReadOnly(bool isReadOnly)
         {
-            mskCodigo.ReadOnly = isReadOnly;
             txtNombre.ReadOnly = isReadOnly;
             cmbMarca.SelectedIndex = -1;
             cmbCategoria.SelectedIndex = -1;
@@ -64,11 +65,10 @@ namespace PresentacionLayer.Operaciones
             }
         }
 
-        private void FrmEntradas_Inventario_Load(object sender, EventArgs e)
-        {
-            //Cargar numero de entrada
-            CargarNumeroEntrada();
 
+        //Metodo para cargar las marcas existentes en un ComboBox
+        private void CargarMarcaComboBox()
+        {
             //Cargar el listado de las marcas       
             foreach (DataRow r in Marca_Logic.ObtenerIdMarca().Rows)
             {
@@ -76,9 +76,11 @@ namespace PresentacionLayer.Operaciones
                 cmbMarca.Items.Add(r["NOMBRE_MARCA"].ToString());
                 idM.Add(int.Parse(r["ID_MARCA"].ToString()));
             }//Fin de la instrucción foreach
+        }
 
-            //Mandar a mostrar el primer indice
-            cmbMarca.SelectedIndex = -1;
+        //Metodo para cargar las categorias existentes en un ComboBox
+        private void CargarCategoriaComboBox()
+        {
 
             //Cargar el listado de las categorias       
             foreach (DataRow r in Categoria_Logic.ObtenerIdCategoria().Rows)
@@ -86,10 +88,13 @@ namespace PresentacionLayer.Operaciones
                 //Cargar los nombres de las categorias
                 cmbCategoria.Items.Add(r["NOMBRE_CATEGORIA"].ToString());
                 idC.Add(int.Parse(r["ID_CATEGORIA"].ToString()));
-            }//Fin de la instrucción foreach
+            }//Fin de la instrucción foreach     
+        }
+        private void FrmEntradas_Inventario_Load(object sender, EventArgs e)
+        {
+            //Cargar numero de entrada
+            CargarNumeroEntrada();
 
-            //Mandar a mostrar el primer indice
-            cmbCategoria.SelectedIndex = -1;
         }
 
         private void radioBtnExistente_CheckedChanged(object sender, EventArgs e)
@@ -213,7 +218,7 @@ namespace PresentacionLayer.Operaciones
                 int selectedMarca = idM[cmbMarca.SelectedIndex];
                 int selectedCategoria = idC[cmbCategoria.SelectedIndex];
 
-                int valpro = Producto_Logic.CrearProducto_Logic(
+                int valpro = Producto_Logic.CrearProductoEntrada_Logic(
                     mskCodigo.Text,
                     txtNombre.Text,
                     precioProducto,
@@ -275,12 +280,14 @@ namespace PresentacionLayer.Operaciones
         {
             FrmMarca frmMarca = new FrmMarca();
             frmMarca.ShowDialog();
+            CargarMarcaComboBox();
         }
 
         private void BtnNuevaCategoria_Click(object sender, EventArgs e)
         {
             FrmCategoria frmCategoria = new FrmCategoria();
             frmCategoria.ShowDialog();
+            CargarCategoriaComboBox();
         }
 
         /// <summary>
@@ -349,24 +356,43 @@ namespace PresentacionLayer.Operaciones
 
         private void btnFinalizarEntrada_Click(object sender, EventArgs e)
         {
-            //Finalizar la entrada
-            int val = Entrada_InventarioLogic.CrearEntrada_Logic(int.Parse(txtNumeroEntrada.Text), txtFechaEntrada.Value, txtxDescripcion.Text);
-            if (!(val > 0)) 
+            // Finalizar la entrada
+            if (DG_ProductosEntrantes.Rows.Count == 0)
             {
-                MessageBox.Show("Entrada agregado correctamente. Entrada Finalizada.",
+                MessageBox.Show("Debe agregar al menos un producto antes de finalizar la entrada.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // No continuar si no hay productos
+            }
+
+            if (string.IsNullOrWhiteSpace(txtxDescripcion.Text))
+            {
+                MessageBox.Show("Debe agregar una descripción para la entrada.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtxDescripcion.Focus(); // Enfocar en la descripción
+                return; // No continuar si no hay descripción
+            }
+
+            int val = Entrada_InventarioLogic.CrearEntrada_Logic(int.Parse(txtNumeroEntrada.Text), txtFechaEntrada.Value, txtxDescripcion.Text);
+            if (!(val > 0))
+            {
+                MessageBox.Show("Entrada agregada correctamente. Entrada Finalizada.",
                    "Finalizar Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //Astualizar el numero de entrada
+                // Actualizar el número de entrada
                 CargarNumeroEntrada();
 
-                //Limpiar los campos
+                // Limpiar los campos
                 txtxDescripcion.Clear();
 
-                //Limpiar la tabla 
+                // Limpiar la tabla 
                 DG_ProductosEntrantes.Rows.Clear();
-
-
             }
+            else
+            {
+                MessageBox.Show("Error al agregar la entrada. Intente nuevamente.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

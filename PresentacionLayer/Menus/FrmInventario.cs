@@ -59,5 +59,16 @@ namespace PresentacionLayer.Menus
             OpenForm(new FrmEntradas_Inventario());
 
         }
+
+        private void BtnMarcasCategorias_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmListaCategoriaMarcas());
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmListaEntradas());
+
+        }
     }
 }

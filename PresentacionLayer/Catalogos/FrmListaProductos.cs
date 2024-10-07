@@ -76,29 +76,13 @@ namespace PresentacionLayer.Catalogos
                     // Mandar abrir al formulario de producto con los valores de los campos
                     FrmProducto frmpro = new FrmProducto(codigo, nombre, precio, marca, categoria, cantidad);
                     frmpro.ShowDialog();
+                    cmbFilter_SelectedIndexChanged(sender, e);
                 }
                 else if (e.ColumnIndex == 7) // Columna para eliminar
                 {
-                    // Confirmar la eliminación
-                    var confirmResult = MessageBox.Show("¿Está seguro que desea dar de baja a este Producto?", "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (confirmResult == DialogResult.Yes)
-                    {
-                        try
-                        {
-                            string codigo = DG_Productos.Rows[e.RowIndex].Cells[0].Value.ToString(); // Obtener ID como string
-                            int rst = Producto_Logic.EliminarProductoLogic(codigo);
-                            if (rst > 0)
-                            {
-                                MessageBox.Show("El registro del producto ha sido dado de baja", "Baja del Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                // Recargar la lista de productos después de eliminar
-                                cmbFilter_SelectedIndexChanged(null, null);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error al dar de baja al Producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+                    
+                    MessageBox.Show("Error al dar de baja al Producto:\n 'Los Productos no se pueden eliminar por razones Internas' " , "Eliminar Producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                 }
             } // END- IF
 
@@ -124,7 +108,7 @@ namespace PresentacionLayer.Catalogos
 
         private void FrmListaProductos_Load(object sender, EventArgs e)
         {
-            originalDataTable = Producto_Logic.ReadTopProductoLogic(100);
+            originalDataTable = Producto_Logic.ReadTopProductoLogic(5);
             CargarProductos(originalDataTable); // Mostrar datos en el DataGridView
             WindowState = FormWindowState.Maximized;
 

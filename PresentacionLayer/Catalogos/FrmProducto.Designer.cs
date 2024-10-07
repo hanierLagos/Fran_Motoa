@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducto));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
@@ -71,7 +72,6 @@
             this.label6.Size = new System.Drawing.Size(232, 26);
             this.label6.TabIndex = 25;
             this.label6.Text = "Datos de los Productos";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // bindingBotons
             // 
@@ -175,7 +175,7 @@
             this.mskCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
             this.mskCodigo.Location = new System.Drawing.Point(180, 25);
-            this.mskCodigo.Mask = "AAAAA00000";
+            this.mskCodigo.Mask = "AAAAAAAAAA";
             this.mskCodigo.Name = "mskCodigo";
             this.mskCodigo.Size = new System.Drawing.Size(176, 24);
             this.mskCodigo.TabIndex = 11;
@@ -261,8 +261,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bindingBotons);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProducto";
-            this.Text = "FrmProducto";
+            this.Text = "CREAR, ACTUALIZAR PRODUCTO";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
