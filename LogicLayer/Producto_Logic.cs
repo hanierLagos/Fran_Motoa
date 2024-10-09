@@ -107,5 +107,18 @@ namespace LogicLayer
         
         }
 
+
+        public static DataTable MostrarProductos()
+        { 
+            Producto_Data data = new Producto_Data();
+            return data.MostrarProductos();
+        }
+
+        public static DataTable VerProductos()
+        {
+            Producto_Data data = new Producto_Data();
+            return data.VerProductos();
+
+        }
     }
 }

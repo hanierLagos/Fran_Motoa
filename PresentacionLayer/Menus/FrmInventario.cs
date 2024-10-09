@@ -67,7 +67,7 @@ namespace PresentacionLayer.Menus
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmListaEntradas());
+            OpenForm(new FrmVentas());
 
         }
     }

@@ -1,15 +1,18 @@
-﻿
-using EntityLayer;
+﻿using EntityLayer;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class Cliente_Data
+    public class VentaData
     {
-        public int CrearCliente(Cliente c)
+        public int CrearVenta(Venta v)
         {
             // Establecer la cadena de coneccióm , asegurando que se liberen los recursos
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
@@ -23,18 +26,17 @@ namespace DataLayer
                         //Asignar la conección vigente
                         cmd.Connection = conn;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_AgregarCliente"; // Indicar el nombre de procedimineto a indicar
+                        cmd.CommandText = "Us_AgregarVenta"; // Indicar el nombre de procedimineto a indicar
 
                         //Aseguerar que nonexiste contenido en los parámetros a utiliar
                         cmd.Parameters.Clear();
 
                         //Inidcar los parametros qeu seran enviados al procedimiento
-                        cmd.Parameters.AddWithValue("@codigo", c.CODIGO_CLIENTE);
-                        cmd.Parameters.AddWithValue("@nombres", c.NOMBRES);
-                        cmd.Parameters.AddWithValue("@apellidos", c.APELLIDOS);
-                        cmd.Parameters.AddWithValue("@telefono", c.TELEFONO);
-                        cmd.Parameters.AddWithValue("@direccion", c.DIRECCION);
-                        
+                        cmd.Parameters.AddWithValue("@Numero", v.NUMERO_VENTA);
+                        cmd.Parameters.AddWithValue("@IdCliente", v.ID_CLIENTE);
+                        cmd.Parameters.AddWithValue("@FechaVenta", v.FECHA_VENTA);
+                        cmd.Parameters.AddWithValue("@MontoTotal", v.MONTO_TOTAL);
+                        cmd.Parameters.AddWithValue("@MetodoPago", v.METODO_PAGO);
 
 
                         //Abrir la coneccion con SGBD
@@ -59,7 +61,7 @@ namespace DataLayer
 
         }// Fin de metodo
 
-        public DataTable ReadCliente(string filter)
+        public DataTable ReadVenta(int filter)
         {
             //definir la instancia datatable por donde se enviará ekl resultado
             DataTable result = null;
@@ -76,14 +78,14 @@ namespace DataLayer
 
                         //Indicar el tipo de comasndo a ejecutar en este caso un procedimiento 
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_ReadCliente";
+                        cmd.CommandText = "Us_ReadVenta";
 
                         //fonzar a que los parametros se encuentren nullos
                         cmd.Parameters.Clear();
 
                         //Establecer el parametro quwe se envia 
                         //indicar lps parametros que sean enviados al procediiento
-                        cmd.Parameters.AddWithValue("@codigo", filter);
+                        cmd.Parameters.AddWithValue("@Numero", filter);
 
                         //abrir la coneccion para quese proceda los resultados
                         conn.Open();
@@ -114,7 +116,7 @@ namespace DataLayer
             return result;
         }//fin de metodo GetGuest 
 
-        public int ActualizarCliente(Cliente c)
+        public int ActualizarVenta(Venta v)
         {
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
@@ -127,18 +129,18 @@ namespace DataLayer
 
                         //indicar el tipo de comando a ejecutar en este caso un prpcedimiento y el nombre del procedimiento
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_ActualizarCliente";
+                        cmd.CommandText = "Us_ActualizarVenta";
 
                         //Forzar a que los parametros se encuentren limpiios
                         cmd.Parameters.Clear();
 
                         // Indicar los parametros que seran enviados al procedimiento de actualizacion
-                        //Inidcar los parametros qeu seran enviados al procedimiento
-                        cmd.Parameters.AddWithValue("@codigo", c.CODIGO_CLIENTE);
-                        cmd.Parameters.AddWithValue("@nombres", c.NOMBRES);
-                        cmd.Parameters.AddWithValue("@apellidos", c.APELLIDOS);
-                        cmd.Parameters.AddWithValue("@telefono", c.TELEFONO);
-                        cmd.Parameters.AddWithValue("@direccion", c.DIRECCION);
+                        cmd.Parameters.AddWithValue("@Numero", v.NUMERO_VENTA);
+                        cmd.Parameters.AddWithValue("@IdCliente", v.ID_CLIENTE);
+                        cmd.Parameters.AddWithValue("@FechaVenta", v.FECHA_VENTA);
+                        cmd.Parameters.AddWithValue("@MontoTotal", v.MONTO_TOTAL);
+                        cmd.Parameters.AddWithValue("@MetodoPago", v.METODO_PAGO);  
+
                         //Inicializar la conexion 
                         conn.Open();
                         //procesar el comando de ejecucion de la consiulta
@@ -153,90 +155,20 @@ namespace DataLayer
                     finally { conn.Close(); }
                 }// fin de segundo using
             }// fin de primer using
-            
+
         }// Fin de metodo update
 
-        public DataTable ReadLastClient(int numRows)
+
+        ///Metodo para anular venta, en este caso pasa a un estado de anulacion
+        public int AnularVenta(int nVenta)
         {
-            DataTable result = new DataTable();
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("Us_ReadTopCliente", conn))
+                using (SqlCommand cmd = new SqlCommand("Us_AnularVenta", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@valuesTop", numRows);
-
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.HasRows)
-                            {
-                                result.Load(dr);
-                            }
-                        }
-                    }
-                    catch (SqlException sqlEx)
-                    {
-                        // Capturar excepciones de SQL
-                        throw new Exception("Error al ejecutar el comando SQL: " + sqlEx.Message, sqlEx);
-                    }
-                    catch (Exception ex)
-                    {
-                        // Capturar cualquier otra excepción
-                        throw new Exception("Se ha producido una infracción interna en el procesamiento de los datos: " + ex.Message, ex);
-                    }
-                }
-                return result;
-            }
-        }// Fin de método
-
-        public DataTable BuscarClientePorNombre(string nombre)
-        {
-            DataTable result = new DataTable();
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("Us_BuscarClientePorNombre", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@NOMBRE", nombre);
-
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.HasRows)
-                            {
-                                result.Load(dr);
-                            }
-                        }
-                    }
-                    catch (SqlException sqlEx)
-                    {
-                        throw new Exception("Error SQL: " + sqlEx.Message, sqlEx);
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("Error al procesar los datos: " + ex.Message, ex);
-                    }
-                }
-            }
-            return result;
-        }
-
-        ///Metodo para eliminar clientes en este caso pasa a un estado inactivo
-        public int EliminarCliente(string codigo)
-        {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("Us_EliminarCliente", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@codigo", codigo);
+                    cmd.Parameters.AddWithValue("@Numero", nVenta);
 
                     try
                     {
@@ -255,8 +187,8 @@ namespace DataLayer
             }
         }
 
-        //Metodo para obtener id del Cliente
-        public DataTable ObtenerIdCliente()
+        //Metodo para obtener id de la venta para la tabla detalleVenta
+        public DataTable ObtenerIdVenta()
         {
             // Definir una instancia DataTable para almacenar el resultado
             DataTable result = null;
@@ -268,7 +200,7 @@ namespace DataLayer
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 // Crear un nuevo comando SQL para ejecutar el procedimiento almacenado
-                using (SqlCommand cmd = new SqlCommand("Us_ObtenerIdCliente", conn))
+                using (SqlCommand cmd = new SqlCommand("Us_ObtenerIdVenta", conn))
                 {
                     try
                     {
@@ -308,10 +240,45 @@ namespace DataLayer
         }
 
 
-    
+        //Metodo para obtener el nuevo numero de venta
+        public int ObtenerNumeroVenta()
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("Us_ObtenerNumeroVenta", conn))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        conn.Open();
 
+                        // Ejecutar el procedimiento almacenado y obtener el resultado
+                        object result = cmd.ExecuteScalar();
 
-
+                        // Validar el resultado y devolver el número de factura
+                        if (result != null && int.TryParse(result.ToString(), out int nextNumber))
+                        {
+                            return nextNumber;
+                        }
+                        else
+                        {
+                            // Lanzar una excepción si no se puede obtener el número de factura
+                            throw new Exception("No se pudo obtener el próximo número de Venta.");
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Manejar las excepciones SQL y lanzar una nueva excepción con información detallada
+                        throw new Exception("Error al ejecutar el procedimiento almacenado Us_ObtenerNumeroVenta: " + ex.Message, ex);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejar otras excepciones y lanzar una nueva excepción con información detallada
+                        throw new Exception("Error interno al obtener el próximo número de factura de Venta: " + ex.Message, ex);
+                    }
+                }
+            }
+        }
 
 
     }

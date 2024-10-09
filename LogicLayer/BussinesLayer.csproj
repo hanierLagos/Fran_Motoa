@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,13 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categoria_Data.cs" />
     <Compile Include="Categoria_Logic.cs" />
     <Compile Include="Cliente_Logic.cs" />
     <Compile Include="Detalle_EntradaLogic.cs" />
+    <Compile Include="Detalle_VentaLogic.cs" />
     <Compile Include="Entrada_InventarioLogic.cs" />
     <Compile Include="Marca_Logic.cs" />
     <Compile Include="Producto_Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">

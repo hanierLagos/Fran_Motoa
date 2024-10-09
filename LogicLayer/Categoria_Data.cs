@@ -5,11 +5,59 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace DataLayer
 {
-    public class Cliente_Data
+    public class Categoria_Data
     {
-        public int CrearCliente(Cliente c)
+        public DataTable ObtenerIdCategoria()
+        {
+            // Definir una instancia DataTable por donde se enviará el resultado
+            DataTable result = null;
+
+            // Obtener cadena de conexión
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
+            {
+                // Crear una nueva instancia del SqlCommand y Asegurar que se destruya el objeto al finalizar
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    try
+                    {
+                        cmd.Connection = conn;  // Establecer la conexión con la que opera
+
+                        // Indicar el tipo de comando a ejecutar en este caso un procedimiento, y el nombre del procedimiento
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "Us_ObtenerIdCategoria";
+
+                        // Abrir la conexión para que se procesen los resultados
+                        conn.Open();
+
+                        // Procesar la instrucción y recuperar los valores en ExecuteReader
+                        SqlDataReader rst = cmd.ExecuteReader();
+                        // Verificar que se haya obtenido registro de la consulta
+                        if (rst.HasRows)
+                        {
+                            result = new DataTable(); // Inicializar la instancia para agregar el registro
+                            result.Load(rst); // Cargar los datos en el DataTable
+                        }// Fin del condicional If
+                    }
+                    catch (Exception e)
+                    {
+                        throw new Exception("Se ha producido una infracción interna en el procesamiento de los datos " + e.Message);
+                    }
+                    finally
+                    {
+                        // En todo caso hay que asegurar el cierre de la conexión
+                        conn.Close();
+                    }// Fin de la instrucción finally
+                }// Fin del using SqlCommand
+            }// Fin de la instrucción using SqlConnection
+
+            return result; // Devolver el DataTable resultante
+        }
+
+        //Metodo para crear una nueva categoria
+        public int CrearCategoria(Categorias c)
         {
             // Establecer la cadena de coneccióm , asegurando que se liberen los recursos
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
@@ -23,19 +71,14 @@ namespace DataLayer
                         //Asignar la conección vigente
                         cmd.Connection = conn;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_AgregarCliente"; // Indicar el nombre de procedimineto a indicar
+                        cmd.CommandText = "Us_AgregarCategoria"; // Indicar el nombre de procedimineto a indicar
 
                         //Aseguerar que nonexiste contenido en los parámetros a utiliar
                         cmd.Parameters.Clear();
 
                         //Inidcar los parametros qeu seran enviados al procedimiento
-                        cmd.Parameters.AddWithValue("@codigo", c.CODIGO_CLIENTE);
-                        cmd.Parameters.AddWithValue("@nombres", c.NOMBRES);
-                        cmd.Parameters.AddWithValue("@apellidos", c.APELLIDOS);
-                        cmd.Parameters.AddWithValue("@telefono", c.TELEFONO);
-                        cmd.Parameters.AddWithValue("@direccion", c.DIRECCION);
-                        
-
+                        cmd.Parameters.AddWithValue("@Codigo", c.CODIGO_CATEGORIA);
+                        cmd.Parameters.AddWithValue("@Nombre_Categoria", c.NOMBRE_CATEGORIA);
 
                         //Abrir la coneccion con SGBD
                         conn.Open();
@@ -59,7 +102,8 @@ namespace DataLayer
 
         }// Fin de metodo
 
-        public DataTable ReadCliente(string filter)
+        //Metodo para Leer las categorias en caso de actualizacion usando un filtro como parametro
+        public DataTable ReadCategoria(string filter)
         {
             //definir la instancia datatable por donde se enviará ekl resultado
             DataTable result = null;
@@ -76,14 +120,14 @@ namespace DataLayer
 
                         //Indicar el tipo de comasndo a ejecutar en este caso un procedimiento 
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_ReadCliente";
+                        cmd.CommandText = "Us_ReadCategoria";
 
                         //fonzar a que los parametros se encuentren nullos
                         cmd.Parameters.Clear();
 
                         //Establecer el parametro quwe se envia 
                         //indicar lps parametros que sean enviados al procediiento
-                        cmd.Parameters.AddWithValue("@codigo", filter);
+                        cmd.Parameters.AddWithValue("@Codigo", filter);
 
                         //abrir la coneccion para quese proceda los resultados
                         conn.Open();
@@ -114,7 +158,8 @@ namespace DataLayer
             return result;
         }//fin de metodo GetGuest 
 
-        public int ActualizarCliente(Cliente c)
+        //Metodo para actualizar una categoria
+        public int ActualizarCategoria(Categorias c)
         {
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
@@ -127,18 +172,15 @@ namespace DataLayer
 
                         //indicar el tipo de comando a ejecutar en este caso un prpcedimiento y el nombre del procedimiento
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_ActualizarCliente";
+                        cmd.CommandText = "Us_ActualizarCategoria";
 
                         //Forzar a que los parametros se encuentren limpiios
                         cmd.Parameters.Clear();
 
                         // Indicar los parametros que seran enviados al procedimiento de actualizacion
-                        //Inidcar los parametros qeu seran enviados al procedimiento
-                        cmd.Parameters.AddWithValue("@codigo", c.CODIGO_CLIENTE);
-                        cmd.Parameters.AddWithValue("@nombres", c.NOMBRES);
-                        cmd.Parameters.AddWithValue("@apellidos", c.APELLIDOS);
-                        cmd.Parameters.AddWithValue("@telefono", c.TELEFONO);
-                        cmd.Parameters.AddWithValue("@direccion", c.DIRECCION);
+                        cmd.Parameters.AddWithValue("@Codigo", c.CODIGO_CATEGORIA);
+                        cmd.Parameters.AddWithValue("@Nombre_Categoria", c.NOMBRE_CATEGORIA);
+
                         //Inicializar la conexion 
                         conn.Open();
                         //procesar el comando de ejecucion de la consiulta
@@ -153,19 +195,21 @@ namespace DataLayer
                     finally { conn.Close(); }
                 }// fin de segundo using
             }// fin de primer using
-            
+
         }// Fin de metodo update
 
-        public DataTable ReadLastClient(int numRows)
+
+        //Metodo para leer las categorias por una determinada cantidad mostrando la cantidad que se elige
+        public DataTable ReadLastCategoria(int numRows)
         {
             DataTable result = new DataTable();
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("Us_ReadTopCliente", conn))
+                using (SqlCommand cmd = new SqlCommand("Us_ReadTopCategorias", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@valuesTop", numRows);
+                    cmd.Parameters.AddWithValue("@ValuesTop", numRows);
 
                     try
                     {
@@ -193,12 +237,14 @@ namespace DataLayer
             }
         }// Fin de método
 
-        public DataTable BuscarClientePorNombre(string nombre)
+
+        //Metodo para buscar una categoria por su nombre
+        public DataTable BuscarCategoriaPorNombre(string nombre)
         {
             DataTable result = new DataTable();
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("Us_BuscarClientePorNombre", conn))
+                using (SqlCommand cmd = new SqlCommand("Us_BuscaCategoriaPorNombre", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@NOMBRE", nombre);
@@ -227,92 +273,7 @@ namespace DataLayer
             return result;
         }
 
-        ///Metodo para eliminar clientes en este caso pasa a un estado inactivo
-        public int EliminarCliente(string codigo)
-        {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("Us_EliminarCliente", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@codigo", codigo);
-
-                    try
-                    {
-                        conn.Open();
-                        return cmd.ExecuteNonQuery();
-                    }
-                    catch (SqlException sqlEx)
-                    {
-                        throw new Exception("Error al ejecutar el comando SQL: " + sqlEx.Message, sqlEx);
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("Error interno de la aplicación: " + ex.Message, ex);
-                    }
-                }
-            }
-        }
-
-        //Metodo para obtener id del Cliente
-        public DataTable ObtenerIdCliente()
-        {
-            // Definir una instancia DataTable para almacenar el resultado
-            DataTable result = null;
-
-            // Obtener la cadena de conexión desde el archivo de configuración
-            string connectionString = ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString;
-
-            // Crear una nueva conexión SQL usando la cadena de conexión
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                // Crear un nuevo comando SQL para ejecutar el procedimiento almacenado
-                using (SqlCommand cmd = new SqlCommand("Us_ObtenerIdCliente", conn))
-                {
-                    try
-                    {
-                        // Establecer el tipo de comando como procedimiento almacenado
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        // Abrir la conexión
-                        conn.Open();
-
-                        // Ejecutar el comando y obtener los resultados en un SqlDataReader
-                        SqlDataReader reader = cmd.ExecuteReader();
-
-                        // Verificar si hay filas en el resultado
-                        if (reader.HasRows)
-                        {
-                            // Inicializar el DataTable
-                            result = new DataTable();
-
-                            // Cargar los datos del SqlDataReader en el DataTable
-                            result.Load(reader);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("Se ha producido un error al procesar los datos: " + ex.Message);
-                    }
-                    finally
-                    {
-                        // Cerrar la conexión
-                        conn.Close();
-                    }
-                }
-            }
-
-            // Devolver el DataTable resultante
-            return result;
-        }
 
 
-    
-
-
-
-
-
-    }
+    }//Fin de la clase
 }

@@ -315,7 +315,7 @@ namespace PresentacionLayer.Operaciones
                 throw new Exception("No se encontró el producto con el código especificado: " + codigo);
             }
 
-            // Retorna el ID del insumo convertido a entero
+            // Retorna el ID del producto convertido a entero
             return Convert.ToInt32(rows[0]["ID_PRODUCTO"]);
         }
 

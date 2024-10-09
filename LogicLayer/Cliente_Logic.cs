@@ -62,5 +62,13 @@ namespace BussinesLayer
             return cd.EliminarCliente(codigo);
         }
 
+        //Metodo pra obtener id del cliente
+        public static DataTable ObtenerIdCliente()
+        {
+            Cliente_Data data = new Cliente_Data();
+            return data.ObtenerIdCliente();
+
+        }
+
     }
 }

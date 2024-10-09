@@ -40,6 +40,7 @@ namespace DataLayer
 
 
 
+
                         //Abrir la coneccion con SGBD
                         conn.Open();
                         //Procesar la consulta
