@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.DG_Clientes = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,14 +49,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscra = new System.Windows.Forms.TextBox();
-            this.BtnGuestPlus = new FontAwesome.Sharp.IconButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.imgCrud = new System.Windows.Forms.ImageList(this.components);
             this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.imgCrud = new System.Windows.Forms.ImageList(this.components);
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarEntrada = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Clientes)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEntrada)).BeginInit();
+            this.btnAgregarEntrada.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,12 +81,12 @@
             this.DG_Clientes.AllowUserToAddRows = false;
             this.DG_Clientes.AllowUserToDeleteRows = false;
             this.DG_Clientes.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DG_Clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DG_Clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.DG_Clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -91,14 +94,14 @@
             this.DG_Clientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DG_Clientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DG_Clientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DG_Clientes.ColumnHeadersHeight = 38;
             this.DG_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -109,14 +112,14 @@
             this.Edit,
             this.delete});
             this.DG_Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_Clientes.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_Clientes.DefaultCellStyle = dataGridViewCellStyle20;
             this.DG_Clientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DG_Clientes.EnableHeadersVisualStyles = false;
             this.DG_Clientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
@@ -168,9 +171,9 @@
             // 
             // Edit
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle18.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle18.NullValue")));
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle18;
             this.Edit.FillWeight = 60F;
             this.Edit.HeaderText = "Editar";
             this.Edit.MinimumWidth = 6;
@@ -180,9 +183,9 @@
             // 
             // delete
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.delete.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle19.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle19.NullValue")));
+            this.delete.DefaultCellStyle = dataGridViewCellStyle19;
             this.delete.HeaderText = "Eliminar";
             this.delete.MinimumWidth = 6;
             this.delete.Name = "delete";
@@ -258,24 +261,35 @@
             this.txtBuscra.TextChanged += new System.EventHandler(this.txtBuscra_TextChanged);
             this.txtBuscra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscra_KeyPress);
             // 
-            // BtnGuestPlus
+            // imgCrud
             // 
-            this.BtnGuestPlus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnGuestPlus.BackColor = System.Drawing.Color.Transparent;
-            this.BtnGuestPlus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnGuestPlus.FlatAppearance.BorderSize = 0;
-            this.BtnGuestPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuestPlus.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.BtnGuestPlus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.BtnGuestPlus.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.BtnGuestPlus.IconSize = 32;
-            this.BtnGuestPlus.Location = new System.Drawing.Point(1050, 64);
-            this.BtnGuestPlus.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnGuestPlus.Name = "BtnGuestPlus";
-            this.BtnGuestPlus.Size = new System.Drawing.Size(26, 28);
-            this.BtnGuestPlus.TabIndex = 27;
-            this.BtnGuestPlus.UseVisualStyleBackColor = false;
-            this.BtnGuestPlus.Click += new System.EventHandler(this.BtnGuestPlus_Click);
+            this.imgCrud.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCrud.ImageStream")));
+            this.imgCrud.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgCrud.Images.SetKeyName(0, "avatar-de-usuario.png");
+            this.imgCrud.Images.SetKeyName(1, "eliminar.png");
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.txtCodigo.Location = new System.Drawing.Point(120, 74);
+            this.txtCodigo.Mask = "NMO000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(74, 24);
+            this.txtCodigo.TabIndex = 34;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.label2.Location = new System.Drawing.Point(35, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "FILTRAR";
             // 
             // btnSearch
             // 
@@ -308,37 +322,44 @@
             this.iconButton2.TabIndex = 21;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
-            // txtCodigo
+            // btnAgregarEntrada
             // 
-            this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.txtCodigo.Location = new System.Drawing.Point(139, 71);
-            this.txtCodigo.Mask = "NMO000";
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(74, 24);
-            this.txtCodigo.TabIndex = 32;
-            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress_1);
+            this.btnAgregarEntrada.AddNewItem = null;
+            this.btnAgregarEntrada.AutoSize = false;
+            this.btnAgregarEntrada.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregarEntrada.CountItem = null;
+            this.btnAgregarEntrada.DeleteItem = null;
+            this.btnAgregarEntrada.Dock = System.Windows.Forms.DockStyle.None;
+            this.btnAgregarEntrada.Font = new System.Drawing.Font("Microsoft JhengHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEntrada.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.btnAgregarEntrada.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.btnAgregarEntrada.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.btnAgregarEntrada.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnAgregar});
+            this.btnAgregarEntrada.Location = new System.Drawing.Point(878, 64);
+            this.btnAgregarEntrada.MoveFirstItem = null;
+            this.btnAgregarEntrada.MoveLastItem = null;
+            this.btnAgregarEntrada.MoveNextItem = null;
+            this.btnAgregarEntrada.MovePreviousItem = null;
+            this.btnAgregarEntrada.Name = "btnAgregarEntrada";
+            this.btnAgregarEntrada.PositionItem = null;
+            this.btnAgregarEntrada.Size = new System.Drawing.Size(198, 38);
+            this.btnAgregarEntrada.TabIndex = 65;
+            this.btnAgregarEntrada.Text = "bindingNavigator1";
             // 
-            // label2
+            // BtnAgregar
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.label2.Location = new System.Drawing.Point(54, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "FILTRAR";
-            // 
-            // imgCrud
-            // 
-            this.imgCrud.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCrud.ImageStream")));
-            this.imgCrud.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgCrud.Images.SetKeyName(0, "avatar-de-usuario.png");
-            this.imgCrud.Images.SetKeyName(1, "eliminar.png");
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.agregar_usuario;
+            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
+            this.BtnAgregar.Size = new System.Drawing.Size(162, 35);
+            this.BtnAgregar.Text = "Agregar Cliente";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // frmListClientes
             // 
@@ -346,12 +367,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1100, 548);
+            this.Controls.Add(this.btnAgregarEntrada);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscra);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnGuestPlus);
             this.Controls.Add(this.DG_Clientes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbFilter);
@@ -366,6 +387,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DG_Clientes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEntrada)).EndInit();
+            this.btnAgregarEntrada.ResumeLayout(false);
+            this.btnAgregarEntrada.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,7 +398,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton BtnGuestPlus;
         private System.Windows.Forms.DataGridView DG_Clientes;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbFilter;
@@ -383,8 +406,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscra;
-        private System.Windows.Forms.MaskedTextBox txtCodigo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRES;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDOS;
@@ -393,5 +414,9 @@
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn delete;
         private System.Windows.Forms.ImageList imgCrud;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingNavigator btnAgregarEntrada;
+        public System.Windows.Forms.ToolStripButton BtnAgregar;
     }
 }

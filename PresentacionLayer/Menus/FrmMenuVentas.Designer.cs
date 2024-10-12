@@ -1,6 +1,6 @@
 ﻿namespace PresentacionLayer.Menus
 {
-    partial class FrmInventario
+    partial class FrmMenuVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuVentas));
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
             this.pnlView = new System.Windows.Forms.Panel();
-            this.btnEntradas = new System.Windows.Forms.ToolStripButton();
+            this.btnVentas = new System.Windows.Forms.ToolStripButton();
             this.BtnProductos = new System.Windows.Forms.ToolStripButton();
-            this.BtnMarcasCategorias = new System.Windows.Forms.ToolStripButton();
+            this.BtnClientes = new System.Windows.Forms.ToolStripButton();
             this.BtnReportes = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
             this.bindingBotons.SuspendLayout();
             this.SuspendLayout();
@@ -54,11 +53,10 @@
             this.bindingBotons.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingBotons.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.bindingBotons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnEntradas,
+            this.btnVentas,
             this.BtnProductos,
-            this.BtnMarcasCategorias,
-            this.BtnReportes,
-            this.toolStripButton1});
+            this.BtnClientes,
+            this.BtnReportes});
             this.bindingBotons.Location = new System.Drawing.Point(0, 0);
             this.bindingBotons.MoveFirstItem = null;
             this.bindingBotons.MoveLastItem = null;
@@ -67,8 +65,8 @@
             this.bindingBotons.Name = "bindingBotons";
             this.bindingBotons.PositionItem = null;
             this.bindingBotons.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingBotons.Size = new System.Drawing.Size(822, 41);
-            this.bindingBotons.TabIndex = 29;
+            this.bindingBotons.Size = new System.Drawing.Size(967, 41);
+            this.bindingBotons.TabIndex = 30;
             this.bindingBotons.Text = "bindingNavigator1";
             // 
             // pnlView
@@ -79,23 +77,22 @@
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlView.Location = new System.Drawing.Point(0, 41);
             this.pnlView.Name = "pnlView";
-            this.pnlView.Size = new System.Drawing.Size(822, 409);
-            this.pnlView.TabIndex = 30;
+            this.pnlView.Size = new System.Drawing.Size(967, 409);
+            this.pnlView.TabIndex = 31;
             this.pnlView.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlView_Paint);
             // 
-            // btnEntradas
+            // btnVentas
             // 
-            this.btnEntradas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEntradas.Image = global::PresentacionLayer.Properties.Resources.agregar1;
-            this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntradas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEntradas.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.btnEntradas.Size = new System.Drawing.Size(114, 40);
-            this.btnEntradas.Text = "Entradas";
-            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
+            this.btnVentas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnVentas.Image = global::PresentacionLayer.Properties.Resources.mano;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Padding = new System.Windows.Forms.Padding(10);
+            this.btnVentas.Size = new System.Drawing.Size(108, 38);
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // BtnProductos
             // 
@@ -107,19 +104,19 @@
             this.BtnProductos.Name = "BtnProductos";
             this.BtnProductos.Size = new System.Drawing.Size(118, 38);
             this.BtnProductos.Text = "Productos";
-            this.BtnProductos.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
-            // BtnMarcasCategorias
+            // BtnClientes
             // 
-            this.BtnMarcasCategorias.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMarcasCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BtnMarcasCategorias.Image = global::PresentacionLayer.Properties.Resources.etiqueta;
-            this.BtnMarcasCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMarcasCategorias.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnMarcasCategorias.Name = "BtnMarcasCategorias";
-            this.BtnMarcasCategorias.Size = new System.Drawing.Size(197, 38);
-            this.BtnMarcasCategorias.Text = "Marcas y Categorias";
-            this.BtnMarcasCategorias.Click += new System.EventHandler(this.BtnMarcasCategorias_Click);
+            this.BtnClientes.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnClientes.Image = global::PresentacionLayer.Properties.Resources.agregar_contacto;
+            this.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnClientes.Name = "BtnClientes";
+            this.BtnClientes.Size = new System.Drawing.Size(98, 38);
+            this.BtnClientes.Text = "Clientes";
+            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // BtnReportes
             // 
@@ -130,28 +127,17 @@
             this.BtnReportes.Size = new System.Drawing.Size(100, 38);
             this.BtnReportes.Text = "Reportes";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(192, 38);
-            this.toolStripButton1.Text = "Ver Entradas Realizadas";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // FrmInventario
+            // FrmMenuVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 450);
+            this.ClientSize = new System.Drawing.Size(967, 450);
             this.Controls.Add(this.pnlView);
             this.Controls.Add(this.bindingBotons);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmInventario";
-            this.Text = "FRAN MOTOS";
-            this.Load += new System.EventHandler(this.FrmInventario_Load_1);
+            this.Name = "FrmMenuVentas";
+            this.Text = "FRAN MOTOS (Ventas)";
+            this.Load += new System.EventHandler(this.FrmMenuVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).EndInit();
             this.bindingBotons.ResumeLayout(false);
             this.bindingBotons.PerformLayout();
@@ -162,11 +148,10 @@
         #endregion
 
         private System.Windows.Forms.BindingNavigator bindingBotons;
-        private System.Windows.Forms.ToolStripButton btnEntradas;
+        private System.Windows.Forms.ToolStripButton btnVentas;
         private System.Windows.Forms.ToolStripButton BtnProductos;
-        private System.Windows.Forms.ToolStripButton BtnMarcasCategorias;
+        private System.Windows.Forms.ToolStripButton BtnClientes;
         private System.Windows.Forms.ToolStripButton BtnReportes;
         private System.Windows.Forms.Panel pnlView;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

@@ -194,6 +194,7 @@ namespace PresentacionLayer.Operaciones
                 txtCodigoProducto.Text = row.Cells[0].Value.ToString(); // Código del producto
                 txtDecripcion.Text = row.Cells[1].Value.ToString(); // Descripción del producto
                 txtPrecio.Text = row.Cells[2].Value.ToString(); // Precio del producto
+                txtCantidad.Focus();
                 
             }
         }
@@ -315,6 +316,18 @@ namespace PresentacionLayer.Operaciones
 
             int clientid = ObtenerIdCliente(mskCodigoCliente.Text);
 
+            // Obtener el id del producto vendido
+            int idP = ObtenerIdProducto(txtCodigoProducto.Text);
+
+            // Verificar disponibilidad del producto en el inventario
+            bool haySuficienteInventario = Producto_Logic.VerificarDisponibilidadProducto(cantidad,txtCodigoProducto.Text);
+
+            if (!haySuficienteInventario)
+            {
+                MessageBox.Show("No hay suficiente inventario disponible para este producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Si todos los campos son válidos, proceder con la lógica de creación de venta
             int venta = VentaLogic.CrearVenta_Logic(clientid, numeroVenta, txtFechaVenta.Value, montoTotal, cmbMetoodPago.Text);
 
@@ -332,9 +345,6 @@ namespace PresentacionLayer.Operaciones
                 // Obtener el id de la venta
                 int idVenta = ObtenerIdVenta(numeroVenta);
 
-                // Obtener el id del producto vendido
-                int idP = ObtenerIdProducto(txtCodigoProducto.Text);
-
                 // Agregar el detalle de la venta
                 int detail = Detalle_VentaLogic.AgregarDetalleVenta(idVenta, idP, cantidad, precio, subtotal, txtDecripcion.Text);
 
@@ -347,8 +357,8 @@ namespace PresentacionLayer.Operaciones
                     // Asigna los valores a cada celda de la fila
                     row.Cells[0].Value = txtCodigoProducto.Text; // Código del insumo
                     row.Cells[1].Value = txtDecripcion.Text;     // Descripción del producto
-                    row.Cells[2].Value = precio;               //precio
-                    row.Cells[3].Value = cantidad;                // Cantidad
+                    row.Cells[2].Value = precio;                 // Precio
+                    row.Cells[3].Value = cantidad;               // Cantidad
                     row.Cells[4].Value = subtotal;               // Subtotal
 
                     // Agrega la fila al DataGridView
@@ -368,6 +378,7 @@ namespace PresentacionLayer.Operaciones
                     txtSubtotal.Clear();
                 }
             }
+
 
 
         }//fin btnAgregar

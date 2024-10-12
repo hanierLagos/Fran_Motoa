@@ -118,11 +118,6 @@ namespace PresentacionLayer.Catalogos
             
         }
 
-        private void BtnGuestPlus_Click(object sender, EventArgs e)
-        {
-            FrmCliente frmCliente = new FrmCliente();
-            frmCliente.ShowDialog();
-        }
 
         private void txtBuscra_TextChanged(object sender, EventArgs e)
         {
@@ -193,6 +188,12 @@ namespace PresentacionLayer.Catalogos
                     CargarCliente(clientData);
                 }
             }
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente();
+            frmCliente.ShowDialog();
         }
     }
 }

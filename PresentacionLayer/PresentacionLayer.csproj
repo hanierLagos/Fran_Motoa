@@ -163,6 +163,12 @@
     <Compile Include="Menus\FrmInventario.Designer.cs">
       <DependentUpon>FrmInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menus\FrmMenuVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\FrmMenuVentas.Designer.cs">
+      <DependentUpon>FrmMenuVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operaciones\FrmEntradas_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menus\FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\FrmMenuVentas.resx">
+      <DependentUpon>FrmMenuVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FrmEntradas_Inventario.resx">
       <DependentUpon>FrmEntradas_Inventario.cs</DependentUpon>
@@ -302,6 +311,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoicono.ico" />
+    <None Include="Resources\LogoTipo_FranMotos.png" />
+    <None Include="Resources\agregar-usuario.png" />
+    <None Include="Resources\agregar-producto %281%29.png" />
+    <None Include="Resources\agregar-producto.png" />
+    <None Include="Resources\ver-usuario.png" />
+    <None Include="Resources\proceso1.png" />
+    <None Include="Resources\proceso.png" />
+    <None Include="Resources\agregar-contacto.png" />
+    <None Include="Resources\mano.png" />
     <None Include="Resources\portapapeles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

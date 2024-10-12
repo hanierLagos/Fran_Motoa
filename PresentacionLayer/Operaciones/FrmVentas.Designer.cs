@@ -44,7 +44,6 @@
             this.imgCrud = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscra = new System.Windows.Forms.TextBox();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -73,13 +72,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
-            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -95,10 +91,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.btnFinalizarVenta = new System.Windows.Forms.ToolStripButton();
-            this.btnAnularVenta = new System.Windows.Forms.ToolStripButton();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.DG_ProductosAgregados = new System.Windows.Forms.DataGridView();
             this.CODIGO_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,13 +99,20 @@
             this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
+            this.btnFinalizarVenta = new System.Windows.Forms.ToolStripButton();
+            this.btnAnularVenta = new System.Windows.Forms.ToolStripButton();
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosDisponibles)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
@@ -122,10 +121,11 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosAgregados)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // DG_ProductosDisponibles
@@ -233,21 +233,6 @@
             this.txtBuscra.Size = new System.Drawing.Size(161, 24);
             this.txtBuscra.TabIndex = 47;
             this.txtBuscra.TextChanged += new System.EventHandler(this.txtBuscra_TextChanged);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 30;
-            this.btnSearch.Location = new System.Drawing.Point(8, 48);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 27);
-            this.btnSearch.TabIndex = 46;
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -593,27 +578,6 @@
             this.panel4.Size = new System.Drawing.Size(506, 42);
             this.panel4.TabIndex = 55;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.flowLayoutPanel1.Controls.Add(this.label18);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 15);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1121, 50);
-            this.flowLayoutPanel1.TabIndex = 56;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label18.Location = new System.Drawing.Point(2, 0);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(89, 19);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "OPCIONES";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
@@ -632,9 +596,9 @@
             this.label8.Location = new System.Drawing.Point(172, 10);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 19);
+            this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 43;
-            this.label8.Text = "Detalle";
+            this.label8.Text = "Detalles";
             // 
             // groupBox2
             // 
@@ -688,19 +652,6 @@
             this.bindingBotons.Size = new System.Drawing.Size(157, 37);
             this.bindingBotons.TabIndex = 63;
             this.bindingBotons.Text = "bindingNavigator1";
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
-            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
-            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
-            this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label16
             // 
@@ -883,60 +834,6 @@
             this.bindingNavigator1.TabIndex = 23;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // btnFinalizarVenta
-            // 
-            this.btnFinalizarVenta.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.btnFinalizarVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizarVenta.Image")));
-            this.btnFinalizarVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnFinalizarVenta.Name = "btnFinalizarVenta";
-            this.btnFinalizarVenta.Padding = new System.Windows.Forms.Padding(10);
-            this.btnFinalizarVenta.RightToLeftAutoMirrorImage = true;
-            this.btnFinalizarVenta.Size = new System.Drawing.Size(173, 44);
-            this.btnFinalizarVenta.Text = "Finalizar Venta";
-            this.btnFinalizarVenta.Click += new System.EventHandler(this.btnFinalizarVenta_Click);
-            // 
-            // btnAnularVenta
-            // 
-            this.btnAnularVenta.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnularVenta.ForeColor = System.Drawing.Color.Red;
-            this.btnAnularVenta.Image = global::PresentacionLayer.Properties.Resources.portapapeles;
-            this.btnAnularVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAnularVenta.Name = "btnAnularVenta";
-            this.btnAnularVenta.Size = new System.Drawing.Size(173, 24);
-            this.btnAnularVenta.Text = "Anular Venta";
-            this.btnAnularVenta.Click += new System.EventHandler(this.btnAnularVenta_Click);
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox2.IconSize = 24;
-            this.iconPictureBox2.Location = new System.Drawing.Point(214, 87);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(24, 26);
-            this.iconPictureBox2.TabIndex = 54;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox1.IconSize = 24;
-            this.iconPictureBox1.Location = new System.Drawing.Point(14, 86);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(24, 26);
-            this.iconPictureBox1.TabIndex = 53;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // DG_ProductosAgregados
             // 
             this.DG_ProductosAgregados.AllowUserToAddRows = false;
@@ -1038,18 +935,120 @@
             this.label19.TabIndex = 42;
             this.label19.Text = "Productos Agregados";
             // 
+            // btnFinalizarVenta
+            // 
+            this.btnFinalizarVenta.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.btnFinalizarVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizarVenta.Image")));
+            this.btnFinalizarVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFinalizarVenta.Name = "btnFinalizarVenta";
+            this.btnFinalizarVenta.Padding = new System.Windows.Forms.Padding(10);
+            this.btnFinalizarVenta.RightToLeftAutoMirrorImage = true;
+            this.btnFinalizarVenta.Size = new System.Drawing.Size(173, 44);
+            this.btnFinalizarVenta.Text = "Finalizar Venta";
+            this.btnFinalizarVenta.Click += new System.EventHandler(this.btnFinalizarVenta_Click);
+            // 
+            // btnAnularVenta
+            // 
+            this.btnAnularVenta.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnularVenta.ForeColor = System.Drawing.Color.Red;
+            this.btnAnularVenta.Image = global::PresentacionLayer.Properties.Resources.portapapeles;
+            this.btnAnularVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAnularVenta.Name = "btnAnularVenta";
+            this.btnAnularVenta.Size = new System.Drawing.Size(173, 24);
+            this.btnAnularVenta.Text = "Anular Venta";
+            this.btnAnularVenta.Click += new System.EventHandler(this.btnAnularVenta_Click);
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
+            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
+            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconPictureBox2.IconSize = 24;
+            this.iconPictureBox2.Location = new System.Drawing.Point(214, 87);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(24, 26);
+            this.iconPictureBox2.TabIndex = 54;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconPictureBox1.IconSize = 24;
+            this.iconPictureBox1.Location = new System.Drawing.Point(14, 86);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(24, 26);
+            this.iconPictureBox1.TabIndex = 53;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 30;
+            this.btnSearch.Location = new System.Drawing.Point(8, 48);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 27);
+            this.btnSearch.TabIndex = 46;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Location = new System.Drawing.Point(6, 15);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1134, 50);
+            this.panel9.TabIndex = 61;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label18.Location = new System.Drawing.Point(454, 12);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(178, 26);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "REALIZAR VENTA";
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 697);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.DG_ProductosAgregados);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.rBtnNuevoCliente);
@@ -1075,8 +1074,6 @@
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1090,11 +1087,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosAgregados)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1128,7 +1127,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
@@ -1153,7 +1151,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         public System.Windows.Forms.ToolStripButton btnFinalizarVenta;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ToolStripButton btnAnularVenta;
         private System.Windows.Forms.BindingNavigator bindingBotons;
         public System.Windows.Forms.ToolStripButton BtnAgregar;
@@ -1173,5 +1170,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTOS;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
         private System.Windows.Forms.DataGridViewImageColumn Agregar;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label18;
     }
 }

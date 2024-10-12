@@ -51,6 +51,7 @@
     <Compile Include="Marca_Logic.cs" />
     <Compile Include="Producto_Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario_Logic.cs" />
     <Compile Include="VentaLogic.cs" />
   </ItemGroup>
   <ItemGroup>

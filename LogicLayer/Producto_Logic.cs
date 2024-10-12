@@ -38,7 +38,7 @@ namespace LogicLayer
             }
         }
 
-        //Metodo para actualizar producto desde la entrada
+        //Metodo para actualizar producto desde la entrada, a diferencia del metodo anterior este actualiza la cantidad del producto entrante sumnando la cantidad qeu se regitra al entrar
         public static int CrearProductoEntrada_Logic(string codigo, string nombre, Decimal precio, int marcaId, int categoriaId, int cantidad)
         {
             Productos p = new Productos
@@ -120,5 +120,23 @@ namespace LogicLayer
             return data.VerProductos();
 
         }
-    }
+
+        //Metodo para verificar la cantidad del producto antes de hacer una venta
+        public static bool VerificarDisponibilidadProducto( int cantidadSolicitada, string codigo)
+        {
+            int cantidadDisponible = Producto_Data.ObtenerCantidadDisponibleProducto(codigo);
+
+            // Verificar si hay suficiente inventario
+            if (cantidadDisponible >= cantidadSolicitada)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+    }//Fin de la clase
 }

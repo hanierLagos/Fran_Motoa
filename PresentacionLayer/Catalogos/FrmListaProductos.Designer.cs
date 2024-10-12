@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListaProductos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscra = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,20 +54,21 @@
             this.mskCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.imgCrud = new System.Windows.Forms.ImageList(this.components);
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.BtnHome = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarEntrada = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             this.BtnGuestPlus = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Productos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEntrada)).BeginInit();
+            this.btnAgregarEntrada.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBuscra
             // 
             this.txtBuscra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.txtBuscra.Location = new System.Drawing.Point(283, 67);
+            this.txtBuscra.Location = new System.Drawing.Point(283, 72);
             this.txtBuscra.Name = "txtBuscra";
             this.txtBuscra.Size = new System.Drawing.Size(161, 24);
             this.txtBuscra.TabIndex = 38;
@@ -76,7 +77,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.panel1.Controls.Add(this.BtnHome);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -104,12 +104,12 @@
             this.DG_Productos.AllowUserToAddRows = false;
             this.DG_Productos.AllowUserToDeleteRows = false;
             this.DG_Productos.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DG_Productos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DG_Productos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DG_Productos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,14 +117,14 @@
             this.DG_Productos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DG_Productos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DG_Productos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DG_Productos.ColumnHeadersHeight = 38;
             this.DG_Productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CODIGO_PRODUCTO,
@@ -136,33 +136,33 @@
             this.Edit,
             this.delete});
             this.DG_Productos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_Productos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_Productos.DefaultCellStyle = dataGridViewCellStyle11;
             this.DG_Productos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DG_Productos.EnableHeadersVisualStyles = false;
             this.DG_Productos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
             this.DG_Productos.Location = new System.Drawing.Point(15, 119);
             this.DG_Productos.Margin = new System.Windows.Forms.Padding(2);
             this.DG_Productos.Name = "DG_Productos";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Productos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Productos.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DG_Productos.RowHeadersVisible = false;
             this.DG_Productos.RowHeadersWidth = 40;
             this.DG_Productos.RowTemplate.Height = 20;
             this.DG_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Productos.Size = new System.Drawing.Size(1159, 416);
+            this.DG_Productos.Size = new System.Drawing.Size(1227, 416);
             this.DG_Productos.TabIndex = 31;
             this.DG_Productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Productos_CellContentClick);
             // 
@@ -208,9 +208,9 @@
             // 
             // Edit
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle9.NullValue")));
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle9;
             this.Edit.FillWeight = 60F;
             this.Edit.HeaderText = "Editar";
             this.Edit.MinimumWidth = 6;
@@ -220,9 +220,9 @@
             // 
             // delete
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.delete.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
+            this.delete.DefaultCellStyle = dataGridViewCellStyle10;
             this.delete.HeaderText = "Eliminar";
             this.delete.MinimumWidth = 6;
             this.delete.Name = "delete";
@@ -233,7 +233,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.label3.Location = new System.Drawing.Point(506, 67);
+            this.label3.Location = new System.Drawing.Point(506, 72);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 19);
@@ -255,7 +255,7 @@
             "50",
             "60",
             "100"});
-            this.cmbFilter.Location = new System.Drawing.Point(618, 64);
+            this.cmbFilter.Location = new System.Drawing.Point(618, 69);
             this.cmbFilter.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(62, 27);
@@ -280,7 +280,7 @@
             this.mskCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.mskCodigo.Location = new System.Drawing.Point(86, 68);
+            this.mskCodigo.Location = new System.Drawing.Point(86, 73);
             this.mskCodigo.Mask = "AAAAA00000";
             this.mskCodigo.Name = "mskCodigo";
             this.mskCodigo.Size = new System.Drawing.Size(110, 24);
@@ -292,7 +292,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.label1.Location = new System.Drawing.Point(29, 70);
+            this.label1.Location = new System.Drawing.Point(29, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 19);
@@ -306,47 +306,44 @@
             this.imgCrud.Images.SetKeyName(0, "avatar-de-usuario.png");
             this.imgCrud.Images.SetKeyName(1, "eliminar.png");
             // 
-            // maskedTextBox1
+            // btnAgregarEntrada
             // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(86, 68);
-            this.maskedTextBox1.Mask = "AAAAA00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(110, 24);
-            this.maskedTextBox1.TabIndex = 41;
-            this.maskedTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskCodigo_KeyPress);
+            this.btnAgregarEntrada.AddNewItem = null;
+            this.btnAgregarEntrada.AutoSize = false;
+            this.btnAgregarEntrada.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregarEntrada.CountItem = null;
+            this.btnAgregarEntrada.DeleteItem = null;
+            this.btnAgregarEntrada.Dock = System.Windows.Forms.DockStyle.None;
+            this.btnAgregarEntrada.Font = new System.Drawing.Font("Microsoft JhengHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEntrada.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.btnAgregarEntrada.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.btnAgregarEntrada.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.btnAgregarEntrada.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnAgregar});
+            this.btnAgregarEntrada.Location = new System.Drawing.Point(1017, 69);
+            this.btnAgregarEntrada.MoveFirstItem = null;
+            this.btnAgregarEntrada.MoveLastItem = null;
+            this.btnAgregarEntrada.MoveNextItem = null;
+            this.btnAgregarEntrada.MovePreviousItem = null;
+            this.btnAgregarEntrada.Name = "btnAgregarEntrada";
+            this.btnAgregarEntrada.PositionItem = null;
+            this.btnAgregarEntrada.Size = new System.Drawing.Size(198, 38);
+            this.btnAgregarEntrada.TabIndex = 64;
+            this.btnAgregarEntrada.Text = "bindingNavigator1";
             // 
-            // label5
+            // BtnAgregar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.label5.Location = new System.Drawing.Point(29, 70);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 19);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Filtrar";
-            // 
-            // BtnHome
-            // 
-            this.BtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.BtnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnHome.IconSize = 32;
-            this.BtnHome.Location = new System.Drawing.Point(12, 9);
-            this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(46, 39);
-            this.BtnHome.TabIndex = 5;
-            this.BtnHome.UseVisualStyleBackColor = false;
-            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.agregar_producto__1_;
+            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
+            this.BtnAgregar.Size = new System.Drawing.Size(168, 35);
+            this.BtnAgregar.Text = "Agregar Entrada";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnGuestPlus
             // 
@@ -374,7 +371,7 @@
             this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 30;
-            this.btnSearch.Location = new System.Drawing.Point(243, 67);
+            this.btnSearch.Location = new System.Drawing.Point(243, 72);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(35, 27);
@@ -387,8 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1287, 546);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.btnAgregarEntrada);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mskCodigo);
             this.Controls.Add(this.txtBuscra);
@@ -406,6 +402,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Productos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEntrada)).EndInit();
+            this.btnAgregarEntrada.ResumeLayout(false);
+            this.btnAgregarEntrada.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,10 +423,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox mskCodigo;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton BtnHome;
         private System.Windows.Forms.ImageList imgCrud;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE_PRODUCT;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
@@ -436,5 +432,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn delete;
+        private System.Windows.Forms.BindingNavigator btnAgregarEntrada;
+        public System.Windows.Forms.ToolStripButton BtnAgregar;
     }
 }

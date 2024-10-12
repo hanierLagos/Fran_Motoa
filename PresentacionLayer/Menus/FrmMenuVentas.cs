@@ -1,6 +1,4 @@
-﻿using PresentacionLayer.Catalogos;
-using PresentacionLayer.Operaciones;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PresentacionLayer.Catalogos;
+using PresentacionLayer.Operaciones;
 
 namespace PresentacionLayer.Menus
 {
-    public partial class FrmInventario : Form
+    public partial class FrmMenuVentas : Form
     {
         private Form frmActive = null;
 
-        public FrmInventario()
+        public FrmMenuVentas()
         {
             InitializeComponent();
         }
 
-        //Metodo pra abriri los formularios en un panel 
         private void OpenForm(Form frmHijo)
         {
             if (frmActive != null)
@@ -36,44 +35,31 @@ namespace PresentacionLayer.Menus
             pnlView.Tag = frmHijo;
             frmActive.Show();
         }
-        private void FrmInventario_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-
-            OpenForm(new FrmListaProductos());
-
-        }
-
-        private void FrmInventario_Load_1(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-        }
-
-        private void btnEntradas_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FrmEntradas_Inventario());
-
-        }
-
-        private void BtnMarcasCategorias_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FrmListaCategoriaMarcas());
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FrmVentas());
-
-        }
 
         private void pnlView_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void FrmMenuVentas_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmVentas());
+        }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmListaProductos());
+        }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmListClientes());
         }
     }
 }

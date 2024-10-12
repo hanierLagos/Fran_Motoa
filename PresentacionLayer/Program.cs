@@ -18,7 +18,7 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInventario());
+            Application.Run(new FrmAdministrador());
         }
     }
 }

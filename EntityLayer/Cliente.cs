@@ -9,7 +9,6 @@
         public string APELLIDOS { get; set; }
         public string TELEFONO { get; set; }
         public string DIRECCION { get; set; }
-        public string Codigo { get; }
 
        
         public Cliente(string codigo, string nombres, string apellidos, string telefono, string direccion)

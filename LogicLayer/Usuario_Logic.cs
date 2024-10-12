@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer
+namespace LogicLayer
 {
-    public class Class1
+    public class Usuario_Logic
     {
     }
 }

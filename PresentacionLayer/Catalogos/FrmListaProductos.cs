@@ -1,6 +1,7 @@
 ﻿using BussinesLayer;
 using LogicLayer;
 using PresentacionLayer.Menus;
+using PresentacionLayer.Operaciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -177,6 +178,12 @@ namespace PresentacionLayer.Catalogos
             FrmInventario frmInventario = new FrmInventario();
             frmInventario.ShowDialog();
             this.Close();
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmEntradas_Inventario frmEntradas_Inventario= new FrmEntradas_Inventario();
+            frmEntradas_Inventario.ShowDialog();
         }
     }
 }

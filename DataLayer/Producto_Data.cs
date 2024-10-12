@@ -486,6 +486,33 @@ namespace DataLayer
             return result;
         }
 
+        //Metodo para verificar la acntidad disponible en el inventario antes de hacer la compra
+        public static int ObtenerCantidadDisponibleProducto(string codigo)
+        {
+            int cantidadDisponible = 0;
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("Us_ObtenerCantidadProducto", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Codigo", codigo);
+
+                    conn.Open();
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        cantidadDisponible = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return cantidadDisponible;
+        }
+
+
+
     }// Fin de la clase
 
 }
