@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PresentacionLayer.Catalogos;
+using PresentacionLayer.Login;
 using PresentacionLayer.Operaciones;
 
 namespace PresentacionLayer.Menus
@@ -60,6 +61,22 @@ namespace PresentacionLayer.Menus
         private void BtnClientes_Click(object sender, EventArgs e)
         {
             OpenForm(new frmListClientes());
+        }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Mostrar un cuadro de diálogo de confirmación
+            DialogResult result = MessageBox.Show("¿Estás seguro de que quieres cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Si el usuario confirma, cierra el formulario actual y muestra el frmLogin
+            if (result == DialogResult.Yes)
+            {
+
+                this.Hide();
+                FrmLogin Anterior = new FrmLogin();
+                Anterior.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

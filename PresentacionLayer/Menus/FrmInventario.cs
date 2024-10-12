@@ -1,4 +1,5 @@
 ﻿using PresentacionLayer.Catalogos;
+using PresentacionLayer.Login;
 using PresentacionLayer.Operaciones;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,22 @@ namespace PresentacionLayer.Menus
         private void pnlView_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Mostrar un cuadro de diálogo de confirmación
+            DialogResult result = MessageBox.Show("¿Estás seguro de que quieres cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Si el usuario confirma, cierra el formulario actual y muestra el frmLogin
+            if (result == DialogResult.Yes)
+            {
+
+                this.Hide();
+                FrmLogin Anterior = new FrmLogin();
+                Anterior.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

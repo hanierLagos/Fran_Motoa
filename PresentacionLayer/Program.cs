@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PresentacionLayer.Login;
+
 
 namespace PresentacionLayer
 {
@@ -18,7 +20,7 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAdministrador());
+            Application.Run(new FrmLogin());
         }
     }
 }

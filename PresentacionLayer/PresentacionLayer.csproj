@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/FRAN MOTOS/</UpdateUrl>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -122,6 +122,12 @@
     <Compile Include="Catalogos\FrmListaProductos.Designer.cs">
       <DependentUpon>FrmListaProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\FrmListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\FrmListaUsuarios.Designer.cs">
+      <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\frmListClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Menus\FrmAdministrador.cs">
       <SubType>Form</SubType>
@@ -198,6 +210,9 @@
     <EmbeddedResource Include="Catalogos\FrmListaProductos.resx">
       <DependentUpon>FrmListaProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FrmListaUsuarios.resx">
+      <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\frmListClientes.resx">
       <DependentUpon>frmListClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menus\FrmAdministrador.resx">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
@@ -311,6 +329,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoicono.ico" />
+    <None Include="Resources\cerrar-sesion %281%29.png" />
+    <None Include="Resources\cerrar-sesion.png" />
     <None Include="Resources\LogoTipo_FranMotos.png" />
     <None Include="Resources\agregar-usuario.png" />
     <None Include="Resources\agregar-producto %281%29.png" />
