@@ -40,7 +40,7 @@ namespace PresentacionLayer.Menus
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            OpenForm(new FrmListaUsuarios());
         }
 
         private void FrmAdministrador_Load(object sender, EventArgs e)

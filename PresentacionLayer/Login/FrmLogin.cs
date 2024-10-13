@@ -85,5 +85,15 @@ namespace PresentacionLayer.Login
                 MessageBox.Show("Se produjo un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            { 
+                //si se produce elevento se manda a llamar el noton de inicio de sesion
+                btnIniciarSesion_Click(sender, e);  
+            
+            }
+        }
     }
 }
