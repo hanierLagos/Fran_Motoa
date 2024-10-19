@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using PresentacionLayer.Reportes;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
+using iTextSharp.tool.xml;
+
 
 namespace PresentacionLayer.Operaciones
 {
@@ -242,6 +248,78 @@ namespace PresentacionLayer.Operaciones
             int val = VentaLogic.CrearVenta_Logic(idcliente, int.Parse(txtNumeroVenta.Text), txtFechaVenta.Value, Decimal.Parse(txtMontoTotal.Text), cmbMetoodPago.Text);
             if (val > 0)
             {
+
+                try
+                {
+                    // Generar la factura de venta en un archivo .pdf
+                    SaveFileDialog saveFileDialog = new SaveFileDialog
+                    {
+                        FileName = "FACTURA_" + txtNumeroVenta.Text + ".pdf"
+                    };
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+
+                        string paginahtml_text = Properties.Resources.PlantillaFactura.ToString();
+
+                        // Reemplazar placeholders en el HTML
+                        paginahtml_text = paginahtml_text.Replace("@CLIENTE", mskCodigoCliente.Text + "--" + txtNombreCliente.Text + " " + txtxApellidosCliente.Text);
+                        paginahtml_text = paginahtml_text.Replace("@FECHA", txtFechaVenta.Text);
+                        paginahtml_text = paginahtml_text.Replace("@NUMERO", txtNumeroVenta.Text);
+
+                        string filas = string.Empty;
+                        decimal total = 0;
+
+                        // Recorrer las filas del DataGridView y generar filas HTML
+                        foreach (DataGridViewRow row in DG_ProductosAgregados.Rows)
+                        {
+                            if (row.Cells["SUBTOTAL"].Value != null) // Verificar que la celda no esté vacía
+                            {
+                                filas += "<tr>";
+                                filas += "<td>" + row.Cells["code"].Value.ToString() + "</td>";
+                                filas += "<td>" + row.Cells["description"].Value.ToString() + "</td>";
+                                filas += "<td>" + row.Cells["pUnitario"].Value.ToString() + "</td>";
+                                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                                filas += "<td>" + row.Cells["SUBTOTAL"].Value.ToString() + "</td>";
+                                filas += "</tr>";
+
+                                total += decimal.Parse(row.Cells["SUBTOTAL"].Value.ToString());
+                            }
+                        }
+
+                        // Reemplazar las filas generadas en el HTML y el total
+                        paginahtml_text = paginahtml_text.Replace("@FILAS", filas);
+                        paginahtml_text = paginahtml_text.Replace("@TOTAL", total.ToString("0.00")); // Formatear el total a dos decimales
+
+                        using (FileStream stream = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                        {
+                            Document pdfdoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                            PdfWriter writer = PdfWriter.GetInstance(pdfdoc, stream);
+                            pdfdoc.Open();
+
+
+                            using (StringReader sr = new StringReader(paginahtml_text))
+                            {
+                                XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfdoc, sr);
+                            }
+
+                            //Pintar la imagen del logo del taller en el pdf
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo_tallerfranc, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            img.ScaleToFit(80, 80);
+                            img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                            img.SetAbsolutePosition(pdfdoc.LeftMargin, pdfdoc.Top - 60);
+                            pdfdoc.Add(img);
+
+                            //Cerrar la creacion del pdf
+                            pdfdoc.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al generar el PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 MessageBox.Show("Venta agregada correctamente. Venta Finalizada.",
                    "Finalizar Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -259,8 +337,9 @@ namespace PresentacionLayer.Operaciones
                 txtNombreCliente.Clear();
                 txtxApellidosCliente.Clear();
                 txtTelefonoCliente.Clear();
-               txtxDireccionCliente.Clear();
+                txtxDireccionCliente.Clear();
                 mskCodigoCliente.Focus();
+
             }
             else
             {
@@ -268,6 +347,7 @@ namespace PresentacionLayer.Operaciones
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {

@@ -201,13 +201,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PresentacionLayer.Properties.Resources.LogoTipo_FranMotos;
+            this.pictureBox1.Image = global::PresentacionLayer.Properties.Resources.logo_tallerfranc;
             this.pictureBox1.Location = new System.Drawing.Point(12, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(466, 424);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmLogin
             // 

@@ -136,7 +136,6 @@
             // pnlView
             // 
             this.pnlView.BackColor = System.Drawing.Color.White;
-            this.pnlView.BackgroundImage = global::PresentacionLayer.Properties.Resources.LogoTipo_FranMotos;
             this.pnlView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlView.Location = new System.Drawing.Point(0, 41);

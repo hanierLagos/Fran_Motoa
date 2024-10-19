@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuVentas));
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnVentas = new System.Windows.Forms.ToolStripButton();
             this.BtnProductos = new System.Windows.Forms.ToolStripButton();
@@ -38,6 +37,7 @@
             this.pnlView = new System.Windows.Forms.Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.BtnCerrarSesion = new System.Windows.Forms.ToolStripButton();
+            this.BtnCaja = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
             this.bindingBotons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -60,6 +60,7 @@
             this.btnVentas,
             this.BtnProductos,
             this.BtnClientes,
+            this.BtnCaja,
             this.BtnReportes});
             this.bindingBotons.Location = new System.Drawing.Point(0, 0);
             this.bindingBotons.MoveFirstItem = null;
@@ -112,17 +113,17 @@
             // 
             // BtnReportes
             // 
+            this.BtnReportes.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BtnReportes.Image = global::PresentacionLayer.Properties.Resources.grafico_de_barras;
             this.BtnReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnReportes.Name = "BtnReportes";
-            this.BtnReportes.Size = new System.Drawing.Size(100, 38);
+            this.BtnReportes.Size = new System.Drawing.Size(107, 38);
             this.BtnReportes.Text = "Reportes";
             // 
             // pnlView
             // 
             this.pnlView.BackColor = System.Drawing.Color.White;
-            this.pnlView.BackgroundImage = global::PresentacionLayer.Properties.Resources.LogoTipo_FranMotos;
             this.pnlView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlView.Location = new System.Drawing.Point(0, 41);
@@ -169,6 +170,17 @@
             this.BtnCerrarSesion.Text = "Cerrar Sesión";
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
+            // BtnCaja
+            // 
+            this.BtnCaja.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnCaja.Image = global::PresentacionLayer.Properties.Resources.caja_registradora;
+            this.BtnCaja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCaja.Name = "BtnCaja";
+            this.BtnCaja.Size = new System.Drawing.Size(68, 38);
+            this.BtnCaja.Text = "Caja";
+            this.BtnCaja.Click += new System.EventHandler(this.BtnCaja_Click_1);
+            // 
             // FrmMenuVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +189,6 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.pnlView);
             this.Controls.Add(this.bindingBotons);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenuVentas";
             this.Text = "FRAN MOTOS (Ventas)";
             this.Load += new System.EventHandler(this.FrmMenuVentas_Load);
@@ -201,5 +212,6 @@
         private System.Windows.Forms.Panel pnlView;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton BtnCerrarSesion;
+        private System.Windows.Forms.ToolStripButton BtnCaja;
     }
 }

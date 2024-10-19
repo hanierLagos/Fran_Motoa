@@ -280,6 +280,41 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Metodo para calcular ingresos en caja
+        /// </summary>
+        /// <param name="fechaCalculo"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>       
+        public DataTable CalcularIngresosEnCaja(DateTime fechaCalculo)
+        {
+            DataTable resultados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
+            {
+                SqlCommand command = new SqlCommand("Us_CalcularIngresosEnCaja", conn);
+                command.CommandType = CommandType.StoredProcedure;
+
+                // Añadir parámetro de fecha
+                command.Parameters.Add("@FechaCalculo", SqlDbType.Date).Value = fechaCalculo;
+
+                try
+                {
+                    conn.Open();
+
+                    // Utilizamos SqlDataAdapter para ejecutar el comando y llenar el DataTable
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(resultados);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al ejecutar el procedimiento almacenado", ex);
+                }
+            }
+
+            return resultados;
+        }
+
 
     }
 }

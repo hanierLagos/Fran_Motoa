@@ -44,6 +44,7 @@
             this.imgCrud = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscra = new System.Windows.Forms.TextBox();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -76,6 +77,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -91,22 +93,20 @@
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.DG_ProductosAgregados = new System.Windows.Forms.DataGridView();
-            this.CODIGO_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
             this.btnFinalizarVenta = new System.Windows.Forms.ToolStripButton();
             this.btnAnularVenta = new System.Windows.Forms.ToolStripButton();
-            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
+            this.DG_ProductosAgregados = new System.Windows.Forms.DataGridView();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosDisponibles)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -233,6 +233,21 @@
             this.txtBuscra.Size = new System.Drawing.Size(161, 24);
             this.txtBuscra.TabIndex = 47;
             this.txtBuscra.TextChanged += new System.EventHandler(this.txtBuscra_TextChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 30;
+            this.btnSearch.Location = new System.Drawing.Point(8, 48);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 27);
+            this.btnSearch.TabIndex = 46;
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -653,6 +668,19 @@
             this.bindingBotons.TabIndex = 63;
             this.bindingBotons.Text = "bindingNavigator1";
             // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
+            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
+            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -834,107 +862,6 @@
             this.bindingNavigator1.TabIndex = 23;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // DG_ProductosAgregados
-            // 
-            this.DG_ProductosAgregados.AllowUserToAddRows = false;
-            this.DG_ProductosAgregados.AllowUserToDeleteRows = false;
-            this.DG_ProductosAgregados.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.DG_ProductosAgregados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.DG_ProductosAgregados.BackgroundColor = System.Drawing.Color.White;
-            this.DG_ProductosAgregados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DG_ProductosAgregados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_ProductosAgregados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DG_ProductosAgregados.ColumnHeadersHeight = 38;
-            this.DG_ProductosAgregados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CODIGO_PRODUCTO,
-            this.DESCRIPCION,
-            this.Marca,
-            this.Categoria,
-            this.SUBTOTAL});
-            this.DG_ProductosAgregados.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_ProductosAgregados.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DG_ProductosAgregados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DG_ProductosAgregados.EnableHeadersVisualStyles = false;
-            this.DG_ProductosAgregados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.DG_ProductosAgregados.Location = new System.Drawing.Point(662, 386);
-            this.DG_ProductosAgregados.Margin = new System.Windows.Forms.Padding(2);
-            this.DG_ProductosAgregados.Name = "DG_ProductosAgregados";
-            this.DG_ProductosAgregados.RowHeadersVisible = false;
-            this.DG_ProductosAgregados.RowHeadersWidth = 40;
-            this.DG_ProductosAgregados.RowTemplate.Height = 20;
-            this.DG_ProductosAgregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_ProductosAgregados.Size = new System.Drawing.Size(662, 304);
-            this.DG_ProductosAgregados.TabIndex = 60;
-            // 
-            // CODIGO_PRODUCTO
-            // 
-            this.CODIGO_PRODUCTO.HeaderText = "Código";
-            this.CODIGO_PRODUCTO.MinimumWidth = 6;
-            this.CODIGO_PRODUCTO.Name = "CODIGO_PRODUCTO";
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.HeaderText = "Descripción";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.Width = 240;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Precio Unitario";
-            this.Marca.Name = "Marca";
-            this.Marca.Width = 120;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Cantidad";
-            this.Categoria.Name = "Categoria";
-            // 
-            // SUBTOTAL
-            // 
-            this.SUBTOTAL.HeaderText = "Sub Total";
-            this.SUBTOTAL.Name = "SUBTOTAL";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.panel8.Controls.Add(this.label19);
-            this.panel8.Location = new System.Drawing.Point(662, 355);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(662, 31);
-            this.panel8.TabIndex = 59;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label19.Location = new System.Drawing.Point(245, 6);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(172, 19);
-            this.label19.TabIndex = 42;
-            this.label19.Text = "Productos Agregados";
-            // 
             // btnFinalizarVenta
             // 
             this.btnFinalizarVenta.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -959,18 +886,78 @@
             this.btnAnularVenta.Text = "Anular Venta";
             this.btnAnularVenta.Click += new System.EventHandler(this.btnAnularVenta_Click);
             // 
-            // BtnAgregar
+            // DG_ProductosAgregados
             // 
-            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
-            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
-            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
-            this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            this.DG_ProductosAgregados.AllowUserToAddRows = false;
+            this.DG_ProductosAgregados.AllowUserToDeleteRows = false;
+            this.DG_ProductosAgregados.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.DG_ProductosAgregados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.DG_ProductosAgregados.BackgroundColor = System.Drawing.Color.White;
+            this.DG_ProductosAgregados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DG_ProductosAgregados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_ProductosAgregados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DG_ProductosAgregados.ColumnHeadersHeight = 38;
+            this.DG_ProductosAgregados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.code,
+            this.description,
+            this.pUnitario,
+            this.Cantidad,
+            this.SUBTOTAL});
+            this.DG_ProductosAgregados.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_ProductosAgregados.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DG_ProductosAgregados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DG_ProductosAgregados.EnableHeadersVisualStyles = false;
+            this.DG_ProductosAgregados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.DG_ProductosAgregados.Location = new System.Drawing.Point(662, 386);
+            this.DG_ProductosAgregados.Margin = new System.Windows.Forms.Padding(2);
+            this.DG_ProductosAgregados.Name = "DG_ProductosAgregados";
+            this.DG_ProductosAgregados.RowHeadersVisible = false;
+            this.DG_ProductosAgregados.RowHeadersWidth = 40;
+            this.DG_ProductosAgregados.RowTemplate.Height = 20;
+            this.DG_ProductosAgregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_ProductosAgregados.Size = new System.Drawing.Size(662, 304);
+            this.DG_ProductosAgregados.TabIndex = 60;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.panel8.Controls.Add(this.label19);
+            this.panel8.Location = new System.Drawing.Point(662, 355);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(662, 31);
+            this.panel8.TabIndex = 59;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label19.Location = new System.Drawing.Point(245, 6);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(172, 19);
+            this.label19.TabIndex = 42;
+            this.label19.Text = "Productos Agregados";
             // 
             // iconPictureBox2
             // 
@@ -1002,21 +989,6 @@
             this.iconPictureBox1.TabIndex = 53;
             this.iconPictureBox1.TabStop = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 30;
-            this.btnSearch.Location = new System.Drawing.Point(8, 48);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 27);
-            this.btnSearch.TabIndex = 46;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
@@ -1036,6 +1008,34 @@
             this.label18.Size = new System.Drawing.Size(178, 26);
             this.label18.TabIndex = 25;
             this.label18.Text = "REALIZAR VENTA";
+            // 
+            // code
+            // 
+            this.code.HeaderText = "Código";
+            this.code.MinimumWidth = 6;
+            this.code.Name = "code";
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Descripción";
+            this.description.Name = "description";
+            this.description.Width = 240;
+            // 
+            // pUnitario
+            // 
+            this.pUnitario.HeaderText = "Precio Unitario";
+            this.pUnitario.Name = "pUnitario";
+            this.pUnitario.Width = 120;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // SUBTOTAL
+            // 
+            this.SUBTOTAL.HeaderText = "Sub Total";
+            this.SUBTOTAL.Name = "SUBTOTAL";
             // 
             // FrmVentas
             // 
@@ -1157,11 +1157,6 @@
         private System.Windows.Forms.DataGridView DG_ProductosAgregados;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO_PRODUCTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SUBTOTAL;
         private System.Windows.Forms.ComboBox cmbMetoodPago;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtBuscra;
@@ -1172,5 +1167,10 @@
         private System.Windows.Forms.DataGridViewImageColumn Agregar;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SUBTOTAL;
     }
 }

@@ -143,6 +143,26 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_registradora {
+            get {
+                object obj = ResourceManager.GetObject("caja-registradora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calculadora {
+            get {
+                object obj = ResourceManager.GetObject("calculadora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar_sesion {
             get {
                 object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
@@ -203,9 +223,9 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logo_tienda_de_productos_de_motos_ilustrativo_retro_rojo {
+        internal static System.Drawing.Bitmap logo_akt {
             get {
-                object obj = ResourceManager.GetObject("Logo tienda de productos de motos ilustrativo retro rojo", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_akt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +233,59 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogoTipo_FranMotos {
+        internal static System.Drawing.Bitmap logo_bajaj {
             get {
-                object obj = ResourceManager.GetObject("LogoTipo_FranMotos", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_bajaj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_honda {
+            get {
+                object obj = ResourceManager.GetObject("logo_honda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_tallerfranc {
+            get {
+                object obj = ResourceManager.GetObject("logo_tallerfranc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_tallerfranc1 {
+            get {
+                object obj = ResourceManager.GetObject("logo_tallerfranc1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_yamaha {
+            get {
+                object obj = ResourceManager.GetObject("logo_yamaha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_zuzuki {
+            get {
+                object obj = ResourceManager.GetObject("logo_zuzuki", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -251,11 +321,61 @@ namespace PresentacionLayer.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Factura Fran Motos&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        table.border {
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///            table.border th, table.border td {
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///
+        ///        td, th {
+        ///            font-family: &apos;Microsoft YaHei UI&apos;, sans-serif;
+        ///            font-weight: bold;
+        ///        }
+        ///
+        ///        .logos {
+        ///            text-align: center; /* Centra los logos */
+        ///            mar [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string PlantillaFactura {
+            get {
+                return ResourceManager.GetString("PlantillaFactura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_calculate_money_png_image_5705171 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-calculate-money-png-image_5705171", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap portapapeles {
             get {
                 object obj = ResourceManager.GetObject("portapapeles", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap presupuesto {
+            get {
+                object obj = ResourceManager.GetObject("presupuesto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

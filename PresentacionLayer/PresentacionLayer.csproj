@@ -71,8 +71,38 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -152,12 +182,6 @@
     <Compile Include="Catalogos\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRAN_MOTOSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,6 +217,12 @@
     <Compile Include="Operaciones\FrmEntradas_Inventario.Designer.cs">
       <DependentUpon>FrmEntradas_Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Operaciones\FrmIngresosCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FrmIngresosCaja.Designer.cs">
+      <DependentUpon>FrmIngresosCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operaciones\FrmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +231,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReportMejoresClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReportMejoresClientes.Designer.cs">
+      <DependentUpon>frmReportMejoresClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Catalogos\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,19 +288,20 @@
     <EmbeddedResource Include="Operaciones\FrmEntradas_Inventario.resx">
       <DependentUpon>FrmEntradas_Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FrmIngresosCaja.resx">
+      <DependentUpon>FrmIngresosCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Reportes\frmReportMejoresClientes.resx">
+      <DependentUpon>frmReportMejoresClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FRAN_MOTOSDataSet.xsc">
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
     </None>
@@ -322,9 +365,6 @@
     <None Include="Resources\boton-mas.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo tienda de productos de motos ilustrativo retro rojo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
@@ -338,6 +378,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoicono.ico" />
+    <None Include="Resources\presupuesto.png" />
+    <None Include="Resources\calculadora.png" />
+    <None Include="Resources\pngtree-calculate-money-png-image_5705171.png" />
+    <None Include="Resources\caja-registradora.png" />
+    <None Include="Resources\PlantillaFactura.html" />
+    <None Include="Resources\logo_honda.png" />
+    <None Include="Resources\logo_bajaj.png" />
+    <None Include="Resources\logo_zuzuki.png" />
+    <None Include="Resources\logo_akt.png" />
+    <None Include="Resources\logo_yamaha.png" />
+    <None Include="Resources\logo_tallerfranc.png" />
+    <None Include="Resources\logo_tallerfranc1.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\cerrar-sesion %281%29.png" />
     <None Include="Resources\cerrar-sesion.png" />
     <None Include="Resources\LogoTipo_FranMotos.png" />
@@ -351,5 +416,6 @@
     <None Include="Resources\mano.png" />
     <None Include="Resources\portapapeles.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

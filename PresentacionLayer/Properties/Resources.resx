@@ -118,73 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar-sesion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar-producto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-producto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_honda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_honda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="orden-de-compra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orden-de-compra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="caja-registradora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja-registradora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="orden-de-compra (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orden-de-compra (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grafico-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grafico-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar-contacto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-contacto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="proceso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proceso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar-producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mano" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="etiqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\etiqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lista-de-verificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lista-de-verificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="presupuesto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\presupuesto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boton-mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton-mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="portapapeles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\portapapeles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoTipo_FranMotos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoTipo_FranMotos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ver-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ver-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo tienda de productos de motos ilustrativo retro rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo tienda de productos de motos ilustrativo retro rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_tallerfranc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_tallerfranc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="proceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar-producto (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-producto (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_zuzuki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_zuzuki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_akt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_akt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ver-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ver-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_yamaha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_yamaha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orden-de-compra (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orden-de-compra (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-contacto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-contacto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-calculate-money-png-image_5705171" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-calculate-money-png-image_5705171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_bajaj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_bajaj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proceso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proceso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orden-de-compra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orden-de-compra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portapapeles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portapapeles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="guardar-el-archivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar-el-archivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton-mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton-mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lista-de-verificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lista-de-verificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar-sesion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-sesion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="etiqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\etiqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grafico-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grafico-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calculadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calculadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlantillaFactura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlantillaFactura.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="agregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_tallerfranc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_tallerfranc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

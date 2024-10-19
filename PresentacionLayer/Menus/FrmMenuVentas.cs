@@ -78,5 +78,16 @@ namespace PresentacionLayer.Menus
                 this.Close();
             }
         }
+
+        private void BtnCaja_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmIngresosCaja());
+
+        }
+
+        private void BtnCaja_Click_1(object sender, EventArgs e)
+        {
+            OpenForm(new FrmIngresosCaja());
+        }
     }
 }

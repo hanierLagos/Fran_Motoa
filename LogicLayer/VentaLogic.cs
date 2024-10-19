@@ -6,7 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataLayer;
 
 namespace LogicLayer
 {
@@ -58,6 +57,21 @@ namespace LogicLayer
         {
             VentaData ventaData = new VentaData();
             return ventaData.ObtenerNumeroVenta();
+
+        }
+
+
+        /// <summary>
+        /// Metodo para calcular ingresos en caja 
+        /// </summary>
+        /// <param name="fechaCalculo"></param>
+        /// <returns></returns>
+        public static DataTable CalcularIngresosEnCaja(DateTime fechaCalculo)
+        {
+            VentaData datos = new VentaData();
+            // Llamada al método en la capa de datos para obtener los resultados
+            return datos.CalcularIngresosEnCaja(fechaCalculo);
+
 
         }
 

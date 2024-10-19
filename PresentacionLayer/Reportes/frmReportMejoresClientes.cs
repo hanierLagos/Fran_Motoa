@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PresentacionLayer
+namespace PresentacionLayer.Reportes
 {
-    public partial class Form1 : Form
+    public partial class frmReportMejoresClientes : Form
     {
-        public Form1()
+        public frmReportMejoresClientes()
         {
             InitializeComponent();
+        }
+
+        private void frmReportMejoresClientes_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
