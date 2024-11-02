@@ -167,6 +167,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCategoria";
             this.Text = "CREAR, ACTUALIZAR CATEGORIA";
+            this.Load += new System.EventHandler(this.FrmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).EndInit();
             this.bindingBotons.ResumeLayout(false);
             this.bindingBotons.PerformLayout();

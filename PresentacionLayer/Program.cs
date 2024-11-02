@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PresentacionLayer.Login;
 using PresentacionLayer.Operaciones;
+using PresentacionLayer.Reportes;
+using PresentacionLayer.Vista_Reportes;
+
 
 
 namespace PresentacionLayer
@@ -21,7 +24,7 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmVentas());
+            Application.Run(new FrmReportProductosVendidos());
         }
     }
 }

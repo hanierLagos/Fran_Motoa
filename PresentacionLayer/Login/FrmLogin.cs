@@ -1,6 +1,7 @@
 ﻿using LogicLayer;
 using PresentacionLayer.Catalogos;
 using PresentacionLayer.Menus;
+using PresentacionLayer.Operaciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,7 +59,7 @@ namespace PresentacionLayer.Login
                             break;
                         case "Ventas":
                             this.Hide();
-                            FrmMenuVentas frmVentas = new FrmMenuVentas();
+                            FrmVentas frmVentas = new FrmVentas();
                             frmVentas.ShowDialog();
                             this.Close();
                             break;

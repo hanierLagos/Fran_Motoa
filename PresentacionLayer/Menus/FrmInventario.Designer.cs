@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
-            this.btnEntradas = new System.Windows.Forms.ToolStripButton();
             this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.BtnMarcasCategorias = new System.Windows.Forms.ToolStripButton();
             this.BtnReportes = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +57,6 @@
             this.bindingBotons.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingBotons.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.bindingBotons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnEntradas,
             this.BtnProductos,
             this.BtnMarcasCategorias,
             this.BtnReportes,
@@ -74,20 +72,6 @@
             this.bindingBotons.Size = new System.Drawing.Size(980, 41);
             this.bindingBotons.TabIndex = 29;
             this.bindingBotons.Text = "bindingNavigator1";
-            // 
-            // btnEntradas
-            // 
-            this.btnEntradas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEntradas.Image = global::PresentacionLayer.Properties.Resources.agregar1;
-            this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntradas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEntradas.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.btnEntradas.Size = new System.Drawing.Size(114, 40);
-            this.btnEntradas.Text = "Entradas";
-            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
             // 
             // BtnProductos
             // 
@@ -136,6 +120,7 @@
             // pnlView
             // 
             this.pnlView.BackColor = System.Drawing.Color.White;
+            this.pnlView.BackgroundImage = global::PresentacionLayer.Properties.Resources.logo_tallerfranc1;
             this.pnlView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlView.Location = new System.Drawing.Point(0, 41);
@@ -207,7 +192,6 @@
         #endregion
 
         private System.Windows.Forms.BindingNavigator bindingBotons;
-        private System.Windows.Forms.ToolStripButton btnEntradas;
         private System.Windows.Forms.ToolStripButton BtnProductos;
         private System.Windows.Forms.ToolStripButton BtnMarcasCategorias;
         private System.Windows.Forms.ToolStripButton BtnReportes;
