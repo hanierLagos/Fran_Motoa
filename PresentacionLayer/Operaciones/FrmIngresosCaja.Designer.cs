@@ -42,8 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,18 +102,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.label3.Location = new System.Drawing.Point(31, 70);
+            this.label3.Location = new System.Drawing.Point(47, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 19);
+            this.label3.Size = new System.Drawing.Size(135, 19);
             this.label3.TabIndex = 48;
-            this.label3.Text = "Ingresos por venta:";
+            this.label3.Text = "Ingresos Totales:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.label4.Location = new System.Drawing.Point(29, 140);
+            this.label4.Location = new System.Drawing.Point(29, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 19);
             this.label4.TabIndex = 49;
@@ -124,7 +125,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.label5.Location = new System.Drawing.Point(109, 207);
+            this.label5.Location = new System.Drawing.Point(102, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 19);
             this.label5.TabIndex = 50;
@@ -212,6 +213,19 @@
             this.bindingBotons.TabIndex = 48;
             this.bindingBotons.Text = "bindingNavigator1";
             // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.btnSave.Image = global::PresentacionLayer.Properties.Resources.calculadora;
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(10);
+            this.btnSave.RightToLeftAutoMirrorImage = true;
+            this.btnSave.Size = new System.Drawing.Size(172, 54);
+            this.btnSave.Text = "Calcular Ingresos";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentacionLayer.Properties.Resources.pngtree_calculate_money_png_image_5705171;
@@ -221,18 +235,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::PresentacionLayer.Properties.Resources.calculadora;
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(10);
-            this.btnSave.RightToLeftAutoMirrorImage = true;
-            this.btnSave.Size = new System.Drawing.Size(172, 54);
-            this.btnSave.Text = "Calcular Ingresos";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmIngresosCaja
             // 

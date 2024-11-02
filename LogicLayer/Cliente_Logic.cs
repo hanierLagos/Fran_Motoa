@@ -63,10 +63,10 @@ namespace BussinesLayer
         }
 
         //Metodo pra obtener id del cliente
-        public static DataTable ObtenerIdCliente()
+        public static DataTable CargarClientesVenta()
         {
             Cliente_Data data = new Cliente_Data();
-            return data.ObtenerIdCliente();
+            return data.CargarClientesVenta();
 
         }
 

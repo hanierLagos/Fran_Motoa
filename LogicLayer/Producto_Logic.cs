@@ -11,51 +11,44 @@ namespace LogicLayer
 {
     public  class Producto_Logic
     {
-        //metodo para actualozar producto desde la ventana de editar
-        public static int CrearProducto_Logic(string codigo, string nombre, Decimal precio, int marcaId, int categoriaId, int cantidad)
-        {
-            Productos p = new Productos
-            {
-                CODIGO_PRODUCTO = codigo,
-                NOMBRE_PRODUCTO = nombre,
-                PRECIO = precio,
-                ID_MARCA = marcaId,
-                ID_CATEGORIA = categoriaId,
-                CANTIDAD = cantidad
-            };
+        ////metodo para actualozar producto desde la ventana de editar
+        //public static int CrearProducto_Logic(string codigo, string nombre, Decimal precio, int marcaId, int categoriaId, int cantidad)
+        //{
+        //    Productos p = new Productos();
+        //    p.CODIGO_PRODUCTO = codigo;
+        //    p.NOMBRE_PRODUCTO = nombre;
+        //    p.PRECIO=precio;
+        //    p.ID_MARCA = marcaId;
+        //    p.ID_CATEGORIA = categoriaId;
+        //    p.CANTIDAD = cantidad;
 
-            Producto_Data pd = new Producto_Data();
+        //    Producto_Data pd = new Producto_Data();
 
-            // Verificar si el producto existe
-            DataTable existingProduct = pd.ReadProducto(codigo);
-            if (existingProduct==null) // Si no hay filas, significa que no existe
-            {
-                return pd.CrearProducto(p);
-            }
-            else
-            {
-                return pd.ActualizarProducto(p);
-            }
-        }
+        //    // Verificar si el producto existe
+        //    if (pd.ReadProducto(codigo) == null) // Si no hay filas, significa que no existe
+        //    {
+        //        return pd.CrearProducto(p);
+        //    }
+        //    else
+        //    {
+        //        return pd.ActualizarProducto(p);
+        //    }
+        //}
 
         //Metodo para actualizar producto desde la entrada, a diferencia del metodo anterior este actualiza la cantidad del producto entrante sumnando la cantidad qeu se regitra al entrar
         public static int CrearProductoEntrada_Logic(string codigo, string nombre, Decimal precio, int marcaId, int categoriaId, int cantidad)
         {
-            Productos p = new Productos
-            {
-                CODIGO_PRODUCTO = codigo,
-                NOMBRE_PRODUCTO = nombre,
-                PRECIO = precio,
-                ID_MARCA = marcaId,
-                ID_CATEGORIA = categoriaId,
-                CANTIDAD = cantidad
-            };
+            Productos p = new Productos();
+            p.CODIGO_PRODUCTO = codigo;
+            p.NOMBRE_PRODUCTO = nombre;
+            p.PRECIO = precio;
+            p.ID_MARCA = marcaId;
+            p.ID_CATEGORIA = categoriaId;
+            p.CANTIDAD = cantidad;
 
             Producto_Data pd = new Producto_Data();
 
-            // Verificar si el producto existe
-            DataTable existingProduct = pd.ReadProducto(codigo);
-            if (existingProduct == null) // Si no hay filas, significa que no existe
+            if (pd.ReadProducto(codigo) == null) // Si no hay filas, significa que no existe
             {
                 return pd.CrearProducto(p);
             }

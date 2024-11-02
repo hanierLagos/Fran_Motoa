@@ -10,60 +10,71 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using PresentacionLayer.Reportes;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 using System.IO;
 using iTextSharp.tool.xml;
+using PresentacionLayer.Menus;
+using PresentacionLayer.Catalogos;
 
 
 namespace PresentacionLayer.Operaciones
 {
     public partial class FrmVentas : Form
     {
+        private List<int> idC = new List<int>();
+        private List<int> idTipoManoObra = new List<int>();
+
         public FrmVentas()
         {
-            InitializeComponent();cmbMetoodPago.SelectedIndex = 0;
+            InitializeComponent();cmbMetoodPago.SelectedIndex = 0; 
+            CargarClienteComboBox();
+            CargarTipoManoObraComboBox();
         }
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
+            rBtnVentaProducto.Checked=true;
+
+            WindowState = FormWindowState.Maximized;
+
             //Cargar el proximi umoer de entrada
             CargarNumeroVentaa();
 
+            //carga los productos disponible en la tabla 
             CargarProductos();
         }
 
-        /// <summary>
-        /// METODO PARA CARGAR LOS CLIENTES AL DAR ENTER
-        /// </summary>
-        /// <param name="clientId"></param>
-        private void LoadClientData(string clientId)
-        {
-            try
-            {
-                // Mandar la solicitud por el controlador
-                DataTable clientData = Cliente_Logic.GetClientLogic(clientId);
+        ///// <summary>
+        ///// METODO PARA CARGAR LOS CLIENTES AL DAR ENTER
+        ///// </summary>
+        ///// <param name="clientId"></param>
+        //private void LoadClientData(string clientId)
+        //{
+        //    try
+        //    {
+        //        // Mandar la solicitud por el controlador
+        //        DataTable clientData = Cliente_Logic.GetClientLogic(clientId);
 
-                if (clientData == null || clientData.Rows.Count == 0)
-                {
-                    MessageBox.Show("No se encuentra el registro del cliente especificado: " + clientId, "Buscar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    DataRow row = clientData.Rows[0];
-                    txtNombreCliente.Text = row["NOMBRES"].ToString();
-                    txtxApellidosCliente.Text = row["APELLIDOS"].ToString();
-                    txtTelefonoCliente.Text = row["TELEFONO"].ToString();
-                    txtxDireccionCliente.Text = row["DIRECCION"].ToString();
+        //        if (clientData == null || clientData.Rows.Count == 0)
+        //        {
+        //            MessageBox.Show("No se encuentra el registro del cliente especificado: " + clientId, "Buscar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //        }
+        //        else
+        //        {
+        //            DataRow row = clientData.Rows[0];
+        //            txtNombreCliente.Text = row["NOMBRES"].ToString();
+        //            txtxApellidosCliente.Text = row["APELLIDOS"].ToString();
+        //            txtTelefonoCliente.Text = row["TELEFONO"].ToString();
+        //            txtxDireccionCliente.Text = row["DIRECCION"].ToString();
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar el cliente: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error al buscar el cliente: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
         /// <summary>
         /// 
         /// METODO PARA CARGAR LOS PRODUCTOS DISPONIBLES NE LA VENTA
@@ -84,6 +95,7 @@ namespace PresentacionLayer.Operaciones
                         row["CODIGO_PRODUCTO"].ToString(),
                         row["PRODUCTO"].ToString(),
                         row["PRECIO_PRODUCTO"].ToString(),
+                        row["CANTIDAD"].ToString(),
                         imgCrud.Images[0]
 
                     );
@@ -125,32 +137,34 @@ namespace PresentacionLayer.Operaciones
         }
 
         /// <summary>
-        /// METODO PARA OBTENER ID DEL CLIENET
+        /// METODO PARA OBTENER ID DEL CLIENTE, ADEMAS CARGA EL CLIENTE EN UN COMBOBOX
         /// </summary>
         /// <param name="codigo"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        private int ObtenerIdCliente(string codigo)
+        private void CargarClienteComboBox()
         {
-            // Obtiene el DataTable con los datos del producto usando el código proporcionado
-            DataTable clienteDtTable = Cliente_Logic.ObtenerIdCliente();
-
-            // Verifica si el DataTable es nulo o está vacío
-            if (clienteDtTable == null || clienteDtTable.Rows.Count == 0)
+            //Cargar el listado de las marcas       
+            foreach (DataRow r in Cliente_Logic.CargarClientesVenta().Rows)
             {
-                // Lanza una excepción si no se encuentra el cliente
-                throw new Exception("No se encontró el cliente con el código especificado: " + codigo);
-            }
+                //Cargar los nombres de los clientes
+                cmbClientes.Items.Add(r["CLIENTE"].ToString());
+                idC.Add(int.Parse(r["ID_CLIENTE"].ToString()));
+            }//Fin de la instrucción foreach
+        }
 
-            // Busca el índice del cliente con el código especificado
-            DataRow[] rows = clienteDtTable.Select($"CODIGO_CLIENTE = '{codigo}'");
-            if (rows.Length == 0)
+        /// <summary>
+        /// METODO PARA CARGAR LOS TIPO DE MANO DE OBRA A UN COMBOBOX
+        /// </summary>
+        private void CargarTipoManoObraComboBox()
+        {
+            //Cargar el listado de los tipo de mano de obra       
+            foreach (DataRow r in ManoObra_Logic.CargarTipoManoObra().Rows)
             {
-                throw new Exception("No se encontró el cliente con el código especificado: " + codigo);
-            }
-
-            // Retorna el ID del cliente convertido a entero
-            return Convert.ToInt32(rows[0]["ID_CLIENTE"]);
+                //Cargar los tipos de mano de obra
+                cmbTipoObra.Items.Add(r["NOMBRE_TIPO"].ToString());
+                idTipoManoObra.Add(int.Parse(r["ID_TIPO_MANO_OBRA"].ToString()));
+            }//Fin de la instrucción foreach
         }
 
         /// <summary>
@@ -191,7 +205,7 @@ namespace PresentacionLayer.Operaciones
         private void DG_ProductosEntrantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar que el clic se haya realizado en una celda válida
-            if (e.ColumnIndex == 3) // Asegúrate de que la columna 4 es la que quieres
+            if (e.ColumnIndex == 4) // Asegúrate de que la columna 4 es la que quieres
             {
                 // Obtener la fila actual del DataGridView
                 DataGridViewRow row = DG_ProductosDisponibles.Rows[e.RowIndex];
@@ -230,20 +244,21 @@ namespace PresentacionLayer.Operaciones
         private void btnFinalizarVenta_Click(object sender, EventArgs e)
         {
             // Validar el código del cliente
-            if (string.IsNullOrWhiteSpace(mskCodigoCliente.Text) || string.IsNullOrWhiteSpace(txtNombreCliente.Text) || string.IsNullOrWhiteSpace(txtxApellidosCliente.Text))
+            if (string.IsNullOrWhiteSpace(cmbClientes.Text))
             {
-                MessageBox.Show("Por favor, complete los campos correspondientes del cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, selecciones el cliente correspondientes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // Finalizar la Venta
-            if (DG_ProductosAgregados.Rows.Count == 0)
+            if (DG_DetallesdeVenta.Rows.Count == 0)
             {
                 MessageBox.Show("Debe agregar al menos un producto antes de finalizar la Venta.",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // No continuar si no hay productos
             }
 
-            int idcliente = ObtenerIdCliente(mskCodigoCliente.Text);  // Obtiene el ID del cliente
+            int idcliente = idC[this.cmbClientes.SelectedIndex];// Obtiene el ID del cliente
+
 
             int val = VentaLogic.CrearVenta_Logic(idcliente, int.Parse(txtNumeroVenta.Text), txtFechaVenta.Value, Decimal.Parse(txtMontoTotal.Text), cmbMetoodPago.Text);
             if (val > 0)
@@ -263,7 +278,7 @@ namespace PresentacionLayer.Operaciones
                         string paginahtml_text = Properties.Resources.PlantillaFactura.ToString();
 
                         // Reemplazar placeholders en el HTML
-                        paginahtml_text = paginahtml_text.Replace("@CLIENTE", mskCodigoCliente.Text + "--" + txtNombreCliente.Text + " " + txtxApellidosCliente.Text);
+                        paginahtml_text = paginahtml_text.Replace("@CLIENTE", cmbClientes.Text);
                         paginahtml_text = paginahtml_text.Replace("@FECHA", txtFechaVenta.Text);
                         paginahtml_text = paginahtml_text.Replace("@NUMERO", txtNumeroVenta.Text);
 
@@ -271,12 +286,11 @@ namespace PresentacionLayer.Operaciones
                         decimal total = 0;
 
                         // Recorrer las filas del DataGridView y generar filas HTML
-                        foreach (DataGridViewRow row in DG_ProductosAgregados.Rows)
+                        foreach (DataGridViewRow row in DG_DetallesdeVenta.Rows)
                         {
                             if (row.Cells["SUBTOTAL"].Value != null) // Verificar que la celda no esté vacía
                             {
                                 filas += "<tr>";
-                                filas += "<td>" + row.Cells["code"].Value.ToString() + "</td>";
                                 filas += "<td>" + row.Cells["description"].Value.ToString() + "</td>";
                                 filas += "<td>" + row.Cells["pUnitario"].Value.ToString() + "</td>";
                                 filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
@@ -331,14 +345,9 @@ namespace PresentacionLayer.Operaciones
                 txtMontoTotal.Clear();
 
                 // Limpiar la tabla 
-                DG_ProductosAgregados.Rows.Clear();
+                DG_DetallesdeVenta.Rows.Clear();
 
-                mskCodigoCliente.Clear();
-                txtNombreCliente.Clear();
-                txtxApellidosCliente.Clear();
-                txtTelefonoCliente.Clear();
-                txtxDireccionCliente.Clear();
-                mskCodigoCliente.Focus();
+                cmbClientes.SelectedIndex = -1;
 
             }
             else
@@ -393,8 +402,10 @@ namespace PresentacionLayer.Operaciones
                 MessageBox.Show("Descripción no válida. Por favor, ingrese una descripción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            
 
-            int clientid = ObtenerIdCliente(mskCodigoCliente.Text);
+            int clientid = idC[this.cmbClientes.SelectedIndex];
+
 
             // Obtener el id del producto vendido
             int idP = ObtenerIdProducto(txtCodigoProducto.Text);
@@ -407,6 +418,7 @@ namespace PresentacionLayer.Operaciones
                 MessageBox.Show("No hay suficiente inventario disponible para este producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
 
             // Si todos los campos son válidos, proceder con la lógica de creación de venta
             int venta = VentaLogic.CrearVenta_Logic(clientid, numeroVenta, txtFechaVenta.Value, montoTotal, cmbMetoodPago.Text);
@@ -432,17 +444,16 @@ namespace PresentacionLayer.Operaciones
                 {
                     // Si se crea el detalle de venta correctamente, agrega una nueva fila al DataGridView
                     DataGridViewRow row = new DataGridViewRow();
-                    row.CreateCells(DG_ProductosAgregados);
+                    row.CreateCells(DG_DetallesdeVenta);
 
                     // Asigna los valores a cada celda de la fila
-                    row.Cells[0].Value = txtCodigoProducto.Text; // Código del insumo
-                    row.Cells[1].Value = txtDecripcion.Text;     // Descripción del producto
-                    row.Cells[2].Value = precio;                 // Precio
-                    row.Cells[3].Value = cantidad;               // Cantidad
-                    row.Cells[4].Value = subtotal;               // Subtotal
+                    row.Cells[0].Value = txtCodigoProducto.Text+"--"+txtDecripcion.Text;     // Descripción del producto
+                    row.Cells[1].Value = precio;                 // Precio
+                    row.Cells[2].Value = cantidad;               // Cantidad
+                    row.Cells[3].Value = subtotal;               // Subtotal
 
                     // Agrega la fila al DataGridView
-                    DG_ProductosAgregados.Rows.Add(row);
+                    DG_DetallesdeVenta.Rows.Add(row);
 
                     // Actualiza el valor del txtMontoTotal con el nuevo total acumulado, formateado
                     txtMontoTotal.Text = total.ToString("0.00"); // Mostrará dos decimales
@@ -463,19 +474,7 @@ namespace PresentacionLayer.Operaciones
 
         }//fin btnAgregar
 
-        private void mskCodigoCliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Comprobar si se ha presionado Enter (ASCII 13)
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                LoadClientData(mskCodigoCliente.Text);  
-
-            }
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btnAnularVenta_Click(object sender, EventArgs e)
         {
@@ -513,14 +512,9 @@ namespace PresentacionLayer.Operaciones
                         txtMontoTotal.Clear();
 
                         // Limpiar la tabla 
-                        DG_ProductosAgregados.Rows.Clear();
+                        DG_DetallesdeVenta.Rows.Clear();
 
-                        mskCodigoCliente.Clear();
-                        txtNombreCliente.Clear();
-                        txtxApellidosCliente.Clear();
-                        txtTelefonoCliente.Clear();
-                        txtxDireccionCliente.Clear();
-                        mskCodigoCliente.Focus();
+                        cmbClientes.SelectedIndex = -1;
                     }
                     else
                     {
@@ -561,43 +555,178 @@ namespace PresentacionLayer.Operaciones
             }
         }
 
-        private void SetTextBoxReadOnly(bool isReadOnly)
-        {
-            txtNombreCliente.ReadOnly = isReadOnly;
-            txtxApellidosCliente.ReadOnly = isReadOnly;
-            txtTelefonoCliente.ReadOnly = isReadOnly;
-            txtxDireccionCliente.ReadOnly = isReadOnly;
-
-        }
+        
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (true)
+            if (rBtnVentaManoObra.Checked)
             {
-                SetTextBoxReadOnly(false);
+                //desabiliar los detaes de los productos
+                txtCodigoProducto.ReadOnly = true;
+                txtPrecio.ReadOnly = true;
+                txtCantidad.ReadOnly = true;    
+                txtDecripcion.ReadOnly = true;
 
-                mskCodigoCliente.Clear();
-                txtNombreCliente.Clear();
-                txtxApellidosCliente.Clear();
-                txtTelefonoCliente.Clear();
-                txtxDireccionCliente.Clear();
-                mskCodigoCliente.Focus();
+                //habilitar detalle de mano de obra
+                txtPrecioObra.ReadOnly = false;
+                txtDescipcionObra.ReadOnly = false;
+
+                //Inabilitar el bton de agregar detalles de los productos
+                BtnAddPrduct.Enabled = false;
+
+                //Habilitar el btn de agregar detalles de mano de obra
+                BtnAddObra.Enabled = true; 
             }
         }
 
         private void rBtnClienteRegistrado_CheckedChanged(object sender, EventArgs e)
         {
-            if (rBtnClienteRegistrado.Checked)
+            if (rBtnVentaProducto.Checked)
             {
-                // Habilitar el campo de ID y limpiar los campos
-                mskCodigoCliente.Enabled = true;
-                SetTextBoxReadOnly(true);
+                //desabilitar los textbox de  los datos de la mano de obra 
+                txtPrecioObra.ReadOnly= true;
+                txtDescipcionObra.ReadOnly= true;
 
-                mskCodigoCliente.Clear();
-                txtNombreCliente.Clear();
-                txtxApellidosCliente.Clear();
-                txtTelefonoCliente.Clear();
-                txtxDireccionCliente.Clear();
-                mskCodigoCliente.Focus();
+                //habilitar detalle de los productos
+                txtCodigoProducto.ReadOnly = false;
+                txtPrecio.ReadOnly = false;
+                txtCantidad.ReadOnly = false;
+                txtDecripcion.ReadOnly = false;
+
+                //Inabilitar en boton de agregar detalles de mano de obra
+                BtnAddObra.Enabled = false;
+
+                //Habilitar el btn de agregar detalles de productos
+                BtnAddPrduct.Enabled = true;
+            }
+        }
+
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMenuVentas frm = new FrmMenuVentas();
+            frm.ShowDialog();   
+            this.Close();
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmCliente frm = new FrmCliente();
+            frm.ShowDialog();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DG_DetallesdeVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+            // Validar el número de venta
+            if (string.IsNullOrWhiteSpace(txtNumeroVenta.Text) || !int.TryParse(txtNumeroVenta.Text, out int numeroVenta))
+            {
+                MessageBox.Show("Número de venta no válido. Por favor, ingrese un número de venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar la fecha de venta
+            if (txtFechaVenta.Value == null || txtFechaVenta.Value > DateTime.Now)
+            {
+                MessageBox.Show("Fecha de venta no válida. Por favor, seleccione una fecha correcta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar el monto total
+            if (string.IsNullOrWhiteSpace(txtMontoTotal.Text) || !decimal.TryParse(txtMontoTotal.Text, out decimal montoTotal) || montoTotal < 0)
+            {
+                MessageBox.Show("Monto total no válido. Por favor, ingrese un monto total correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
+
+
+            // Verifica que la descripción no esté vacía
+            if (string.IsNullOrWhiteSpace(txtDescipcionObra.Text))
+            {
+                MessageBox.Show("Descripción no válida. Por favor, ingrese una descripción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            int clientid = idC[this.cmbClientes.SelectedIndex];
+
+
+            // Si todos los campos son válidos, proceder con la lógica de creación de venta
+            int venta = VentaLogic.CrearVenta_Logic(clientid, numeroVenta, txtFechaVenta.Value, montoTotal, cmbMetoodPago.Text);
+
+            if (venta > 0)
+            {
+              
+                // Suma el subtotal al total acumulado
+                total += Decimal.Parse(txtPrecioObra.Text);
+
+                // Obtener el id de la venta
+                int idVenta = ObtenerIdVenta(numeroVenta);
+
+                int idTipo =idTipoManoObra [this.cmbTipoObra.SelectedIndex];
+                // Agregar el detalle de la Mano de obra
+                int detail = ManoObra_Logic.AgregarDetalleObra(idVenta, idTipo, txtDescipcionObra.Text, Decimal.Parse(txtPrecioObra.Text));
+
+                if (detail > 0)
+                {
+                    // Si se crea el detalle de venta correctamente, agrega una nueva fila al DataGridView
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(DG_DetallesdeVenta);
+
+                    // Asigna los valores a cada celda de la fila
+                    row.Cells[0].Value = cmbTipoObra.Text+", "+ txtDescipcionObra.Text;     // Descripción del producto
+                    row.Cells[1].Value = txtPrecioObra.Text;                 // Precio
+                    row.Cells[2].Value = "No Aplica";               // Cantidad
+                    row.Cells[3].Value = txtPrecioObra.Text;               // Subtotal
+
+                    // Agrega la fila al DataGridView
+                    DG_DetallesdeVenta.Rows.Add(row);
+
+                    // Actualiza el valor del txtMontoTotal con el nuevo total acumulado, formateado
+                    txtMontoTotal.Text = total.ToString("0.00"); // Mostrará dos decimales
+
+                    // Mensaje de éxito
+                    MessageBox.Show("Detalle agregado exitosamente.", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpiar los campos después de agregar el producto
+                    cmbTipoObra.SelectedIndex=-1;
+                    txtPrecioObra.Clear();
+                    txtDescipcionObra.Clear();
+                  
+                }
+            }
+
+        }
+
+        private void rBtnAmbas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBtnAmbas.Checked)
+            {
+                //habilitar detalle de mano de obra
+                txtPrecioObra.ReadOnly = false;
+                txtDescipcionObra.ReadOnly = false;
+
+                //habilitar detalle de los productos
+                txtCodigoProducto.ReadOnly = false;
+                txtPrecio.ReadOnly = false;
+                txtCantidad.ReadOnly = false;
+                txtDecripcion.ReadOnly = false;
+
+                //habilitar los botnoes de agregar detalles
+                BtnAddPrduct.Enabled = true;
+                BtnAddObra.Enabled = true;
+
             }
         }
     }

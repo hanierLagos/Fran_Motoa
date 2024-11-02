@@ -255,60 +255,55 @@ namespace DataLayer
             }
         }
 
-        //Metodo para obtener id del Cliente
-        public DataTable ObtenerIdCliente()
+        //Metodo para obtener id del Cliente, ademas se obtine el id de la tabla
+        public DataTable CargarClientesVenta()
         {
-            // Definir una instancia DataTable para almacenar el resultado
+            // Definir una instancia DataTable por donde se enviará el resultado
             DataTable result = null;
 
-            // Obtener la cadena de conexión desde el archivo de configuración
-            string connectionString = ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString;
-
-            // Crear una nueva conexión SQL usando la cadena de conexión
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // Obtener cadena de conexión
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
             {
-                // Crear un nuevo comando SQL para ejecutar el procedimiento almacenado
-                using (SqlCommand cmd = new SqlCommand("Us_ObtenerIdCliente", conn))
+                // Crear una nueva instancia del SqlCommand y Asegurar que se destruya el objeto al finalizar
+                using (SqlCommand cmd = new SqlCommand())
                 {
                     try
                     {
-                        // Establecer el tipo de comando como procedimiento almacenado
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Connection = conn;  // Establecer la conexión con la que opera
 
-                        // Abrir la conexión
+                        // Indicar el tipo de comando a ejecutar en este caso un procedimiento, y el nombre del procedimiento
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "Us_VerClientesEnVenta";
+
+                        // Abrir la conexión para que se procesen los resultados
                         conn.Open();
 
-                        // Ejecutar el comando y obtener los resultados en un SqlDataReader
-                        SqlDataReader reader = cmd.ExecuteReader();
-
-                        // Verificar si hay filas en el resultado
-                        if (reader.HasRows)
+                        // Procesar la instrucción y recuperar los valores en ExecuteReader
+                        SqlDataReader rst = cmd.ExecuteReader();
+                        // Verificar que se haya obtenido registro de la consulta
+                        if (rst.HasRows)
                         {
-                            // Inicializar el DataTable
-                            result = new DataTable();
-
-                            // Cargar los datos del SqlDataReader en el DataTable
-                            result.Load(reader);
-                        }
+                            result = new DataTable(); // Inicializar la instancia para agregar el registro
+                            result.Load(rst); // Cargar los datos en el DataTable
+                        }// Fin del condicional If
                     }
-                    catch (Exception ex)
+                    catch (Exception e)
                     {
-                        throw new Exception("Se ha producido un error al procesar los datos: " + ex.Message);
+                        throw new Exception("Se ha producido una infracción interna en el procesamiento de los datos " + e.Message);
                     }
                     finally
                     {
-                        // Cerrar la conexión
+                        // En todo caso hay que asegurar el cierre de la conexión
                         conn.Close();
-                    }
-                }
-            }
+                    }// Fin de la instrucción finally
+                }// Fin del using SqlCommand
+            }// Fin de la instrucción using SqlConnection
 
-            // Devolver el DataTable resultante
-            return result;
+            return result; // Devolver el DataTable resultante
         }
 
 
-    
+
 
 
 

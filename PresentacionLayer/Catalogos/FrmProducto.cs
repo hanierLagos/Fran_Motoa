@@ -79,26 +79,29 @@ namespace PresentacionLayer.Catalogos
                     return;
                 }
 
-                int selectedMarca = idM[cmbMarca.SelectedIndex];
-                int selectedCategoria = idC[cmbCategoria.SelectedIndex];
+                int selectedMarca = idM[this.cmbMarca.SelectedIndex];
+                int selectedCategoria = idC[this.cmbCategoria.SelectedIndex];
 
-                int val = Producto_Logic.CrearProducto_Logic(
-                    mskCodigo.Text,
-                    txtNombre.Text,
-                    decimal.Parse(txtPrecioProducto.Text),
+                int val = Producto_Logic.CrearProductoEntrada_Logic(this.mskCodigo.Text,
+                    this.txtNombre.Text,
+                    decimal.Parse(this.txtPrecioProducto.Text),
                     selectedMarca,
                     selectedCategoria,
-                    int.Parse(txtCantidad.Text)
+                    int.Parse(this.txtCantidad.Text)
+
                 );
 
-                if (!(val > 0))
+                if (val >0)
                 {
                     MessageBox.Show("El registro del producto ha sido registrado correctamente.", "Registrar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mskCodigo.Clear();
+                    txtNombre.Clear();
+                    txtPrecioProducto.Clear();
+                    cmbCategoria.SelectedIndex = 0;
+                    cmbMarca.SelectedIndex = 0;
+                    txtCantidad.Clear();    
                 }
-                else
-                {
-                    MessageBox.Show("No se pudo registrar el producto. Intente nuevamente.", "Registrar Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+               
             }
             catch (Exception ex)
             {

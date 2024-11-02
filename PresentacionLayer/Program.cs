@@ -21,7 +21,7 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenuVentas());
+            Application.Run(new FrmVentas());
         }
     }
 }

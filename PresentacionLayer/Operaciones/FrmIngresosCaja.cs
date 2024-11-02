@@ -50,5 +50,10 @@ namespace PresentacionLayer.Operaciones
                 MessageBox.Show($"Error al calcular ingresos en caja: {ex.Message}");
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

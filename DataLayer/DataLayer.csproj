@@ -53,6 +53,7 @@
     <Compile Include="Detalle_EntradaData.cs" />
     <Compile Include="Detalle_VentaData.cs" />
     <Compile Include="Entrada_InventarioData.cs" />
+    <Compile Include="ManoObra_Data.cs" />
     <Compile Include="Marca_Data.cs" />
     <Compile Include="Producto_Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

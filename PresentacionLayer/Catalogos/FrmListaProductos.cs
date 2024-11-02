@@ -185,5 +185,10 @@ namespace PresentacionLayer.Catalogos
             FrmEntradas_Inventario frmEntradas_Inventario= new FrmEntradas_Inventario();
             frmEntradas_Inventario.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

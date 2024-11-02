@@ -50,7 +50,10 @@ namespace PresentacionLayer.Menus
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmVentas());
+            this.Hide();
+            FrmVentas frm=new FrmVentas();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
@@ -88,6 +91,12 @@ namespace PresentacionLayer.Menus
         private void BtnCaja_Click_1(object sender, EventArgs e)
         {
             OpenForm(new FrmIngresosCaja());
+        }
+
+        private void BtnReportes_Click(object sender, EventArgs e)
+        {
+
+   
         }
     }
 }

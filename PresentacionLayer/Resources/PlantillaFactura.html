@@ -7,14 +7,14 @@
             border-collapse: collapse;
         }
 
-            table.border th, table.border td {
+        table.border th, table.border td {
                 padding: 5px;
                 border: 1px solid black;
-            }
+        }
 
         td, th {
             font-family: 'Microsoft YaHei UI', sans-serif;
-            font-weight: bold;
+            
         }
 
         .logos {
@@ -22,10 +22,11 @@
             margin: 10px 0; /* Espaciado arriba y abajo de los logos */
         }
 
-            .logos img {
+        .logos img {
                 width: 50px; /* Ajusta el tamaño de los logos según sea necesario */
                 margin: 0 5px; /* Espaciado entre logos */
-            }
+        }
+
     </style>
 </head>
 <body>
@@ -34,9 +35,9 @@
             <td style="width: 20%"> </td>
             <td style="width: 60%" align="center">
                 <table>
-                    <tr><td align="center" style="color: #283D3E; font-size: 24px">EL TALLER DE FRAN</td></tr>
-                    <tr style="color: #48586F; font-size: 15px"><td align="center">Servicios, Repuestos y Accesorios </td></tr>
-                    <tr style="color: #48586F; font-size: 13px"><td align="center">"Contamos con la mejor maquinaria en mano de obra" </td></tr>
+                    <tr><td align="center" style="color: #283D3E; font-size: 24px; font-weight: bold; ">TALLER FRANC</td></tr>
+                    <tr style="color: #48586F; font-size: 15px; font-weight: bold;"><td align="center">Servicios, Repuestos y Accesorios </td></tr>
+                    <tr style="color: #48586F; font-size: 13px; font-weight: bold;"><td align="center">"Contamos con la mejor maquinaria en mano de obra" </td></tr>
                     <tr>
                         <td align="center">
                             <div class="logos">
@@ -51,9 +52,9 @@
                 </table>
             </td>
             <td style="width: 20%">
-                <table class="border" style="width:100%">
-                    <tr><td align="center">FACTURA</td></tr>
-                    <tr><td align="center" style="color: RED">N°  @NUMERO</td></tr>
+                <table class="border" style="width: 100%; font-weight: bold;">
+                    <tr style=" font-weight: bold;"><td align="center">FACTURA</td></tr>
+                    <tr style=" font-weight: bold;"><td align="center" style="color: RED">N°  @NUMERO</td></tr>
                 </table>
             </td>
         </tr>
@@ -63,13 +64,13 @@
         <tr>
             <td colspan="2">
                 <table style="width:100%">
-                    <tr>
-                        <td style="width:20%"> Cliente: </td>
-                        <td style="width:80%; border-bottom: 1px solid black"> @CLIENTE </td>
+                    <tr  style=" font-weight: bold;">
+                        <td style="width:20%"; font-weight: bold;> Cliente: </td>
+                        <td style="width: 80%; font-weight: bold; border-bottom: 1px solid black"> @CLIENTE </td>
                     </tr>
                     <tr>
-                        <td style="width:10%"> Fecha: </td>
-                        <td style="width:40%; border-bottom: 1px solid black"> @FECHA </td>
+                        <td style="width: 10%; font-weight: bold; "> Fecha: </td>
+                        <td style="width: 40%; font-weight: bold; border-bottom: 1px solid black"> @FECHA </td>
                     </tr>
                 </table>
             </td>
@@ -79,10 +80,9 @@
 
         <tr>
             <td colspan="3">
-                <table style="width:100%">
-                    <thead class="border" style="background-color: #48586F">
+                <table style="width:100%;">
+                    <thead class="border" style="background-color: #48586F; font-weight: bold">
                         <tr>
-                            <th style="color: #FFFFC0">Codigo</th>
                             <th style="color: #FFFFC0">Descripcion</th>
                             <th style="color: #FFFFC0">P. Unitario</th>
                             <th style="color: #FFFFC0">Cant.</th>
@@ -90,20 +90,18 @@
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody style="font-family: Microsoft YaHei UI; sans-serif">
                         @FILAS
                         <tr>
-                            <td style="border: 0px "></td>
                             <th style="border: 0px "></th>
                             <th style="border: 0px "></th>
-                            <th align="right">Total:</th>
+                            <th align="right" style="font-family: Microsoft YaHei UI; sans-serif;">Total:</th>
                             <th>@TOTAL</th>
                         </tr>
                     </tbody>
                 </table>
             </td>
         </tr>
-
     </table>
 </body>
 </html>

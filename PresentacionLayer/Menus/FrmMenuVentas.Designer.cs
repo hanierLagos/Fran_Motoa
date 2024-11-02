@@ -33,11 +33,11 @@
             this.btnVentas = new System.Windows.Forms.ToolStripButton();
             this.BtnProductos = new System.Windows.Forms.ToolStripButton();
             this.BtnClientes = new System.Windows.Forms.ToolStripButton();
+            this.BtnCaja = new System.Windows.Forms.ToolStripButton();
             this.BtnReportes = new System.Windows.Forms.ToolStripButton();
             this.pnlView = new System.Windows.Forms.Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.BtnCerrarSesion = new System.Windows.Forms.ToolStripButton();
-            this.BtnCaja = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
             this.bindingBotons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -111,6 +111,17 @@
             this.BtnClientes.Text = "Clientes";
             this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
+            // BtnCaja
+            // 
+            this.BtnCaja.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnCaja.Image = global::PresentacionLayer.Properties.Resources.caja_registradora;
+            this.BtnCaja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCaja.Name = "BtnCaja";
+            this.BtnCaja.Size = new System.Drawing.Size(68, 38);
+            this.BtnCaja.Text = "Caja";
+            this.BtnCaja.Click += new System.EventHandler(this.BtnCaja_Click_1);
+            // 
             // BtnReportes
             // 
             this.BtnReportes.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,10 +131,12 @@
             this.BtnReportes.Name = "BtnReportes";
             this.BtnReportes.Size = new System.Drawing.Size(107, 38);
             this.BtnReportes.Text = "Reportes";
+            this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
             // 
             // pnlView
             // 
             this.pnlView.BackColor = System.Drawing.Color.White;
+            this.pnlView.BackgroundImage = global::PresentacionLayer.Properties.Resources.logo_tallerfranc;
             this.pnlView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlView.Location = new System.Drawing.Point(0, 41);
@@ -169,17 +182,6 @@
             this.BtnCerrarSesion.Size = new System.Drawing.Size(132, 34);
             this.BtnCerrarSesion.Text = "Cerrar Sesión";
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
-            // 
-            // BtnCaja
-            // 
-            this.BtnCaja.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BtnCaja.Image = global::PresentacionLayer.Properties.Resources.caja_registradora;
-            this.BtnCaja.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnCaja.Name = "BtnCaja";
-            this.BtnCaja.Size = new System.Drawing.Size(68, 38);
-            this.BtnCaja.Text = "Caja";
-            this.BtnCaja.Click += new System.EventHandler(this.BtnCaja_Click_1);
             // 
             // FrmMenuVentas
             // 

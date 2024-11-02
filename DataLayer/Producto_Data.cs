@@ -57,7 +57,7 @@ namespace DataLayer
         // Método para leer un producto por su código
         public DataTable ReadProducto(string codigo)
         {
-            DataTable result = new DataTable();  // Estructura para almacenar el resultado
+            DataTable result = null;
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
