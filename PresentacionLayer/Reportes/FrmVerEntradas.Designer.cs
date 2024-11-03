@@ -29,19 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVerEntradas));
+            this.usReportEntradasRealizadasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fRAN_MOTOSDataSet9 = new PresentacionLayer.FRAN_MOTOSDataSet9();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbCantidad = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.fRAN_MOTOSDataSet9 = new PresentacionLayer.FRAN_MOTOSDataSet9();
-            this.usReportEntradasRealizadasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.us_ReportEntradasRealizadasTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet9TableAdapters.Us_ReportEntradasRealizadasTableAdapter();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usReportEntradasRealizadasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet9)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // usReportEntradasRealizadasBindingSource
+            // 
+            this.usReportEntradasRealizadasBindingSource.DataMember = "Us_ReportEntradasRealizadas";
+            this.usReportEntradasRealizadasBindingSource.DataSource = this.fRAN_MOTOSDataSet9;
+            // 
+            // fRAN_MOTOSDataSet9
+            // 
+            this.fRAN_MOTOSDataSet9.DataSetName = "FRAN_MOTOSDataSet9";
+            this.fRAN_MOTOSDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -105,25 +116,15 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.usReportEntradasRealizadasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.usReportEntradasRealizadasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PresentacionLayer.Reportes.ReporteEntradasInventario.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 87);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(773, 585);
             this.reportViewer1.TabIndex = 80;
-            // 
-            // fRAN_MOTOSDataSet9
-            // 
-            this.fRAN_MOTOSDataSet9.DataSetName = "FRAN_MOTOSDataSet9";
-            this.fRAN_MOTOSDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usReportEntradasRealizadasBindingSource
-            // 
-            this.usReportEntradasRealizadasBindingSource.DataMember = "Us_ReportEntradasRealizadas";
-            this.usReportEntradasRealizadasBindingSource.DataSource = this.fRAN_MOTOSDataSet9;
             // 
             // us_ReportEntradasRealizadasTableAdapter
             // 
@@ -138,13 +139,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCantidad);
             this.Controls.Add(this.panel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVerEntradas";
-            this.Text = "FrmVerEntradas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "REPORTE DE ENTRADAS";
             this.Load += new System.EventHandler(this.FrmVerEntradas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usReportEntradasRealizadasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet9)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportEntradasRealizadasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

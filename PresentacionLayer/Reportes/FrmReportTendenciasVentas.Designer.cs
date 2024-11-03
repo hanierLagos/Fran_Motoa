@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.fRAN_MOTOSDataSet2 = new PresentacionLayer.FRAN_MOTOSDataSet2();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportTendenciasVentas));
             this.usReportTop10ProductosMasVendidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fRAN_MOTOSDataSet2 = new PresentacionLayer.FRAN_MOTOSDataSet2();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.us_ReportTop10ProductosMasVendidosTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet2TableAdapters.Us_ReportTop10ProductosMasVendidosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usReportTop10ProductosMasVendidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usReportTop10ProductosMasVendidosBindingSource
+            // 
+            this.usReportTop10ProductosMasVendidosBindingSource.DataMember = "Us_ReportTop10ProductosMasVendidos";
+            this.usReportTop10ProductosMasVendidosBindingSource.DataSource = this.fRAN_MOTOSDataSet2;
+            // 
+            // fRAN_MOTOSDataSet2
+            // 
+            this.fRAN_MOTOSDataSet2.DataSetName = "FRAN_MOTOSDataSet2";
+            this.fRAN_MOTOSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +62,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(685, 581);
             this.reportViewer1.TabIndex = 0;
             // 
-            // fRAN_MOTOSDataSet2
-            // 
-            this.fRAN_MOTOSDataSet2.DataSetName = "FRAN_MOTOSDataSet2";
-            this.fRAN_MOTOSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usReportTop10ProductosMasVendidosBindingSource
-            // 
-            this.usReportTop10ProductosMasVendidosBindingSource.DataMember = "Us_ReportTop10ProductosMasVendidos";
-            this.usReportTop10ProductosMasVendidosBindingSource.DataSource = this.fRAN_MOTOSDataSet2;
-            // 
             // us_ReportTop10ProductosMasVendidosTableAdapter
             // 
             this.us_ReportTop10ProductosMasVendidosTableAdapter.ClearBeforeFill = true;
@@ -71,11 +72,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 581);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReportTendenciasVentas";
-            this.Text = "FrmReportTendenciasVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "REPORTE PRODUCTOS MAS VENDIDOS";
             this.Load += new System.EventHandler(this.FrmReportTendenciasVentas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usReportTop10ProductosMasVendidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

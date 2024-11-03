@@ -95,7 +95,7 @@ namespace PresentacionLayer.Menus
 
         private void BtnReportes_Click(object sender, EventArgs e)
         {
-
+            OpenForm(new FrmVierMenuReportesVenta());   
    
         }
     }

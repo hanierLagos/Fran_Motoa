@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportVentas));
+            this.usReportVentasRealizadasConDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fRAN_MOTOSDataSet8 = new PresentacionLayer.FRAN_MOTOSDataSet8();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -39,15 +42,23 @@
             this.label14 = new System.Windows.Forms.Label();
             this.datePickerFEchaInicio = new System.Windows.Forms.DateTimePicker();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.fRAN_MOTOSDataSet8 = new PresentacionLayer.FRAN_MOTOSDataSet8();
-            this.usReportVentasRealizadasConDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.us_ReportVentasRealizadasConDetallesTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet8TableAdapters.Us_ReportVentasRealizadasConDetallesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasRealizadasConDetallesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet8)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
             this.bindingNavigator3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasRealizadasConDetallesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usReportVentasRealizadasConDetallesBindingSource
+            // 
+            this.usReportVentasRealizadasConDetallesBindingSource.DataMember = "Us_ReportVentasRealizadasConDetalles";
+            this.usReportVentasRealizadasConDetallesBindingSource.DataSource = this.fRAN_MOTOSDataSet8;
+            // 
+            // fRAN_MOTOSDataSet8
+            // 
+            this.fRAN_MOTOSDataSet8.DataSetName = "FRAN_MOTOSDataSet8";
+            this.fRAN_MOTOSDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -176,16 +187,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(760, 521);
             this.reportViewer1.TabIndex = 77;
             // 
-            // fRAN_MOTOSDataSet8
-            // 
-            this.fRAN_MOTOSDataSet8.DataSetName = "FRAN_MOTOSDataSet8";
-            this.fRAN_MOTOSDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usReportVentasRealizadasConDetallesBindingSource
-            // 
-            this.usReportVentasRealizadasConDetallesBindingSource.DataMember = "Us_ReportVentasRealizadasConDetalles";
-            this.usReportVentasRealizadasConDetallesBindingSource.DataSource = this.fRAN_MOTOSDataSet8;
-            // 
             // us_ReportVentasRealizadasConDetallesTableAdapter
             // 
             this.us_ReportVentasRealizadasConDetallesTableAdapter.ClearBeforeFill = true;
@@ -202,16 +203,18 @@
             this.Controls.Add(this.datePickerFechaFin);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.datePickerFEchaInicio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReportVentas";
-            this.Text = "FrmReportVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "REPORTE DE VENTAS";
             this.Load += new System.EventHandler(this.FrmReportVentas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasRealizadasConDetallesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet8)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             this.bindingNavigator3.ResumeLayout(false);
             this.bindingNavigator3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasRealizadasConDetallesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

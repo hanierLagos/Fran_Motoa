@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteVentaManoObra));
+            this.usReportVentasManoObraRealizadasConDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fRAN_MOTOSDataSet7 = new PresentacionLayer.FRAN_MOTOSDataSet7();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -39,15 +42,23 @@
             this.label14 = new System.Windows.Forms.Label();
             this.datePickerFEchaInicio = new System.Windows.Forms.DateTimePicker();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.fRAN_MOTOSDataSet7 = new PresentacionLayer.FRAN_MOTOSDataSet7();
-            this.usReportVentasManoObraRealizadasConDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet7TableAdapters.Us_ReportVentasManoObraRealizadasConDetallesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet7)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
             this.bindingNavigator3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usReportVentasManoObraRealizadasConDetallesBindingSource
+            // 
+            this.usReportVentasManoObraRealizadasConDetallesBindingSource.DataMember = "Us_ReportVentasManoObraRealizadasConDetalles";
+            this.usReportVentasManoObraRealizadasConDetallesBindingSource.DataSource = this.fRAN_MOTOSDataSet7;
+            // 
+            // fRAN_MOTOSDataSet7
+            // 
+            this.fRAN_MOTOSDataSet7.DataSetName = "FRAN_MOTOSDataSet7";
+            this.fRAN_MOTOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -166,25 +177,15 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.usReportVentasManoObraRealizadasConDetallesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.usReportVentasManoObraRealizadasConDetallesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PresentacionLayer.Reportes.ReporteVentasManoObra.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 91);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(708, 523);
             this.reportViewer1.TabIndex = 77;
-            // 
-            // fRAN_MOTOSDataSet7
-            // 
-            this.fRAN_MOTOSDataSet7.DataSetName = "FRAN_MOTOSDataSet7";
-            this.fRAN_MOTOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usReportVentasManoObraRealizadasConDetallesBindingSource
-            // 
-            this.usReportVentasManoObraRealizadasConDetallesBindingSource.DataMember = "Us_ReportVentasManoObraRealizadasConDetalles";
-            this.usReportVentasManoObraRealizadasConDetallesBindingSource.DataSource = this.fRAN_MOTOSDataSet7;
             // 
             // us_ReportVentasManoObraRealizadasConDetallesTableAdapter
             // 
@@ -202,16 +203,18 @@
             this.Controls.Add(this.datePickerFechaFin);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.datePickerFEchaInicio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReporteVentaManoObra";
-            this.Text = "FrmReporteVentaManoObra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "REPORTE VENTA MANO DE OBRA";
             this.Load += new System.EventHandler(this.FrmReporteVentaManoObra_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet7)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             this.bindingNavigator3.ResumeLayout(false);
             this.bindingNavigator3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

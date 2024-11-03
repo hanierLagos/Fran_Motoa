@@ -30,15 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.fRAN_MOTOSDataSet5 = new PresentacionLayer.FRAN_MOTOSDataSet5();
-            this.fRANMOTOSDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductosMasVendidos));
             this.usReportTendenciasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fRAN_MOTOSDataSet5 = new PresentacionLayer.FRAN_MOTOSDataSet5();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.fRANMOTOSDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.us_ReportTendenciasVentasTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet5TableAdapters.Us_ReportTendenciasVentasTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.usReportTendenciasVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fRANMOTOSDataSet5BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportTendenciasVentasBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usReportTendenciasVentasBindingSource
+            // 
+            this.usReportTendenciasVentasBindingSource.DataMember = "Us_ReportTendenciasVentas";
+            this.usReportTendenciasVentasBindingSource.DataSource = this.fRAN_MOTOSDataSet5;
+            // 
+            // fRAN_MOTOSDataSet5
+            // 
+            this.fRAN_MOTOSDataSet5.DataSetName = "FRAN_MOTOSDataSet5";
+            this.fRAN_MOTOSDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -53,20 +64,10 @@
             this.reportViewer1.Size = new System.Drawing.Size(611, 589);
             this.reportViewer1.TabIndex = 0;
             // 
-            // fRAN_MOTOSDataSet5
-            // 
-            this.fRAN_MOTOSDataSet5.DataSetName = "FRAN_MOTOSDataSet5";
-            this.fRAN_MOTOSDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // fRANMOTOSDataSet5BindingSource
             // 
             this.fRANMOTOSDataSet5BindingSource.DataSource = this.fRAN_MOTOSDataSet5;
             this.fRANMOTOSDataSet5BindingSource.Position = 0;
-            // 
-            // usReportTendenciasVentasBindingSource
-            // 
-            this.usReportTendenciasVentasBindingSource.DataMember = "Us_ReportTendenciasVentas";
-            this.usReportTendenciasVentasBindingSource.DataSource = this.fRAN_MOTOSDataSet5;
             // 
             // us_ReportTendenciasVentasTableAdapter
             // 
@@ -78,12 +79,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 589);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductosMasVendidos";
-            this.Text = "FrmProductosMasVendidos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "REPORTE TENDENCIA DE VENTAS";
             this.Load += new System.EventHandler(this.FrmProductosMasVendidos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usReportTendenciasVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fRANMOTOSDataSet5BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportTendenciasVentasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

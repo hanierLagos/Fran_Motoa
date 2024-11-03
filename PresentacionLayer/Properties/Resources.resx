@@ -121,6 +121,12 @@
   <data name="logo_tallerfranc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_tallerfranc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tendencias-de-compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tendencias-de-compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="automovil-con-llave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\automovil-con-llave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cerrar-sesion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar-sesion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +160,9 @@
   <data name="agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="grafico-de-barras (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grafico-de-barras (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo_zuzuki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_zuzuki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,8 +175,14 @@
   <data name="logo_yamaha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_yamaha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bienes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bienes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="etiqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\etiqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ventas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ventas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +205,12 @@
   <data name="orden-de-compra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orden-de-compra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bienes (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bienes (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="venta-adicional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\venta-adicional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -198,6 +219,9 @@
   </data>
   <data name="guardar-el-archivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar-el-archivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="la-mejor-experiencia-del-cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\la-mejor-experiencia-del-cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lista-de-verificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lista-de-verificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +241,7 @@
   <data name="agregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ventas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ventas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="almacenar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\almacenar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

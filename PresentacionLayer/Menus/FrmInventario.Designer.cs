@@ -105,6 +105,7 @@
             this.BtnReportes.Name = "BtnReportes";
             this.BtnReportes.Size = new System.Drawing.Size(100, 38);
             this.BtnReportes.Text = "Reportes";
+            this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
             // 
             // toolStripButton1
             // 

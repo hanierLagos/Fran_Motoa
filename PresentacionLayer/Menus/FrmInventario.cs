@@ -1,6 +1,7 @@
 ﻿using PresentacionLayer.Catalogos;
 using PresentacionLayer.Login;
 using PresentacionLayer.Operaciones;
+using PresentacionLayer.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,6 +92,12 @@ namespace PresentacionLayer.Menus
                 Anterior.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void BtnReportes_Click(object sender, EventArgs e)
+        {
+            FrmVerEntradas frmVerEntradas = new FrmVerEntradas();
+            frmVerEntradas.ShowDialog();
         }
     }
 }

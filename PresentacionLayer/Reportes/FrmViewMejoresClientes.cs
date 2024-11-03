@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace PresentacionLayer.Reportes
 {
-    public partial class FrmMejoresClientes : Form
+    public partial class FrmViewMejoresClientes : Form
     {
-        public FrmMejoresClientes()
+        public FrmViewMejoresClientes()
         {
             InitializeComponent();
         }
 
-        private void FrmMejoresClientes_Load(object sender, EventArgs e)
+        private void FrmViewMejoresClientes_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'fRAN_MOTOSDataSet4.Us_ReportMejoresClientes' Puede moverla o quitarla según sea necesario.
             this.us_ReportMejoresClientesTableAdapter.Fill(this.fRAN_MOTOSDataSet4.Us_ReportMejoresClientes);
 
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
     }

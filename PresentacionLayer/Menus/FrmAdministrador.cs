@@ -84,5 +84,10 @@ namespace PresentacionLayer.Menus
                 this.Close();
             }
         }
+
+        private void BtnReportes_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmViewMenuReportAdmin());
+        }
     }
 }

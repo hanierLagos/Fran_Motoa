@@ -133,6 +133,46 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap almacenar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("almacenar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap automovil_con_llave {
+            get {
+                object obj = ResourceManager.GetObject("automovil-con-llave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bienes {
+            get {
+                object obj = ResourceManager.GetObject("bienes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bienes__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bienes (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boton_mas {
             get {
                 object obj = ResourceManager.GetObject("boton-mas", resourceCulture);
@@ -203,9 +243,29 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grafico_de_barras__1_ {
+            get {
+                object obj = ResourceManager.GetObject("grafico-de-barras (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar_el_archivo {
             get {
                 object obj = ResourceManager.GetObject("guardar-el-archivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap la_mejor_experiencia_del_cliente {
+            get {
+                object obj = ResourceManager.GetObject("la-mejor-experiencia-del-cliente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -396,6 +456,26 @@ namespace PresentacionLayer.Properties {
         internal static System.Drawing.Bitmap proceso1 {
             get {
                 object obj = ResourceManager.GetObject("proceso1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tendencias_de_compras {
+            get {
+                object obj = ResourceManager.GetObject("tendencias-de-compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venta_adicional {
+            get {
+                object obj = ResourceManager.GetObject("venta-adicional", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

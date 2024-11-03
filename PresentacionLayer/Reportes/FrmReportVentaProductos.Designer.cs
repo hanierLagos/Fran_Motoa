@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportVentaProductos));
+            this.usReportVentasProductosRealizadasConDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fRAN_MOTOSDataSet6 = new PresentacionLayer.FRAN_MOTOSDataSet6();
             this.datePickerFEchaInicio = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,17 +40,25 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
             this.BtnReporte = new System.Windows.Forms.ToolStripButton();
-            this.fRAN_MOTOSDataSet6 = new PresentacionLayer.FRAN_MOTOSDataSet6();
-            this.usReportVentasProductosRealizadasConDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.us_ReportVentasProductosRealizadasConDetallesTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet6TableAdapters.Us_ReportVentasProductosRealizadasConDetallesTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasProductosRealizadasConDetallesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
             this.bindingNavigator3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasProductosRealizadasConDetallesBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // usReportVentasProductosRealizadasConDetallesBindingSource
+            // 
+            this.usReportVentasProductosRealizadasConDetallesBindingSource.DataMember = "Us_ReportVentasProductosRealizadasConDetalles";
+            this.usReportVentasProductosRealizadasConDetallesBindingSource.DataSource = this.fRAN_MOTOSDataSet6;
+            // 
+            // fRAN_MOTOSDataSet6
+            // 
+            this.fRAN_MOTOSDataSet6.DataSetName = "FRAN_MOTOSDataSet6";
+            this.fRAN_MOTOSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // datePickerFEchaInicio
             // 
@@ -106,9 +117,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.usReportVentasProductosRealizadasConDetallesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.usReportVentasProductosRealizadasConDetallesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PresentacionLayer.Reportes.ReporteVentaProductos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(18, 101);
             this.reportViewer1.Name = "reportViewer1";
@@ -154,16 +165,6 @@
             this.BtnReporte.Text = "Reporte";
             this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
             // 
-            // fRAN_MOTOSDataSet6
-            // 
-            this.fRAN_MOTOSDataSet6.DataSetName = "FRAN_MOTOSDataSet6";
-            this.fRAN_MOTOSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usReportVentasProductosRealizadasConDetallesBindingSource
-            // 
-            this.usReportVentasProductosRealizadasConDetallesBindingSource.DataMember = "Us_ReportVentasProductosRealizadasConDetalles";
-            this.usReportVentasProductosRealizadasConDetallesBindingSource.DataSource = this.fRAN_MOTOSDataSet6;
-            // 
             // us_ReportVentasProductosRealizadasConDetallesTableAdapter
             // 
             this.us_ReportVentasProductosRealizadasConDetallesTableAdapter.ClearBeforeFill = true;
@@ -204,14 +205,16 @@
             this.Controls.Add(this.datePickerFechaFin);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.datePickerFEchaInicio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReportVentaProductos";
-            this.Text = "FrmReportVentaProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "REPORTE VENTA DE PRODUCTOS";
             this.Load += new System.EventHandler(this.FrmReportVentaProductos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasProductosRealizadasConDetallesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             this.bindingNavigator3.ResumeLayout(false);
             this.bindingNavigator3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasProductosRealizadasConDetallesBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
