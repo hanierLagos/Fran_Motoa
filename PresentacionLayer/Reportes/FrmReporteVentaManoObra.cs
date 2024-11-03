@@ -35,7 +35,7 @@ namespace PresentacionLayer.Reportes
             {
                 // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
                 this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.Connection.ConnectionString =
-                    "Data Source=DESKTOP-7GLINRR;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                    "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
                 // Llenar el DataSet usando el TableAdapter con los parámetros de fecha
                 this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.Fill(

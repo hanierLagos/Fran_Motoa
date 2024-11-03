@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using PresentacionLayer.Login;
 using PresentacionLayer.Operaciones;
 using PresentacionLayer.Reportes;
+using System.Data.SqlClient;
 
 
 
@@ -23,6 +24,20 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            string connectionString = "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    Console.WriteLine("Conexión exitosa.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error de conexión: " + ex.Message);
+                }
+            }
             Application.Run(new FrmLogin());
         }
     }
