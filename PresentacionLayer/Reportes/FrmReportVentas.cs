@@ -32,6 +32,9 @@ namespace PresentacionLayer.Reportes
             // Llenar el DataSet usando el TableAdapter y los parámetros de fecha
             try
             {
+                // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
+                this.us_ReportVentasRealizadasConDetallesTableAdapter.Connection.ConnectionString =
+                    "Data Source=DESKTOP-7GLINRR;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
                 this.us_ReportVentasRealizadasConDetallesTableAdapter.Fill(this.fRAN_MOTOSDataSet8.Us_ReportVentasRealizadasConDetalles, fechaInicio, fechaFin);
 
                 // Refrescar el ReportViewer

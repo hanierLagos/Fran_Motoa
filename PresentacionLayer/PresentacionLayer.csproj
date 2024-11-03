@@ -257,6 +257,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FRAN_MOTOSDataSet1.cs">
+      <DependentUpon>FRAN_MOTOSDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FRAN_MOTOSDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

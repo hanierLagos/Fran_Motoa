@@ -32,6 +32,9 @@ namespace PresentacionLayer.Reportes
             // Llenar el DataSet usando el TableAdapter y los parámetros del coombobox
             try
             {
+                // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
+                this.us_ReportEntradasRealizadasTableAdapter.Connection.ConnectionString =
+                    "Data Source=DESKTOP-7GLINRR;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
                 this.us_ReportEntradasRealizadasTableAdapter.Fill(this.fRAN_MOTOSDataSet9.Us_ReportEntradasRealizadas, cantAver);
 
                 // Refrescar el ReportViewer

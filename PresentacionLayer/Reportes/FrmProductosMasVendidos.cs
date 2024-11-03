@@ -19,14 +19,20 @@ namespace PresentacionLayer.Reportes
 
         private void FrmProductosMasVendidos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'fRAN_MOTOSDataSet5.Us_ReportTendenciasVentas' Puede moverla o quitarla según sea necesario.
+            CargarReporteTendenciasVentas();
+        }
+        private void CargarReporteTendenciasVentas()
+        {
+            // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
+            this.us_ReportTendenciasVentasTableAdapter.Connection.ConnectionString =
+                "Data Source=DESKTOP-7GLINRR;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+            // Llenar el DataSet con los datos actualizados
             this.us_ReportTendenciasVentasTableAdapter.Fill(this.fRAN_MOTOSDataSet5.Us_ReportTendenciasVentas);
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
+            // Refrescar el ReportViewer para mostrar el reporte actualizado
             this.reportViewer1.RefreshReport();
         }
+
     }
 }

@@ -19,11 +19,20 @@ namespace PresentacionLayer.Reportes
 
         private void FrmViewMejoresClientes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'fRAN_MOTOSDataSet4.Us_ReportMejoresClientes' Puede moverla o quitarla según sea necesario.
+            CargarReporteMejoresClientes();
+
+        }
+
+        private void CargarReporteMejoresClientes()
+        {
+            // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
+            this.us_ReportMejoresClientesTableAdapter.Connection.ConnectionString =
+                "Data Source=DESKTOP-7GLINRR;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+            // Llenar el DataSet con los datos actualizados
             this.us_ReportMejoresClientesTableAdapter.Fill(this.fRAN_MOTOSDataSet4.Us_ReportMejoresClientes);
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
+            // Refrescar el ReportViewer para mostrar el reporte actualizado
             this.reportViewer1.RefreshReport();
         }
     }
