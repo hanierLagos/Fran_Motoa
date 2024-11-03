@@ -23,7 +23,7 @@ namespace PresentacionLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmReporteVentaManoObra());
+            Application.Run(new FrmReportVentas());
         }
     }
 }
