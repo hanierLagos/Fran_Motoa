@@ -65,7 +65,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logoicono.ico</ApplicationIcon>
+    <ApplicationIcon>logo_tallerfranc.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>PresentacionLayer.Program</StartupObject>
@@ -678,6 +678,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoicono.ico" />
+    <Content Include="logo_tallerfranc.ico" />
     <None Include="Resources\almacenar %281%29.png" />
     <None Include="Resources\la-mejor-experiencia-del-cliente.png" />
     <None Include="Resources\venta-adicional.png" />
