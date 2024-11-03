@@ -29,14 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DG_ProductosDisponibles = new System.Windows.Forms.DataGridView();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.imgCrud = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscra = new System.Windows.Forms.TextBox();
@@ -58,9 +63,13 @@
             this.rBtnVentaProducto = new System.Windows.Forms.RadioButton();
             this.cmbClientes = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rBtnAmbas = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BtnAddPrduct = new System.Windows.Forms.ToolStripButton();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -79,6 +88,10 @@
             this.btnFinalizarVenta = new System.Windows.Forms.ToolStripButton();
             this.btnAnularVenta = new System.Windows.Forms.ToolStripButton();
             this.DG_DetallesdeVenta = new System.Windows.Forms.DataGridView();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -86,31 +99,18 @@
             this.BtnMenu = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.rBtnAmbas = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDescipcionObra = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtPrecioObra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbTipoObra = new System.Windows.Forms.ComboBox();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.BtnAddObra = new System.Windows.Forms.ToolStripButton();
             this.button2 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbTipoObra = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPrecioObra = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtDescipcionObra = new System.Windows.Forms.TextBox();
-            this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.BtnAddPrduct = new System.Windows.Forms.ToolStripButton();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosDisponibles)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -119,6 +119,8 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
+            this.bindingNavigator3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -131,8 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
-            this.bindingNavigator3.SuspendLayout();
             this.SuspendLayout();
             // 
             // DG_ProductosDisponibles
@@ -140,23 +140,23 @@
             this.DG_ProductosDisponibles.AllowUserToAddRows = false;
             this.DG_ProductosDisponibles.AllowUserToDeleteRows = false;
             this.DG_ProductosDisponibles.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DG_ProductosDisponibles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DG_ProductosDisponibles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DG_ProductosDisponibles.BackgroundColor = System.Drawing.Color.White;
             this.DG_ProductosDisponibles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DG_ProductosDisponibles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_ProductosDisponibles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_ProductosDisponibles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DG_ProductosDisponibles.ColumnHeadersHeight = 38;
             this.DG_ProductosDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CODIGO,
@@ -165,14 +165,14 @@
             this.amount,
             this.Agregar});
             this.DG_ProductosDisponibles.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_ProductosDisponibles.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_ProductosDisponibles.DefaultCellStyle = dataGridViewCellStyle3;
             this.DG_ProductosDisponibles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DG_ProductosDisponibles.EnableHeadersVisualStyles = false;
             this.DG_ProductosDisponibles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
@@ -186,6 +186,38 @@
             this.DG_ProductosDisponibles.Size = new System.Drawing.Size(652, 269);
             this.DG_ProductosDisponibles.TabIndex = 45;
             this.DG_ProductosDisponibles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_ProductosEntrantes_CellContentClick);
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.HeaderText = "Código";
+            this.CODIGO.MinimumWidth = 6;
+            this.CODIGO.Name = "CODIGO";
+            // 
+            // PRODUCTOS
+            // 
+            this.PRODUCTOS.HeaderText = "Producto";
+            this.PRODUCTOS.Name = "PRODUCTOS";
+            this.PRODUCTOS.Width = 300;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "Precio Venta";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.Width = 107;
+            // 
+            // amount
+            // 
+            this.amount.HeaderText = "Cantidad";
+            this.amount.Name = "amount";
+            this.amount.Width = 80;
+            // 
+            // Agregar
+            // 
+            this.Agregar.HeaderText = "Agregar";
+            this.Agregar.MinimumWidth = 6;
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // imgCrud
             // 
@@ -440,6 +472,34 @@
             this.panel4.Size = new System.Drawing.Size(506, 42);
             this.panel4.TabIndex = 55;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(5, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 19);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Tipo de Venta:";
+            // 
+            // rBtnAmbas
+            // 
+            this.rBtnAmbas.AutoSize = true;
+            this.rBtnAmbas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.rBtnAmbas.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnAmbas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rBtnAmbas.Location = new System.Drawing.Point(409, 10);
+            this.rBtnAmbas.Margin = new System.Windows.Forms.Padding(2);
+            this.rBtnAmbas.Name = "rBtnAmbas";
+            this.rBtnAmbas.Size = new System.Drawing.Size(68, 21);
+            this.rBtnAmbas.TabIndex = 63;
+            this.rBtnAmbas.TabStop = true;
+            this.rBtnAmbas.Text = "Ambas";
+            this.rBtnAmbas.UseVisualStyleBackColor = false;
+            this.rBtnAmbas.CheckedChanged += new System.EventHandler(this.rBtnAmbas_CheckedChanged);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
@@ -490,6 +550,44 @@
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Producto";
+            // 
+            // bindingNavigator3
+            // 
+            this.bindingNavigator3.AddNewItem = null;
+            this.bindingNavigator3.AutoSize = false;
+            this.bindingNavigator3.BackColor = System.Drawing.Color.Transparent;
+            this.bindingNavigator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bindingNavigator3.CountItem = null;
+            this.bindingNavigator3.DeleteItem = null;
+            this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bindingNavigator3.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator3.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.bindingNavigator3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnAddPrduct});
+            this.bindingNavigator3.Location = new System.Drawing.Point(135, 176);
+            this.bindingNavigator3.MoveFirstItem = null;
+            this.bindingNavigator3.MoveLastItem = null;
+            this.bindingNavigator3.MoveNextItem = null;
+            this.bindingNavigator3.MovePreviousItem = null;
+            this.bindingNavigator3.Name = "bindingNavigator3";
+            this.bindingNavigator3.PositionItem = null;
+            this.bindingNavigator3.Size = new System.Drawing.Size(199, 37);
+            this.bindingNavigator3.TabIndex = 68;
+            this.bindingNavigator3.Text = "bindingNavigator1";
+            // 
+            // BtnAddPrduct
+            // 
+            this.BtnAddPrduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddPrduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAddPrduct.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
+            this.BtnAddPrduct.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAddPrduct.Name = "BtnAddPrduct";
+            this.BtnAddPrduct.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAddPrduct.RightToLeftAutoMirrorImage = true;
+            this.BtnAddPrduct.Size = new System.Drawing.Size(167, 34);
+            this.BtnAddPrduct.Text = "Agregar a Venta";
+            this.BtnAddPrduct.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label16
             // 
@@ -701,23 +799,23 @@
             this.DG_DetallesdeVenta.AllowUserToAddRows = false;
             this.DG_DetallesdeVenta.AllowUserToDeleteRows = false;
             this.DG_DetallesdeVenta.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.DG_DetallesdeVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.DG_DetallesdeVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DG_DetallesdeVenta.BackgroundColor = System.Drawing.Color.White;
             this.DG_DetallesdeVenta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DG_DetallesdeVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_DetallesdeVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(196)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_DetallesdeVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DG_DetallesdeVenta.ColumnHeadersHeight = 38;
             this.DG_DetallesdeVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.description,
@@ -725,14 +823,14 @@
             this.Cantidad,
             this.SUBTOTAL});
             this.DG_DetallesdeVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_DetallesdeVenta.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_DetallesdeVenta.DefaultCellStyle = dataGridViewCellStyle6;
             this.DG_DetallesdeVenta.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DG_DetallesdeVenta.EnableHeadersVisualStyles = false;
             this.DG_DetallesdeVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
@@ -746,6 +844,29 @@
             this.DG_DetallesdeVenta.Size = new System.Drawing.Size(684, 335);
             this.DG_DetallesdeVenta.TabIndex = 60;
             this.DG_DetallesdeVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_DetallesdeVenta_CellContentClick);
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Descripción";
+            this.description.Name = "description";
+            this.description.Width = 320;
+            // 
+            // pUnitario
+            // 
+            this.pUnitario.HeaderText = "Precio Unitario";
+            this.pUnitario.Name = "pUnitario";
+            this.pUnitario.Width = 130;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // SUBTOTAL
+            // 
+            this.SUBTOTAL.HeaderText = "Sub Total";
+            this.SUBTOTAL.Name = "SUBTOTAL";
+            this.SUBTOTAL.Width = 130;
             // 
             // panel8
             // 
@@ -798,6 +919,7 @@
             // BtnMenu
             // 
             this.BtnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMenu.FlatAppearance.BorderSize = 0;
             this.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMenu.ForeColor = System.Drawing.Color.Transparent;
             this.BtnMenu.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
@@ -833,66 +955,6 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "Cliente:";
             // 
-            // CODIGO
-            // 
-            this.CODIGO.HeaderText = "Código";
-            this.CODIGO.MinimumWidth = 6;
-            this.CODIGO.Name = "CODIGO";
-            // 
-            // PRODUCTOS
-            // 
-            this.PRODUCTOS.HeaderText = "Producto";
-            this.PRODUCTOS.Name = "PRODUCTOS";
-            this.PRODUCTOS.Width = 300;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "Precio Venta";
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.Width = 107;
-            // 
-            // amount
-            // 
-            this.amount.HeaderText = "Cantidad";
-            this.amount.Name = "amount";
-            this.amount.Width = 80;
-            // 
-            // Agregar
-            // 
-            this.Agregar.HeaderText = "Agregar";
-            this.Agregar.MinimumWidth = 6;
-            this.Agregar.Name = "Agregar";
-            this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // rBtnAmbas
-            // 
-            this.rBtnAmbas.AutoSize = true;
-            this.rBtnAmbas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.rBtnAmbas.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rBtnAmbas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.rBtnAmbas.Location = new System.Drawing.Point(409, 10);
-            this.rBtnAmbas.Margin = new System.Windows.Forms.Padding(2);
-            this.rBtnAmbas.Name = "rBtnAmbas";
-            this.rBtnAmbas.Size = new System.Drawing.Size(68, 21);
-            this.rBtnAmbas.TabIndex = 63;
-            this.rBtnAmbas.TabStop = true;
-            this.rBtnAmbas.Text = "Ambas";
-            this.rBtnAmbas.UseVisualStyleBackColor = false;
-            this.rBtnAmbas.CheckedChanged += new System.EventHandler(this.rBtnAmbas_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(5, 10);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 19);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Tipo de Venta:";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -915,6 +977,68 @@
             this.groupBox1.Size = new System.Drawing.Size(506, 164);
             this.groupBox1.TabIndex = 64;
             this.groupBox1.TabStop = false;
+            // 
+            // txtDescipcionObra
+            // 
+            this.txtDescipcionObra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescipcionObra.Location = new System.Drawing.Point(284, 45);
+            this.txtDescipcionObra.Multiline = true;
+            this.txtDescipcionObra.Name = "txtDescipcionObra";
+            this.txtDescipcionObra.Size = new System.Drawing.Size(208, 73);
+            this.txtDescipcionObra.TabIndex = 67;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.label21.Location = new System.Drawing.Point(280, 22);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(91, 19);
+            this.label21.TabIndex = 64;
+            this.label21.Text = "Descripción:";
+            // 
+            // txtPrecioObra
+            // 
+            this.txtPrecioObra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioObra.Location = new System.Drawing.Point(88, 71);
+            this.txtPrecioObra.Name = "txtPrecioObra";
+            this.txtPrecioObra.Size = new System.Drawing.Size(158, 24);
+            this.txtPrecioObra.TabIndex = 64;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.label5.Location = new System.Drawing.Point(9, 71);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 19);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Precio";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.label4.Location = new System.Drawing.Point(5, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 19);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Tipo";
+            // 
+            // cmbTipoObra
+            // 
+            this.cmbTipoObra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoObra.FormattingEnabled = true;
+            this.cmbTipoObra.Location = new System.Drawing.Point(88, 25);
+            this.cmbTipoObra.Name = "cmbTipoObra";
+            this.cmbTipoObra.Size = new System.Drawing.Size(158, 27);
+            this.cmbTipoObra.TabIndex = 65;
             // 
             // bindingNavigator2
             // 
@@ -992,129 +1116,6 @@
             this.label3.TabIndex = 42;
             this.label3.Text = "Detalles de la Mano de Obra";
             // 
-            // cmbTipoObra
-            // 
-            this.cmbTipoObra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoObra.FormattingEnabled = true;
-            this.cmbTipoObra.Location = new System.Drawing.Point(88, 25);
-            this.cmbTipoObra.Name = "cmbTipoObra";
-            this.cmbTipoObra.Size = new System.Drawing.Size(158, 27);
-            this.cmbTipoObra.TabIndex = 65;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.label4.Location = new System.Drawing.Point(5, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 19);
-            this.label4.TabIndex = 65;
-            this.label4.Text = "Tipo";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.label5.Location = new System.Drawing.Point(9, 71);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 19);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "Precio";
-            // 
-            // txtPrecioObra
-            // 
-            this.txtPrecioObra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioObra.Location = new System.Drawing.Point(88, 71);
-            this.txtPrecioObra.Name = "txtPrecioObra";
-            this.txtPrecioObra.Size = new System.Drawing.Size(158, 24);
-            this.txtPrecioObra.TabIndex = 64;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.label21.Location = new System.Drawing.Point(280, 22);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(91, 19);
-            this.label21.TabIndex = 64;
-            this.label21.Text = "Descripción:";
-            // 
-            // txtDescipcionObra
-            // 
-            this.txtDescipcionObra.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescipcionObra.Location = new System.Drawing.Point(284, 45);
-            this.txtDescipcionObra.Multiline = true;
-            this.txtDescipcionObra.Name = "txtDescipcionObra";
-            this.txtDescipcionObra.Size = new System.Drawing.Size(208, 73);
-            this.txtDescipcionObra.TabIndex = 67;
-            // 
-            // bindingNavigator3
-            // 
-            this.bindingNavigator3.AddNewItem = null;
-            this.bindingNavigator3.AutoSize = false;
-            this.bindingNavigator3.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bindingNavigator3.CountItem = null;
-            this.bindingNavigator3.DeleteItem = null;
-            this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.None;
-            this.bindingNavigator3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bindingNavigator3.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator3.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.bindingNavigator3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnAddPrduct});
-            this.bindingNavigator3.Location = new System.Drawing.Point(135, 176);
-            this.bindingNavigator3.MoveFirstItem = null;
-            this.bindingNavigator3.MoveLastItem = null;
-            this.bindingNavigator3.MoveNextItem = null;
-            this.bindingNavigator3.MovePreviousItem = null;
-            this.bindingNavigator3.Name = "bindingNavigator3";
-            this.bindingNavigator3.PositionItem = null;
-            this.bindingNavigator3.Size = new System.Drawing.Size(199, 37);
-            this.bindingNavigator3.TabIndex = 68;
-            this.bindingNavigator3.Text = "bindingNavigator1";
-            // 
-            // BtnAddPrduct
-            // 
-            this.BtnAddPrduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddPrduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.BtnAddPrduct.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
-            this.BtnAddPrduct.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnAddPrduct.Name = "BtnAddPrduct";
-            this.BtnAddPrduct.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnAddPrduct.RightToLeftAutoMirrorImage = true;
-            this.BtnAddPrduct.Size = new System.Drawing.Size(167, 34);
-            this.BtnAddPrduct.Text = "Agregar a Venta";
-            this.BtnAddPrduct.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // description
-            // 
-            this.description.HeaderText = "Descripción";
-            this.description.Name = "description";
-            this.description.Width = 320;
-            // 
-            // pUnitario
-            // 
-            this.pUnitario.HeaderText = "Precio Unitario";
-            this.pUnitario.Name = "pUnitario";
-            this.pUnitario.Width = 130;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // SUBTOTAL
-            // 
-            this.SUBTOTAL.HeaderText = "Sub Total";
-            this.SUBTOTAL.Name = "SUBTOTAL";
-            this.SUBTOTAL.Width = 130;
-            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1158,6 +1159,9 @@
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
+            this.bindingNavigator3.ResumeLayout(false);
+            this.bindingNavigator3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1177,9 +1181,6 @@
             this.bindingNavigator2.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
-            this.bindingNavigator3.ResumeLayout(false);
-            this.bindingNavigator3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

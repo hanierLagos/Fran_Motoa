@@ -51,7 +51,10 @@ namespace PresentacionLayer.Menus
 
         private void BtnVentas_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmVentas());
+            this.Hide();
+            FrmVentas frm=new FrmVentas();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void BtnInventario_Click(object sender, EventArgs e)
