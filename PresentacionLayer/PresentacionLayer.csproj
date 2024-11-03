@@ -285,6 +285,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FRAN_MOTOSDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FRAN_MOTOSDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRAN_MOTOSDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FRAN_MOTOSReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -375,6 +380,12 @@
     <Compile Include="Reportes\FrmReportVentas.Designer.cs">
       <DependentUpon>FrmReportVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmVerEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmVerEntradas.Designer.cs">
+      <DependentUpon>FrmVerEntradas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Catalogos\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +460,10 @@
     <EmbeddedResource Include="Reportes\FrmReportVentas.resx">
       <DependentUpon>FrmReportVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmVerEntradas.resx">
+      <DependentUpon>FrmVerEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteEntradasInventario.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteMejoresClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteTendenciaDeVentas.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentaProductos.rdlc" />
@@ -553,6 +568,17 @@
     </None>
     <None Include="FRAN_MOTOSDataSet8.xss">
       <DependentUpon>FRAN_MOTOSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet9.xsc">
+      <DependentUpon>FRAN_MOTOSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRAN_MOTOSDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAN_MOTOSDataSet9.xss">
+      <DependentUpon>FRAN_MOTOSDataSet9.xsd</DependentUpon>
     </None>
     <None Include="FRAN_MOTOSReport.xsc">
       <DependentUpon>FRAN_MOTOSReport.xsd</DependentUpon>
