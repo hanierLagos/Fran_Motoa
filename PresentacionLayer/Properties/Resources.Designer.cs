@@ -330,19 +330,19 @@ namespace PresentacionLayer.Properties {
         ///            border-collapse: collapse;
         ///        }
         ///
-        ///            table.border th, table.border td {
+        ///        table.border th, table.border td {
         ///                padding: 5px;
         ///                border: 1px solid black;
-        ///            }
+        ///        }
         ///
         ///        td, th {
         ///            font-family: &apos;Microsoft YaHei UI&apos;, sans-serif;
-        ///            font-weight: bold;
+        ///            
         ///        }
         ///
         ///        .logos {
         ///            text-align: center; /* Centra los logos */
-        ///            mar [resto de la cadena truncado]&quot;;.
+        ///            margin: 10px 0; /* Espaciado  [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string PlantillaFactura {
             get {
@@ -396,6 +396,16 @@ namespace PresentacionLayer.Properties {
         internal static System.Drawing.Bitmap proceso1 {
             get {
                 object obj = ResourceManager.GetObject("proceso1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ventas {
+            get {
+                object obj = ResourceManager.GetObject("ventas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
