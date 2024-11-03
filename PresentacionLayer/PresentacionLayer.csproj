@@ -245,6 +245,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FRAN_MOTOSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRAN_MOTOSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAN_MOTOSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRAN_MOTOSDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FRAN_MOTOSReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -299,13 +309,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Frm_ViewRptProductosvendios.cs">
+    <Compile Include="Reportes\FrmReportTendenciasVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\Frm_ViewRptProductosvendios.Designer.cs">
-      <DependentUpon>Frm_ViewRptProductosvendios.cs</DependentUpon>
+    <Compile Include="Reportes\FrmReportTendenciasVentas.Designer.cs">
+      <DependentUpon>FrmReportTendenciasVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Catalogos\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,10 +371,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Frm_ViewRptProductosvendios.resx">
-      <DependentUpon>Frm_ViewRptProductosvendios.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\FrmReportTendenciasVentas.resx">
+      <DependentUpon>FrmReportTendenciasVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Report10ProductosVendidos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteTendenciasDeVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\RptProductosVendidos.rdlc" />
+    <EmbeddedResource Include="Reportes\RptTendenciasdeVentas.rdlc" />
     <None Include="FRAN_MOTOSDataSet.xsc">
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
     </None>
@@ -376,6 +387,28 @@
     </None>
     <None Include="FRAN_MOTOSDataSet.xss">
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet1.xsc">
+      <DependentUpon>FRAN_MOTOSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRAN_MOTOSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAN_MOTOSDataSet1.xss">
+      <DependentUpon>FRAN_MOTOSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet2.xsc">
+      <DependentUpon>FRAN_MOTOSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRAN_MOTOSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAN_MOTOSDataSet2.xss">
+      <DependentUpon>FRAN_MOTOSDataSet2.xsd</DependentUpon>
     </None>
     <None Include="FRAN_MOTOSReport.xsc">
       <DependentUpon>FRAN_MOTOSReport.xsd</DependentUpon>
@@ -465,19 +498,6 @@
     <None Include="Resources\logo_yamaha.png" />
     <None Include="Resources\logo_tallerfranc.png" />
     <None Include="Resources\logo_tallerfranc1.png" />
-    <Content Include="Reportes\SqlServerTypes\readme.htm" />
-    <Content Include="Reportes\SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Reportes\SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Reportes\SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Reportes\SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\cerrar-sesion %281%29.png" />
     <None Include="Resources\cerrar-sesion.png" />
     <None Include="Resources\LogoTipo_FranMotos.png" />
