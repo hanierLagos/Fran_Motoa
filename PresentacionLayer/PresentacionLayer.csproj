@@ -275,6 +275,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FRAN_MOTOSDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FRAN_MOTOSDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FRAN_MOTOSDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FRAN_MOTOSReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -340,6 +345,12 @@
     </Compile>
     <Compile Include="Reportes\FrmProductosMasVendidos.Designer.cs">
       <DependentUpon>FrmProductosMasVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteVentaManoObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteVentaManoObra.Designer.cs">
+      <DependentUpon>FrmReporteVentaManoObra.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmReportTendenciasVentas.cs">
       <SubType>Form</SubType>
@@ -415,6 +426,9 @@
     <EmbeddedResource Include="Reportes\FrmProductosMasVendidos.resx">
       <DependentUpon>FrmProductosMasVendidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReporteVentaManoObra.resx">
+      <DependentUpon>FrmReporteVentaManoObra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReportTendenciasVentas.resx">
       <DependentUpon>FrmReportTendenciasVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +438,7 @@
     <EmbeddedResource Include="Reportes\ReporteMejoresClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteTendenciaDeVentas.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentaProductos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteVentasManoObra.rdlc" />
     <EmbeddedResource Include="Reportes\RptProductosVendidos.rdlc" />
     <None Include="FRAN_MOTOSDataSet.xsc">
       <DependentUpon>FRAN_MOTOSDataSet.xsd</DependentUpon>
@@ -501,6 +516,17 @@
     </None>
     <None Include="FRAN_MOTOSDataSet6.xss">
       <DependentUpon>FRAN_MOTOSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet7.xsc">
+      <DependentUpon>FRAN_MOTOSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FRAN_MOTOSDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FRAN_MOTOSDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAN_MOTOSDataSet7.xss">
+      <DependentUpon>FRAN_MOTOSDataSet7.xsd</DependentUpon>
     </None>
     <None Include="FRAN_MOTOSReport.xsc">
       <DependentUpon>FRAN_MOTOSReport.xsd</DependentUpon>
