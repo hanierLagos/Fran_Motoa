@@ -43,11 +43,13 @@
             this.datePickerFEchaInicio = new System.Windows.Forms.DateTimePicker();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter = new PresentacionLayer.FRAN_MOTOSDataSet7TableAdapters.Us_ReportVentasManoObraRealizadasConDetallesTableAdapter();
+            this.usReportVentasManoObraRealizadasConDetallesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fRAN_MOTOSDataSet7)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
             this.bindingNavigator3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // usReportVentasManoObraRealizadasConDetallesBindingSource
@@ -178,7 +180,7 @@
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.usReportVentasManoObraRealizadasConDetallesBindingSource;
+            reportDataSource1.Value = this.usReportVentasManoObraRealizadasConDetallesBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PresentacionLayer.Reportes.ReporteVentasManoObra.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 91);
@@ -190,6 +192,11 @@
             // us_ReportVentasManoObraRealizadasConDetallesTableAdapter
             // 
             this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.ClearBeforeFill = true;
+            // 
+            // usReportVentasManoObraRealizadasConDetallesBindingSource1
+            // 
+            this.usReportVentasManoObraRealizadasConDetallesBindingSource1.DataMember = "Us_ReportVentasManoObraRealizadasConDetalles";
+            this.usReportVentasManoObraRealizadasConDetallesBindingSource1.DataSource = this.fRAN_MOTOSDataSet7;
             // 
             // FrmReporteVentaManoObra
             // 
@@ -215,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             this.bindingNavigator3.ResumeLayout(false);
             this.bindingNavigator3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usReportVentasManoObraRealizadasConDetallesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +242,6 @@
         private System.Windows.Forms.BindingSource usReportVentasManoObraRealizadasConDetallesBindingSource;
         private FRAN_MOTOSDataSet7 fRAN_MOTOSDataSet7;
         private FRAN_MOTOSDataSet7TableAdapters.Us_ReportVentasManoObraRealizadasConDetallesTableAdapter us_ReportVentasManoObraRealizadasConDetallesTableAdapter;
+        private System.Windows.Forms.BindingSource usReportVentasManoObraRealizadasConDetallesBindingSource1;
     }
 }

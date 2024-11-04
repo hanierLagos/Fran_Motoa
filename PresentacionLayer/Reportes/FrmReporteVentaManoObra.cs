@@ -26,6 +26,10 @@ namespace PresentacionLayer.Reportes
 
         private void BtnReporte_Click(object sender, EventArgs e)
         {
+            // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
+            this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.Connection.ConnectionString =
+                "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
             // Obtener las fechas de los DateTimePicker
             DateTime fechaInicio = datePickerFEchaInicio.Value;
             DateTime fechaFin = datePickerFechaFin.Value;
@@ -33,9 +37,6 @@ namespace PresentacionLayer.Reportes
             // Llenar el DataSet usando el TableAdapter y los parámetros de fecha
             try
             {
-                // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
-                this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.Connection.ConnectionString =
-                    "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
                 // Llenar el DataSet usando el TableAdapter con los parámetros de fecha
                 this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.Fill(
