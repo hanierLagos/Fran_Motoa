@@ -37,8 +37,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
             this.bindingBotons.SuspendLayout();
@@ -131,14 +131,6 @@
             this.bindingBotons.TabIndex = 31;
             this.bindingBotons.Text = "bindingNavigator1";
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(12, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 143);
-            this.panel1.TabIndex = 32;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,6 +143,14 @@
             this.btnGuardar.Size = new System.Drawing.Size(114, 34);
             this.btnGuardar.Text = " Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(12, 81);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(412, 143);
+            this.panel1.TabIndex = 32;
             // 
             // FrmMarca
             // 
@@ -166,6 +166,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CREAR, ACTUALIZAR MARCA";
             this.Load += new System.EventHandler(this.FrmMarca_Load);
             this.panel2.ResumeLayout(false);

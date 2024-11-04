@@ -44,11 +44,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.radioBtnNuevo = new System.Windows.Forms.RadioButton();
             this.radioBtnExistente = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bindingBotons = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnNuevaMarca = new FontAwesome.Sharp.IconPictureBox();
+            this.BtnNuevaCategoria = new FontAwesome.Sharp.IconPictureBox();
             this.txtPrecioEntrada = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -76,21 +81,20 @@
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.btnFinalizarEntrada = new System.Windows.Forms.ToolStripButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnFinalizarEntrada = new System.Windows.Forms.ToolStripButton();
-            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
-            this.BtnNuevaMarca = new FontAwesome.Sharp.IconPictureBox();
-            this.BtnNuevaCategoria = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).BeginInit();
             this.bindingBotons.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_ProductosEntrantes)).BeginInit();
@@ -98,10 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -232,6 +232,36 @@
             this.panel4.Size = new System.Drawing.Size(396, 42);
             this.panel4.TabIndex = 37;
             // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconPictureBox2.IconSize = 24;
+            this.iconPictureBox2.Location = new System.Drawing.Point(233, 10);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(24, 26);
+            this.iconPictureBox2.TabIndex = 40;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Instalod;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconPictureBox1.IconSize = 24;
+            this.iconPictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(24, 26);
+            this.iconPictureBox1.TabIndex = 39;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // radioBtnNuevo
             // 
             this.radioBtnNuevo.AutoSize = true;
@@ -308,6 +338,19 @@
             this.bindingBotons.TabIndex = 45;
             this.bindingBotons.Text = "bindingNavigator1";
             // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
+            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
+            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
+            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -331,6 +374,38 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(376, 372);
             this.panel3.TabIndex = 29;
+            // 
+            // BtnNuevaMarca
+            // 
+            this.BtnNuevaMarca.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaMarca.ForeColor = System.Drawing.Color.Green;
+            this.BtnNuevaMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.BtnNuevaMarca.IconColor = System.Drawing.Color.Green;
+            this.BtnNuevaMarca.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnNuevaMarca.IconSize = 24;
+            this.BtnNuevaMarca.Location = new System.Drawing.Point(340, 125);
+            this.BtnNuevaMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNuevaMarca.Name = "BtnNuevaMarca";
+            this.BtnNuevaMarca.Size = new System.Drawing.Size(24, 25);
+            this.BtnNuevaMarca.TabIndex = 42;
+            this.BtnNuevaMarca.TabStop = false;
+            this.BtnNuevaMarca.Click += new System.EventHandler(this.BtnNuevaMarca_Click);
+            // 
+            // BtnNuevaCategoria
+            // 
+            this.BtnNuevaCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaCategoria.ForeColor = System.Drawing.Color.Green;
+            this.BtnNuevaCategoria.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.BtnNuevaCategoria.IconColor = System.Drawing.Color.Green;
+            this.BtnNuevaCategoria.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnNuevaCategoria.IconSize = 24;
+            this.BtnNuevaCategoria.Location = new System.Drawing.Point(340, 173);
+            this.BtnNuevaCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNuevaCategoria.Name = "BtnNuevaCategoria";
+            this.BtnNuevaCategoria.Size = new System.Drawing.Size(24, 26);
+            this.BtnNuevaCategoria.TabIndex = 41;
+            this.BtnNuevaCategoria.TabStop = false;
+            this.BtnNuevaCategoria.Click += new System.EventHandler(this.BtnNuevaCategoria_Click);
             // 
             // txtPrecioEntrada
             // 
@@ -642,6 +717,19 @@
             this.bindingNavigator1.TabIndex = 23;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // btnFinalizarEntrada
+            // 
+            this.btnFinalizarEntrada.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarEntrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
+            this.btnFinalizarEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizarEntrada.Image")));
+            this.btnFinalizarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFinalizarEntrada.Name = "btnFinalizarEntrada";
+            this.btnFinalizarEntrada.Padding = new System.Windows.Forms.Padding(10);
+            this.btnFinalizarEntrada.RightToLeftAutoMirrorImage = true;
+            this.btnFinalizarEntrada.Size = new System.Drawing.Size(173, 44);
+            this.btnFinalizarEntrada.Text = "Finalizar Entrada";
+            this.btnFinalizarEntrada.Click += new System.EventHandler(this.btnFinalizarEntrada_Click);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
@@ -664,94 +752,6 @@
             this.label10.TabIndex = 42;
             this.label10.Text = "OPCIONES";
             // 
-            // btnFinalizarEntrada
-            // 
-            this.btnFinalizarEntrada.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarEntrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(88)))), ((int)(((byte)(111)))));
-            this.btnFinalizarEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizarEntrada.Image")));
-            this.btnFinalizarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnFinalizarEntrada.Name = "btnFinalizarEntrada";
-            this.btnFinalizarEntrada.Padding = new System.Windows.Forms.Padding(10);
-            this.btnFinalizarEntrada.RightToLeftAutoMirrorImage = true;
-            this.btnFinalizarEntrada.Size = new System.Drawing.Size(173, 44);
-            this.btnFinalizarEntrada.Text = "Finalizar Entrada";
-            this.btnFinalizarEntrada.Click += new System.EventHandler(this.btnFinalizarEntrada_Click);
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(62)))));
-            this.BtnAgregar.Image = global::PresentacionLayer.Properties.Resources.boton_mas;
-            this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnAgregar.RightToLeftAutoMirrorImage = true;
-            this.BtnAgregar.Size = new System.Drawing.Size(110, 34);
-            this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // BtnNuevaMarca
-            // 
-            this.BtnNuevaMarca.BackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevaMarca.ForeColor = System.Drawing.Color.Green;
-            this.BtnNuevaMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.BtnNuevaMarca.IconColor = System.Drawing.Color.Green;
-            this.BtnNuevaMarca.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.BtnNuevaMarca.IconSize = 24;
-            this.BtnNuevaMarca.Location = new System.Drawing.Point(340, 125);
-            this.BtnNuevaMarca.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnNuevaMarca.Name = "BtnNuevaMarca";
-            this.BtnNuevaMarca.Size = new System.Drawing.Size(24, 25);
-            this.BtnNuevaMarca.TabIndex = 42;
-            this.BtnNuevaMarca.TabStop = false;
-            this.BtnNuevaMarca.Click += new System.EventHandler(this.BtnNuevaMarca_Click);
-            // 
-            // BtnNuevaCategoria
-            // 
-            this.BtnNuevaCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.BtnNuevaCategoria.ForeColor = System.Drawing.Color.Green;
-            this.BtnNuevaCategoria.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.BtnNuevaCategoria.IconColor = System.Drawing.Color.Green;
-            this.BtnNuevaCategoria.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.BtnNuevaCategoria.IconSize = 24;
-            this.BtnNuevaCategoria.Location = new System.Drawing.Point(340, 173);
-            this.BtnNuevaCategoria.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnNuevaCategoria.Name = "BtnNuevaCategoria";
-            this.BtnNuevaCategoria.Size = new System.Drawing.Size(24, 26);
-            this.BtnNuevaCategoria.TabIndex = 41;
-            this.BtnNuevaCategoria.TabStop = false;
-            this.BtnNuevaCategoria.Click += new System.EventHandler(this.BtnNuevaCategoria_Click);
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox2.IconSize = 24;
-            this.iconPictureBox2.Location = new System.Drawing.Point(233, 10);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(24, 26);
-            this.iconPictureBox2.TabIndex = 40;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Instalod;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox1.IconSize = 24;
-            this.iconPictureBox1.Location = new System.Drawing.Point(8, 10);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(24, 26);
-            this.iconPictureBox1.TabIndex = 39;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // FrmEntradas_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -768,6 +768,7 @@
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEntradas_Inventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CREAR ENTRADAS";
             this.Load += new System.EventHandler(this.FrmEntradas_Inventario_Load);
             this.panel2.ResumeLayout(false);
@@ -776,12 +777,16 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingBotons)).EndInit();
             this.bindingBotons.ResumeLayout(false);
             this.bindingBotons.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -793,10 +798,6 @@
             this.bindingNavigator1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaMarca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnNuevaCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -286,6 +286,7 @@
             this.Controls.Add(this.bindingBotons);
             this.Controls.Add(this.panel1);
             this.Name = "FrmUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUsuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.panel2.ResumeLayout(false);

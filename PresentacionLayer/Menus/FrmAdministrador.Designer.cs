@@ -35,6 +35,8 @@
             this.BtnInventario = new System.Windows.Forms.ToolStripButton();
             this.BtnClientes = new System.Windows.Forms.ToolStripButton();
             this.BtnUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.BtnCaja = new System.Windows.Forms.ToolStripButton();
+            this.btnMarcas = new System.Windows.Forms.ToolStripButton();
             this.BtnReportes = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.BtnCerrarSesion = new System.Windows.Forms.ToolStripButton();
@@ -62,6 +64,8 @@
             this.BtnInventario,
             this.BtnClientes,
             this.BtnUsuarios,
+            this.BtnCaja,
+            this.btnMarcas,
             this.BtnReportes});
             this.bdtnMenus.Location = new System.Drawing.Point(0, 0);
             this.bdtnMenus.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -72,7 +76,7 @@
             this.bdtnMenus.Name = "bdtnMenus";
             this.bdtnMenus.PositionItem = null;
             this.bdtnMenus.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bdtnMenus.Size = new System.Drawing.Size(153, 405);
+            this.bdtnMenus.Size = new System.Drawing.Size(170, 492);
             this.bdtnMenus.TabIndex = 30;
             this.bdtnMenus.Text = "bindingNavigator1";
             // 
@@ -85,7 +89,7 @@
             this.BtnVentas.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnVentas.Name = "BtnVentas";
             this.BtnVentas.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnVentas.Size = new System.Drawing.Size(141, 44);
+            this.BtnVentas.Size = new System.Drawing.Size(158, 44);
             this.BtnVentas.Text = "Ventas";
             this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
             // 
@@ -98,7 +102,7 @@
             this.BtnInventario.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnInventario.Name = "BtnInventario";
             this.BtnInventario.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnInventario.Size = new System.Drawing.Size(141, 44);
+            this.BtnInventario.Size = new System.Drawing.Size(158, 44);
             this.BtnInventario.Text = "Inventario";
             this.BtnInventario.Click += new System.EventHandler(this.BtnInventario_Click);
             // 
@@ -111,7 +115,7 @@
             this.BtnClientes.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnClientes.Name = "BtnClientes";
             this.BtnClientes.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnClientes.Size = new System.Drawing.Size(141, 44);
+            this.BtnClientes.Size = new System.Drawing.Size(158, 44);
             this.BtnClientes.Text = "Clientes";
             this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
@@ -124,9 +128,36 @@
             this.BtnUsuarios.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnUsuarios.Name = "BtnUsuarios";
             this.BtnUsuarios.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnUsuarios.Size = new System.Drawing.Size(141, 44);
+            this.BtnUsuarios.Size = new System.Drawing.Size(158, 44);
             this.BtnUsuarios.Text = "Usuarios";
             this.BtnUsuarios.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // BtnCaja
+            // 
+            this.BtnCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnCaja.Image = global::PresentacionLayer.Properties.Resources.caja_registradora1;
+            this.BtnCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCaja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnCaja.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnCaja.Name = "BtnCaja";
+            this.BtnCaja.Padding = new System.Windows.Forms.Padding(10);
+            this.BtnCaja.Size = new System.Drawing.Size(158, 44);
+            this.BtnCaja.Text = "Caja";
+            this.BtnCaja.Click += new System.EventHandler(this.BtnCaja_Click);
+            // 
+            // btnMarcas
+            // 
+            this.btnMarcas.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnMarcas.Image = global::PresentacionLayer.Properties.Resources.etiqueta__1_;
+            this.btnMarcas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMarcas.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMarcas.Name = "btnMarcas";
+            this.btnMarcas.Padding = new System.Windows.Forms.Padding(10);
+            this.btnMarcas.Size = new System.Drawing.Size(158, 44);
+            this.btnMarcas.Text = "Marcas Categorias";
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
             // BtnReportes
             // 
@@ -137,7 +168,7 @@
             this.BtnReportes.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnReportes.Name = "BtnReportes";
             this.BtnReportes.Padding = new System.Windows.Forms.Padding(10);
-            this.BtnReportes.Size = new System.Drawing.Size(141, 44);
+            this.BtnReportes.Size = new System.Drawing.Size(158, 44);
             this.BtnReportes.Text = "Reportes";
             this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
             // 
@@ -157,7 +188,7 @@
             this.bindingNavigator1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnCerrarSesion});
-            this.bindingNavigator1.Location = new System.Drawing.Point(3, 359);
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 446);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
             this.bindingNavigator1.MoveNextItem = null;
@@ -184,9 +215,9 @@
             this.pnlView.BackColor = System.Drawing.Color.White;
             this.pnlView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlView.Location = new System.Drawing.Point(153, 0);
+            this.pnlView.Location = new System.Drawing.Point(170, 0);
             this.pnlView.Name = "pnlView";
-            this.pnlView.Size = new System.Drawing.Size(768, 405);
+            this.pnlView.Size = new System.Drawing.Size(751, 492);
             this.pnlView.TabIndex = 31;
             this.pnlView.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlView_Paint);
             // 
@@ -194,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 405);
+            this.ClientSize = new System.Drawing.Size(921, 492);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.pnlView);
             this.Controls.Add(this.bdtnMenus);
@@ -223,5 +254,7 @@
         private System.Windows.Forms.Panel pnlView;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton BtnCerrarSesion;
+        private System.Windows.Forms.ToolStripButton BtnCaja;
+        private System.Windows.Forms.ToolStripButton btnMarcas;
     }
 }

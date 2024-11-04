@@ -193,6 +193,16 @@ namespace PresentacionLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_registradora1 {
+            get {
+                object obj = ResourceManager.GetObject("caja-registradora1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calculadora {
             get {
                 object obj = ResourceManager.GetObject("calculadora", resourceCulture);
@@ -226,6 +236,16 @@ namespace PresentacionLayer.Properties {
         internal static System.Drawing.Bitmap etiqueta {
             get {
                 object obj = ResourceManager.GetObject("etiqueta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap etiqueta__1_ {
+            get {
+                object obj = ResourceManager.GetObject("etiqueta (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

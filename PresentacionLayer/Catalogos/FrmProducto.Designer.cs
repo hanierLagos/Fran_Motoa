@@ -263,6 +263,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CREAR, ACTUALIZAR PRODUCTO";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.panel2.ResumeLayout(false);

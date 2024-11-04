@@ -92,5 +92,16 @@ namespace PresentacionLayer.Menus
         {
             OpenForm(new FrmViewMenuReportAdmin());
         }
+
+        private void BtnCaja_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmIngresosCaja());
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmListaCategoriaMarcas());
+
+        }
     }
 }

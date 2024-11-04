@@ -679,6 +679,8 @@
   <ItemGroup>
     <Content Include="logoicono.ico" />
     <Content Include="logo_tallerfranc.ico" />
+    <None Include="Resources\etiqueta %281%29.png" />
+    <None Include="Resources\caja-registradora1.png" />
     <None Include="Resources\almacenar %281%29.png" />
     <None Include="Resources\la-mejor-experiencia-del-cliente.png" />
     <None Include="Resources\venta-adicional.png" />

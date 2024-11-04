@@ -65,6 +65,12 @@ namespace PresentacionLayer.Catalogos
                              + "\n ha sido registrado correctamente.", "Registrar Cliente", MessageBoxButtons.OK,
                               MessageBoxIcon.Information);
 
+                    txtCodigo.Clear();
+                    txtNombres.Clear();
+                    txtApellidos.Clear();   
+                    txtTelefono.Clear();    
+                    txtDireccion.Clear();   
+
                 }
 
             }

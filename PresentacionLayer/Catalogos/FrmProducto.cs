@@ -91,7 +91,7 @@ namespace PresentacionLayer.Catalogos
 
                 );
 
-                if (val >0)
+                if (!(val == 0))
                 {
                     MessageBox.Show("El registro del producto ha sido registrado correctamente.", "Registrar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mskCodigo.Clear();

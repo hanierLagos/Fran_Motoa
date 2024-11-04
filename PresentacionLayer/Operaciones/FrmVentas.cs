@@ -243,12 +243,12 @@ namespace PresentacionLayer.Operaciones
 
         private void btnFinalizarVenta_Click(object sender, EventArgs e)
         {
-            // Validar el código del cliente
-            if (string.IsNullOrWhiteSpace(cmbClientes.Text))
+            if (cmbClientes.SelectedIndex < 0)
             {
                 MessageBox.Show("Por favor, selecciones el cliente correspondientes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             // Finalizar la Venta
             if (DG_DetallesdeVenta.Rows.Count == 0)
             {
@@ -402,7 +402,11 @@ namespace PresentacionLayer.Operaciones
                 MessageBox.Show("Descripción no válida. Por favor, ingrese una descripción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+            if (cmbClientes.SelectedIndex<0)
+            {
+                MessageBox.Show("Debe de indicar el Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             int clientid = idC[this.cmbClientes.SelectedIndex];
 

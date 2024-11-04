@@ -51,6 +51,12 @@ namespace PresentacionLayer.Catalogos
                 {
                     MessageBox.Show("Registro del Usuario Guardado Exitosamente", "Guardar, Actualizar Usuario",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtNombres.Clear();
+                    txtApellidos.Clear();
+                    txtContraseña.Clear();
+                    txtUsuario.Clear();
+                    cmbRol.SelectedIndex = -1;   
                 }
             }
             catch (Exception ex)

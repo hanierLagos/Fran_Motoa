@@ -55,46 +55,60 @@ namespace DataLayer
 
 
         // Método para leer un producto por su código
-        public DataTable ReadProducto(string codigo)
+        public DataTable ReadProducto(string filter)
         {
+            //definir la instancia datatable por donde se enviará ekl resultado
             DataTable result = null;
+
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FRAN_MOTOSConnectionString"].ConnectionString))
             {
+                //crear una nueva instancia de sqlComand y asegurar que se destruya el objeto al finaklizar
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     try
                     {
-                        // Asigna la conexión y tipo de comando
+                        //establecer lam coneccion en la que se opera
                         cmd.Connection = conn;
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "Us_ReadProducto";  // Procedimiento almacenado para leer productos
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@codigo", codigo);  // Parámetro de búsqueda
 
-                        // Abre la conexión y ejecuta la lectura de datos
+                        //Indicar el tipo de comasndo a ejecutar en este caso un procedimiento 
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "Us_ReadProducto";
+
+                        //fonzar a que los parametros se encuentren nullos
+                        cmd.Parameters.Clear();
+
+                        //Establecer el parametro quwe se envia 
+                        //indicar lps parametros que sean enviados al procediiento
+                        cmd.Parameters.AddWithValue("@codigo", filter);
+
+                        //abrir la coneccion para quese proceda los resultados
                         conn.Open();
-                        using (SqlDataReader dr = cmd.ExecuteReader())
+
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        //Verificar que se haya obtenido registro de la consulta
+                        if (dr.HasRows)
                         {
-                            if (dr.HasRows)
-                            {
-                                result.Load(dr);  // Carga los datos en el DataTable si existen filas
-                            }
-                        }
+                            result = new DataTable(); // inicializar la instancia para agregar el registro
+                            result.Load(dr); // cagar los datos de DataTable
+                        }//Fin del condicional If
+
+
                     }
-                    catch (Exception ex)
+                    catch (Exception e)
                     {
-                        // Manejo de errores
-                        throw new Exception("Error al procesar los datos: " + ex.Message);
+
+                        throw new Exception("Se ha producido una infraccion interna en el\n" + "procesamiento de los datos" + e.Message);
                     }
                     finally
                     {
-                        // Cierra la conexión
                         conn.Close();
+
                     }
-                }
-            }
-            return result;  // Retorna los datos del producto
-        }
+                }//fin de segundo using
+
+            }// fin de primer using
+            return result;
+        }//fin de metodo  
 
 
 
