@@ -27,7 +27,7 @@ namespace PresentacionLayer.Reportes
         {
             // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
             this.us_ReportTop10ProductosMasVendidosTableAdapter.Connection.ConnectionString =
-                "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;User Id=Admin;Password=CzMa7p*0";
 
             // Llenar el DataSet con los datos actualizados
             this.us_ReportTop10ProductosMasVendidosTableAdapter.Fill(this.fRAN_MOTOSDataSet2.Us_ReportTop10ProductosMasVendidos);

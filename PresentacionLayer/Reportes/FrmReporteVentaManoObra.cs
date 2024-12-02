@@ -28,7 +28,7 @@ namespace PresentacionLayer.Reportes
         {
             // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
             this.us_ReportVentasManoObraRealizadasConDetallesTableAdapter.Connection.ConnectionString =
-                "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;User Id=Admin;Password=CzMa7p*0";
 
             // Obtener las fechas de los DateTimePicker
             DateTime fechaInicio = datePickerFEchaInicio.Value;

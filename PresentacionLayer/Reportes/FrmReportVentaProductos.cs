@@ -39,7 +39,7 @@ namespace PresentacionLayer.Reportes
             {
                 // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
                 this.us_ReportVentasProductosRealizadasConDetallesTableAdapter.Connection.ConnectionString =
-                    "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                    "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;User Id=Admin;Password=CzMa7p*0";
 
                 this.us_ReportVentasProductosRealizadasConDetallesTableAdapter.Fill(this.fRAN_MOTOSDataSet6.Us_ReportVentasProductosRealizadasConDetalles, fechaInicio, fechaFin);
 
