@@ -34,7 +34,7 @@ namespace PresentacionLayer.Reportes
             {
                 // Cambiar la cadena de conexión del TableAdapter antes de llenar los datos
                 this.us_ReportEntradasRealizadasTableAdapter.Connection.ConnectionString =
-                    "Data Source=DESKTOP-7GLINRR\\MSSQLSERVER01;Initial Catalog=TALLER_FRANC;User Id=Admin;Password=CzMa7p*0";
+                    "Data Source=ALEJANDRO;Initial Catalog=TALLER_FRANC;User Id=FRAN;Password=CzMa7p*0";
                 this.us_ReportEntradasRealizadasTableAdapter.Fill(this.fRAN_MOTOSDataSet9.Us_ReportEntradasRealizadas, cantAver);
 
                 // Refrescar el ReportViewer

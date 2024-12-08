@@ -38,7 +38,7 @@ namespace PresentacionLayer
                     Console.WriteLine("Error de conexión: " + ex.Message);
                 }
             }
-            Application.Run(new FrmVentas());
+            Application.Run(new FrmLogin());
         }
     }
 }
